@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    themes.xml — Mandarin Learn
+    XML-based theme required by the Android system (Activity window, splash screen).
+    The Compose UI uses MandarinLearnTheme (ui/theme/Theme.kt) which supersedes this.
+    The splash screen theme is declared here per core-splashscreen library requirements.
+-->
+<resources>
+    <!-- Base application theme — used as the fallback before Compose takes over -->
+    <style name="Theme.MandarinLearn" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/color_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- Splash screen theme — wraps Theme.MandarinLearn with splash attributes -->
+    <style name="Theme.MandarinLearn.Splash" parent="Theme.SplashScreen">
+        <!-- Splash background matches app background for a seamless transition -->
+        <item name="windowSplashScreenBackground">@color/color_background</item>
+        <!-- The actual theme to switch to after splash is dismissed -->
+        <item name="postSplashScreenTheme">@style/Theme.MandarinLearn</item>
+    </style>
+</resources>

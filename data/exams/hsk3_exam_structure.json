@@ -1,0 +1,38 @@
+{
+  "hsk_level": 3,
+  "total_duration_minutes": 90,
+  "sections": [
+    {
+      "name": "listening",
+      "question_count": 40,
+      "duration_minutes": 35,
+      "question_types": ["judge_true_false", "choose_correct_answer", "fill_in_blank_audio"],
+      "max_score": 100,
+      "passing_score": 60,
+      "description": "Part 1 (10 items): Listen to a short dialogue and judge if the description is correct. Part 2 (10 items): Listen to a dialogue and choose the correct picture. Part 3 (10 items): Listen to a short conversation (3–4 turns) and answer a question. Part 4 (10 items): Listen to a monologue and answer questions about it."
+    },
+    {
+      "name": "reading",
+      "question_count": 30,
+      "duration_minutes": 30,
+      "question_types": ["choose_correct_word", "judge_correct_sentence", "reading_comprehension"],
+      "max_score": 100,
+      "passing_score": 60,
+      "description": "Part 1 (10 items): Choose the word that fits correctly in a sentence. Part 2 (10 items): Arrange words/phrases to form a correct sentence. Part 3 (10 items): Read short passages and answer multiple-choice questions."
+    },
+    {
+      "name": "writing",
+      "question_count": 15,
+      "duration_minutes": 15,
+      "question_types": ["fill_in_blank", "reorder_sentence"],
+      "max_score": 100,
+      "passing_score": 60,
+      "description": "Part 1 (5 items): Fill in the pinyin for a character shown in context. Part 2 (5 items): Reorder words to form a correct sentence. Part 3 (5 items): Write the correct character based on the pinyin given."
+    }
+  ],
+  "total_max_score": 300,
+  "total_passing_score": 180,
+  "vocabulary_required": 600,
+  "scoring_notes": "Each section scored 0–100. Total is sum of three sections. 180/300 required to pass. Writing section introduced at HSK 3.",
+  "source": "Official HSK 3 exam specifications (model-verified)"
+}

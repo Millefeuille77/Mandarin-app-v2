@@ -1,0 +1,38 @@
+{
+  "hsk_level": 5,
+  "total_duration_minutes": 125,
+  "sections": [
+    {
+      "name": "listening",
+      "question_count": 45,
+      "duration_minutes": 30,
+      "question_types": ["judge_true_false", "choose_correct_answer", "extended_dialogue_comprehension"],
+      "max_score": 100,
+      "passing_score": 60,
+      "description": "Part 1 (15 items): Listen to dialogues and judge whether statements are true or false. Part 2 (15 items): Listen to interviews/conversations and answer multiple-choice questions. Part 3 (15 items): Listen to extended monologues, news, or academic lectures and answer comprehension questions."
+    },
+    {
+      "name": "reading",
+      "question_count": 45,
+      "duration_minutes": 45,
+      "question_types": ["choose_correct_word", "passage_comprehension", "long_text_analysis"],
+      "max_score": 100,
+      "passing_score": 60,
+      "description": "Part 1 (15 items): Choose the correct word or phrase to fill blanks in complex sentences. Part 2 (15 items): Read medium passages and answer multiple-choice comprehension questions. Part 3 (15 items): Read longer, more complex texts (news articles, academic excerpts) and answer comprehension questions requiring inference and analysis."
+    },
+    {
+      "name": "writing",
+      "question_count": 2,
+      "duration_minutes": 40,
+      "question_types": ["summary_writing", "essay_writing"],
+      "max_score": 100,
+      "passing_score": 60,
+      "description": "Part 1 (1 item): Read a passage of approximately 1000 characters, then write an 400-character summary capturing the main points. Part 2 (1 item): Write a composition of at least 80 characters based on a picture prompt, expressing your view or telling a story."
+    }
+  ],
+  "total_max_score": 300,
+  "total_passing_score": 180,
+  "vocabulary_required": 2500,
+  "scoring_notes": "Each section scored 0–100. Total is sum of three sections. 180/300 required to pass. Writing section includes both a summary task and a composition. HSK 5 certifies advanced proficiency equivalent to C1 on the CEFR.",
+  "source": "Official HSK 5 exam specifications (model-verified)"
+}

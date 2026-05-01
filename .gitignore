@@ -1,0 +1,24 @@
+# Android / Gradle
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+
+# App module build output
+/app/build/
+
+# API keys — NEVER commit
+local.properties
+
+# Kotlin compiler caches
+.kotlin/
+
+# Misc
+*.swp
+*.swo
+*~

@@ -1,0 +1,262 @@
+[
+  {
+    "id": "tone_1_1",
+    "tone_pair": "1-1",
+    "description": "First tone + First tone",
+    "example_word": "飞机",
+    "pinyin": "fēijī",
+    "translation": "airplane",
+    "additional_examples": [
+      {"word": "今天", "pinyin": "jīntiān", "translation": "today"},
+      {"word": "书包", "pinyin": "shūbāo", "translation": "schoolbag"},
+      {"word": "中心", "pinyin": "zhōngxīn", "translation": "center"}
+    ]
+  },
+  {
+    "id": "tone_1_2",
+    "tone_pair": "1-2",
+    "description": "First tone + Second tone",
+    "example_word": "中国",
+    "pinyin": "Zhōngguó",
+    "translation": "China",
+    "additional_examples": [
+      {"word": "书房", "pinyin": "shūfáng", "translation": "study room"},
+      {"word": "工人", "pinyin": "gōngrén", "translation": "worker"},
+      {"word": "音乐", "pinyin": "yīnyuè", "translation": "music"}
+    ]
+  },
+  {
+    "id": "tone_1_3",
+    "tone_pair": "1-3",
+    "description": "First tone + Third tone",
+    "example_word": "花朵",
+    "pinyin": "huāduǒ",
+    "translation": "flower",
+    "additional_examples": [
+      {"word": "书本", "pinyin": "shūběn", "translation": "book"},
+      {"word": "餐馆", "pinyin": "cānguǎn", "translation": "restaurant"},
+      {"word": "开始", "pinyin": "kāishǐ", "translation": "to start"}
+    ]
+  },
+  {
+    "id": "tone_1_4",
+    "tone_pair": "1-4",
+    "description": "First tone + Fourth tone",
+    "example_word": "家庭",
+    "pinyin": "jiātíng",
+    "translation": "family",
+    "additional_examples": [
+      {"word": "书店", "pinyin": "shūdiàn", "translation": "bookstore"},
+      {"word": "工作", "pinyin": "gōngzuò", "translation": "work"},
+      {"word": "出发", "pinyin": "chūfā", "translation": "to depart"}
+    ]
+  },
+  {
+    "id": "tone_2_1",
+    "tone_pair": "2-1",
+    "description": "Second tone + First tone",
+    "example_word": "银行",
+    "pinyin": "yínháng",
+    "translation": "bank",
+    "additional_examples": [
+      {"word": "人工", "pinyin": "réngōng", "translation": "manual/artificial"},
+      {"word": "牛奶", "pinyin": "niúnǎi", "translation": "milk"},
+      {"word": "学生", "pinyin": "xuéshēng", "translation": "student"}
+    ]
+  },
+  {
+    "id": "tone_2_2",
+    "tone_pair": "2-2",
+    "description": "Second tone + Second tone",
+    "example_word": "学习",
+    "pinyin": "xuéxí",
+    "translation": "to study",
+    "additional_examples": [
+      {"word": "国家", "pinyin": "guójiā", "translation": "country"},
+      {"word": "人民", "pinyin": "rénmín", "translation": "people"},
+      {"word": "时间", "pinyin": "shíjiān", "translation": "time"}
+    ]
+  },
+  {
+    "id": "tone_2_3",
+    "tone_pair": "2-3",
+    "description": "Second tone + Third tone",
+    "example_word": "时间",
+    "pinyin": "shíjiān",
+    "translation": "time",
+    "additional_examples": [
+      {"word": "游泳", "pinyin": "yóuyǒng", "translation": "to swim"},
+      {"word": "红酒", "pinyin": "hóngjiǔ", "translation": "red wine"},
+      {"word": "桥梁", "pinyin": "qiáoliáng", "translation": "bridge"}
+    ]
+  },
+  {
+    "id": "tone_2_4",
+    "tone_pair": "2-4",
+    "description": "Second tone + Fourth tone",
+    "example_word": "学校",
+    "pinyin": "xuéxiào",
+    "translation": "school",
+    "additional_examples": [
+      {"word": "爱好", "pinyin": "àihào", "translation": "hobby"},
+      {"word": "特别", "pinyin": "tèbié", "translation": "especially"},
+      {"word": "合适", "pinyin": "héshì", "translation": "suitable"}
+    ]
+  },
+  {
+    "id": "tone_3_1",
+    "tone_pair": "3-1",
+    "description": "Third tone + First tone",
+    "example_word": "你好",
+    "pinyin": "nǐhǎo",
+    "translation": "hello",
+    "additional_examples": [
+      {"word": "水平", "pinyin": "shuǐpíng", "translation": "level/standard"},
+      {"word": "可能", "pinyin": "kěnéng", "translation": "possible"},
+      {"word": "美餐", "pinyin": "měicān", "translation": "delicious meal"}
+    ]
+  },
+  {
+    "id": "tone_3_2",
+    "tone_pair": "3-2",
+    "description": "Third tone + Second tone",
+    "example_word": "手机",
+    "pinyin": "shǒujī",
+    "translation": "mobile phone",
+    "additional_examples": [
+      {"word": "女儿", "pinyin": "nǚér", "translation": "daughter"},
+      {"word": "可以", "pinyin": "kěyǐ", "translation": "can/may"},
+      {"word": "老人", "pinyin": "lǎorén", "translation": "elderly person"}
+    ]
+  },
+  {
+    "id": "tone_3_3",
+    "tone_pair": "3-3",
+    "description": "Third tone + Third tone (first syllable becomes second tone in practice)",
+    "example_word": "你好",
+    "pinyin": "nǐ hǎo",
+    "translation": "hello",
+    "additional_examples": [
+      {"word": "理解", "pinyin": "lǐjiě", "translation": "to understand"},
+      {"word": "水果", "pinyin": "shuǐguǒ", "translation": "fruit"},
+      {"word": "可以", "pinyin": "kěyǐ", "translation": "can/may"}
+    ]
+  },
+  {
+    "id": "tone_3_4",
+    "tone_pair": "3-4",
+    "description": "Third tone + Fourth tone",
+    "example_word": "所以",
+    "pinyin": "suǒyǐ",
+    "translation": "therefore",
+    "additional_examples": [
+      {"word": "请问", "pinyin": "qǐngwèn", "translation": "may I ask"},
+      {"word": "小事", "pinyin": "xiǎoshì", "translation": "trivial matter"},
+      {"word": "旅游", "pinyin": "lǚyóu", "translation": "to travel"}
+    ]
+  },
+  {
+    "id": "tone_4_1",
+    "tone_pair": "4-1",
+    "description": "Fourth tone + First tone",
+    "example_word": "汉语",
+    "pinyin": "hànyǔ",
+    "translation": "Chinese language",
+    "additional_examples": [
+      {"word": "地图", "pinyin": "dìtú", "translation": "map"},
+      {"word": "大家", "pinyin": "dàjiā", "translation": "everyone"},
+      {"word": "意思", "pinyin": "yìsi", "translation": "meaning"}
+    ]
+  },
+  {
+    "id": "tone_4_2",
+    "tone_pair": "4-2",
+    "description": "Fourth tone + Second tone",
+    "example_word": "电影",
+    "pinyin": "diànyǐng",
+    "translation": "movie",
+    "additional_examples": [
+      {"word": "上班", "pinyin": "shàngbān", "translation": "go to work"},
+      {"word": "大学", "pinyin": "dàxué", "translation": "university"},
+      {"word": "再来", "pinyin": "zàilái", "translation": "come again"}
+    ]
+  },
+  {
+    "id": "tone_4_3",
+    "tone_pair": "4-3",
+    "description": "Fourth tone + Third tone",
+    "example_word": "下雨",
+    "pinyin": "xiàyǔ",
+    "translation": "to rain",
+    "additional_examples": [
+      {"word": "买水", "pinyin": "mǎishuǐ", "translation": "buy water"},
+      {"word": "看法", "pinyin": "kànfǎ", "translation": "viewpoint"},
+      {"word": "再想", "pinyin": "zàixiǎng", "translation": "think again"}
+    ]
+  },
+  {
+    "id": "tone_4_4",
+    "tone_pair": "4-4",
+    "description": "Fourth tone + Fourth tone",
+    "example_word": "再见",
+    "pinyin": "zàijiàn",
+    "translation": "goodbye",
+    "additional_examples": [
+      {"word": "上课", "pinyin": "shàngkè", "translation": "attend class"},
+      {"word": "大意", "pinyin": "dàyì", "translation": "careless/main idea"},
+      {"word": "热闹", "pinyin": "rènào", "translation": "lively"}
+    ]
+  },
+  {
+    "id": "tone_neutral_1",
+    "tone_pair": "neutral-1",
+    "description": "Neutral tone + First tone",
+    "example_word": "吗啊",
+    "pinyin": "ma ā",
+    "translation": "question particle + exclamation",
+    "additional_examples": [
+      {"word": "的吗", "pinyin": "de ma", "translation": "possessive + question"},
+      {"word": "了呢", "pinyin": "le ne", "translation": "change of state + question"},
+      {"word": "们工", "pinyin": "men gōng", "translation": "(plural marker) + work"}
+    ]
+  },
+  {
+    "id": "tone_1_neutral",
+    "tone_pair": "1-neutral",
+    "description": "First tone + Neutral tone",
+    "example_word": "妈妈",
+    "pinyin": "māma",
+    "translation": "mother",
+    "additional_examples": [
+      {"word": "哥哥", "pinyin": "gēge", "translation": "older brother"},
+      {"word": "书本", "pinyin": "shūben", "translation": "books"},
+      {"word": "东西", "pinyin": "dōngxi", "translation": "thing/stuff"}
+    ]
+  },
+  {
+    "id": "tone_2_neutral",
+    "tone_pair": "2-neutral",
+    "description": "Second tone + Neutral tone",
+    "example_word": "朋友",
+    "pinyin": "péngyou",
+    "translation": "friend",
+    "additional_examples": [
+      {"word": "学生们", "pinyin": "xuéshengmen", "translation": "students"},
+      {"word": "明白", "pinyin": "míngbai", "translation": "to understand"},
+      {"word": "时候", "pinyin": "shíhou", "translation": "time/moment"}
+    ]
+  },
+  {
+    "id": "tone_4_neutral",
+    "tone_pair": "4-neutral",
+    "description": "Fourth tone + Neutral tone",
+    "example_word": "爸爸",
+    "pinyin": "bàba",
+    "translation": "father",
+    "additional_examples": [
+      {"word": "意思", "pinyin": "yìsi", "translation": "meaning"},
+      {"word": "客气", "pinyin": "kèqi", "translation": "polite"},
+      {"word": "舒服", "pinyin": "shūfu", "translation": "comfortable"}
+    ]
+  }
+]

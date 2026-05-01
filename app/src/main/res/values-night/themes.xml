@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    values-night/themes.xml — Mandarin Learn (dark theme)
+    Dark-mode overrides for the XML AppTheme and splash theme.
+-->
+<resources>
+    <style name="Theme.MandarinLearn" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/color_background</item>
+        <!-- Dark mode: light status bar icons are NOT used (background is dark) -->
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="Theme.MandarinLearn.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/color_background</item>
+        <item name="postSplashScreenTheme">@style/Theme.MandarinLearn</item>
+    </style>
+</resources>

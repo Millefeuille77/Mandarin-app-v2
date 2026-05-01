@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    ic_launcher_foreground.xml — Mandarin Learn
+    Adaptive icon foreground layer. Simple "ML" monogram in white.
+    Phase 10: replace with a proper branded icon asset.
+-->
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- White circle background for the monogram -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,24 A30,30 0 1,0 54,84 A30,30 0 1,0 54,24" />
+
+    <!-- "M" letter in primary color — simplified path -->
+    <path
+        android:fillColor="#1565C0"
+        android:pathData="M36,72 L36,40 L45,58 L54,40 L63,58 L72,40 L72,72 L67,72 L67,52 L59,68 L49,68 L41,52 L41,72 Z" />
+</vector>

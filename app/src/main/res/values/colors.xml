@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    colors.xml — Mandarin Learn
+    Raw hex color values. These are referenced by themes.xml for the XML-based AppTheme
+    (used by the splash screen). The Compose theme reads from ui/theme/Color.kt directly.
+    UX_SPECIFICATION.md §1.2 lists all token values.
+-->
+<resources>
+    <!-- Light palette -->
+    <color name="color_primary">#1565C0</color>
+    <color name="color_on_primary">#FFFFFF</color>
+    <color name="color_secondary">#5D4037</color>
+    <color name="color_on_secondary">#FFFFFF</color>
+    <color name="color_background">#FAFAFA</color>
+    <color name="color_on_background">#1A1A1A</color>
+    <color name="color_surface">#FFFFFF</color>
+    <color name="color_on_surface">#1A1A1A</color>
+    <color name="color_surface_variant">#EEEEEE</color>
+    <color name="color_on_surface_variant">#424242</color>
+    <color name="color_error">#C62828</color>
+    <color name="color_on_error">#FFFFFF</color>
+    <color name="color_success">#2E7D32</color>
+    <color name="color_warning">#EF6C00</color>
+</resources>

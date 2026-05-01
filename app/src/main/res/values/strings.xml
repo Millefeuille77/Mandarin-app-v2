@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    strings.xml — Mandarin Learn
+    ALL user-facing strings for Phase 1. Per CLAUDE.md: no hardcoded strings anywhere else.
+    Additional strings will be added as screens are implemented in Phases 2–10.
+-->
+<resources>
+    <!-- App name -->
+    <string name="app_name">Mandarin Learn</string>
+
+    <!-- Bottom navigation tab labels (UX spec §1.6) -->
+    <string name="nav_learn">Learn</string>
+    <string name="nav_practice">Practice</string>
+    <string name="nav_exam">Exam</string>
+    <string name="nav_me">Me</string>
+
+    <!-- Bottom nav content descriptions for TalkBack (UX spec §1.6) -->
+    <string name="content_desc_nav_learn">Learn tab</string>
+    <string name="content_desc_nav_practice">Practice tab</string>
+    <string name="content_desc_nav_exam">Exam tab</string>
+    <string name="content_desc_nav_me">Me tab</string>
+
+    <!-- Screen placeholder titles (used in Phase 1 stub composables) -->
+    <string name="screen_home">Home</string>
+    <string name="screen_practice_hub">Practice</string>
+    <string name="screen_vocabulary">Vocabulary</string>
+    <string name="screen_flashcard">Flashcards</string>
+    <string name="screen_reading_list">Reading</string>
+    <string name="screen_passage">Passage</string>
+    <string name="screen_listening">Listening</string>
+    <string name="screen_speaking">Speaking</string>
+    <string name="screen_exam_hub">Exam</string>
+    <string name="screen_exam">HSK Exam</string>
+    <string name="screen_exam_result">Exam Result</string>
+    <string name="screen_me">Me</string>
+    <string name="screen_progress">Progress</string>
+    <string name="screen_settings">Settings</string>
+    <string name="screen_import_loading">Setting up your lessons…</string>
+
+    <!-- Common action labels -->
+    <string name="action_retry">Retry</string>
+    <string name="action_back">Back</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_confirm">Confirm</string>
+    <string name="action_done">Done</string>
+    <string name="action_next">Next</string>
+    <string name="action_close">Close</string>
+
+    <!-- Navigation content descriptions -->
+    <string name="content_desc_navigate_back">Back</string>
+
+    <!-- HSK level chip label — %1$d is replaced with the level number (1–5) -->
+    <string name="hsk_level_label">HSK %1$d</string>
+
+    <!-- Error states (UX spec §3.9) -->
+    <string name="error_title_something_went_wrong">Something went wrong</string>
+    <string name="error_generic_message">Please try again.</string>
+
+    <!-- Offline banner (UX spec §3.10) -->
+    <string name="offline_banner_message">You are offline. AI features are unavailable.</string>
+
+    <!-- Content descriptions for icons -->
+    <string name="content_desc_error_icon">Error</string>
+    <string name="content_desc_empty_icon">No content</string>
+    <string name="content_desc_settings_icon">Settings</string>
+    <string name="content_desc_loading">Loading</string>
+
+    <!-- Phase 3: Vocabulary screen strings (UX spec §4 Screen 2) -->
+    <string name="vocab_search_placeholder">Search Chinese, pinyin, or English</string>
+    <string name="vocab_stats_strip">%1$d words · %2$d mastered · %3$d due today</string>
+    <string name="vocab_start_review">Start today\'s review (%1$d)</string>
+    <string name="vocab_start_new">Start learning (%1$d new)</string>
+    <string name="vocab_empty_search_title">No results</string>
+    <string name="vocab_empty_search_message">No words match \'%1$s\'</string>
+    <string name="vocab_row_content_desc">Word: %1$s, pronounced %2$s, meaning %3$s. Status: %4$s.</string>
+    <string name="label_example_sentence">Example sentence</string>
+
+    <!-- SRS status badges -->
+    <string name="srs_status_new">New</string>
+    <string name="srs_status_learning">Learning</string>
+    <string name="srs_status_mastered">Mastered</string>
+
+    <!-- Phase 3: Flashcard screen strings (UX spec §4 Screen 3) -->
+    <string name="flashcard_counter">%1$d / %2$d</string>
+    <string name="flashcard_tap_to_flip">Tap to flip</string>
+    <string name="flashcard_show_answer">Show answer</string>
+    <string name="flashcard_exit_title">Exit session?</string>
+    <string name="flashcard_exit_message">Your progress will not be saved if you quit now.</string>
+    <string name="flashcard_exit_confirm">Quit</string>
+    <string name="flashcard_empty_title">All caught up!</string>
+    <string name="flashcard_empty_message">No cards due for review at this level. Come back tomorrow or learn new words.</string>
+    <string name="flashcard_session_complete">Session complete!</string>
+    <string name="flashcard_session_stats">%1$d reviewed · %2$d new</string>
+    <string name="flashcard_back_to_vocabulary">Back to Vocabulary</string>
+    <string name="flashcard_continue_new">Continue with new words</string>
+    <string name="flashcard_rating_forgot">Forgot</string>
+    <string name="flashcard_rating_hard">Hard</string>
+    <string name="flashcard_rating_good">Good</string>
+    <string name="flashcard_rating_easy">Easy</string>
+    <string name="flashcard_interval_days">%1$d day(s)</string>
+    <string name="flashcard_rating_button_desc">%1$s. Next review in %2$s.</string>
+    <string name="flashcard_back_content_desc">Word %1$s, pronounced %2$s, means %3$s. Example: %4$s — %5$s.</string>
+    <string name="flashcard_card_flipped">Card flipped to answer</string>
+
+    <!-- Phase 3: Audio -->
+    <string name="content_desc_play_audio">Play pronunciation audio</string>
+    <string name="content_desc_search">Search</string>
+    <string name="content_desc_clear_search">Clear search</string>
+
+    <!-- Phase 3: PracticeHub screen strings (UX spec §2) -->
+    <string name="practice_hub_select_level">Select HSK level</string>
+    <string name="practice_hub_choose_activity">Choose an activity</string>
+    <string name="practice_hub_vocab_title">Vocabulary</string>
+    <string name="practice_hub_vocab_subtitle">Browse and review words with flashcards</string>
+    <string name="practice_hub_vocab_due">%1$d cards due for review</string>
+    <string name="practice_hub_reading_title">Reading</string>
+    <string name="practice_hub_reading_subtitle">Read passages at your level</string>
+    <string name="practice_hub_listening_title">Listening</string>
+    <string name="practice_hub_listening_subtitle">Listen and choose the correct word</string>
+    <string name="practice_hub_speaking_title">Speaking</string>
+    <string name="practice_hub_speaking_subtitle">Record yourself and get pronunciation feedback</string>
+
+    <!-- Phase 4: Reading section strings (UX_SPECIFICATION.md §4 Screen 4 and Screen 5) -->
+    <string name="reading_pinyin_note">HSK 1–3 passages show pinyin above every character. HSK 4–5 show pinyin only on key vocabulary.</string>
+    <string name="reading_empty_title">No passages available</string>
+    <string name="reading_empty_body">Reading passages will appear here once imported.</string>
+    <string name="reading_status_read">Read</string>
+    <string name="reading_status_not_read">Not yet read</string>
+    <string name="reading_word_count">%1$d characters</string>
+    <string name="reading_card_content_desc">%1$s. %2$d characters. %3$s.</string>
+    <string name="reading_pinyin_toggle_label">Pinyin</string>
+    <string name="reading_pinyin_shown">Pinyin shown</string>
+    <string name="reading_pinyin_hidden">Pinyin hidden</string>
+    <string name="reading_font_scale_desc">Font size %1$.1f times</string>
+    <string name="reading_font_decrease">Decrease font size</string>
+    <string name="reading_font_increase">Increase font size</string>
+    <string name="reading_show_translation">Show English translation</string>
+    <string name="reading_hide_translation">Hide English translation</string>
+    <string name="reading_mark_as_read">Mark as read</string>
+    <string name="reading_already_read">Already read</string>
+    <string name="reading_marked_as_read">Marked as read</string>
+    <string name="reading_no_definition">Word not in HSK 1–5 vocabulary list.</string>
+
+    <!-- Phase 4: Preview strings (used in @Preview blocks — must be in strings.xml per rules) -->
+    <string name="preview_passage_title_1">Self Introduction</string>
+    <string name="preview_passage_title_2">My Family</string>
+
+    <!-- Phase 5: Listening section strings (UX_SPECIFICATION.md §4 Screen 7) -->
+    <string name="listening_question_counter">Question %1$d of %2$d</string>
+    <string name="listening_tap_to_play">Tap to play</string>
+    <string name="listening_play_button_desc">Play audio. Question %1$d of %2$d</string>
+    <string name="listening_replay_desc">Replay audio</string>
+    <string name="listening_replays_remaining">%1$d replays remaining</string>
+    <string name="listening_audio_failed">Could not play audio — try again or skip</string>
+    <string name="listening_skip">Skip</string>
+    <string name="listening_option_desc">Option %1$s: %2$s</string>
+    <string name="listening_correct">Correct!</string>
+    <string name="listening_incorrect">Not quite.</string>
+    <string name="listening_correct_answer">The answer was: %1$s</string>
+    <string name="listening_feedback_correct_desc">Correct answer</string>
+    <string name="listening_feedback_incorrect_desc">Incorrect. The answer was %1$s</string>
+    <string name="listening_session_complete">Session complete!</string>
+    <string name="listening_session_score">%1$d of %2$d correct</string>
+    <string name="listening_try_again">Try again</string>
+    <string name="listening_empty_title">No questions available</string>
+    <string name="listening_empty_body">Listening questions will appear here once imported.</string>
+
+    <!-- Phase 5: Audio playback strings -->
+    <string name="audio_not_available">Audio not available — please install Chinese TTS voice in Android Settings</string>
+    <string name="audio_play_all">Play all</string>
+    <string name="audio_coming_soon">Audio coming soon</string>
+
+    <!-- Phase 2: Import loading screen strings (ARCHITECTURE.md §3.4) -->
+    <string name="import_setting_up">Setting up your lessons…</string>
+    <string name="import_importing_vocabulary">Importing vocabulary…</string>
+    <string name="import_importing_reading">Importing reading passages…</string>
+    <string name="import_importing_audio">Importing audio content…</string>
+    <string name="import_importing_exams">Importing exam structures…</string>
+    <string name="import_finalising">Finalising…</string>
+    <string name="import_up_to_date">Up to date</string>
+    <string name="import_done">Done</string>
+    <string name="import_error_vocabulary">Failed to import vocabulary</string>
+    <string name="import_error_reading">Failed to import reading passages</string>
+    <string name="import_error_audio">Failed to import audio content</string>
+    <string name="import_error_exams">Failed to import exam structures</string>
+    <string name="import_error_finalise">Failed to finalise setup</string>
+</resources>

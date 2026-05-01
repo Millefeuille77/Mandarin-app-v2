@@ -1,0 +1,29 @@
+{
+  "hsk_level": 1,
+  "total_duration_minutes": 40,
+  "sections": [
+    {
+      "name": "listening",
+      "question_count": 20,
+      "duration_minutes": 15,
+      "question_types": ["choose_correct_picture", "judge_true_false"],
+      "max_score": 100,
+      "passing_score": 60,
+      "description": "Part 1 (5 items): Listen to a word/phrase and choose the matching picture from options. Part 2 (5 items): Listen to a short sentence and judge if it matches the picture shown. Part 3 (5 items): Listen to a short dialogue and choose the correct answer. Part 4 (5 items): Listen to a short sentence and choose the correct response."
+    },
+    {
+      "name": "reading",
+      "question_count": 20,
+      "duration_minutes": 17,
+      "question_types": ["match_picture_to_word", "match_sentence_to_word", "select_correct_word"],
+      "max_score": 100,
+      "passing_score": 60,
+      "description": "Part 1 (5 items): Match a word to its corresponding picture. Part 2 (5 items): Read a sentence and identify the correct picture. Part 3 (5 items): Fill in a blank in a sentence with the correct word. Part 4 (5 items): Read short sentences and choose the correct response."
+    }
+  ],
+  "total_max_score": 200,
+  "total_passing_score": 120,
+  "vocabulary_required": 150,
+  "scoring_notes": "Each section scored 0–100. Total is sum of sections. 120/200 required to pass. No writing section at HSK 1.",
+  "source": "Official HSK 1 exam specifications (model-verified)"
+}

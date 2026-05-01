@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    dimens.xml — Mandarin Learn
+    Dimension resources for XML layouts / window-level sizing.
+    Most sizing in Compose uses the Dimensions.kt token file instead.
+    These mirror the values in ui/theme/Dimensions.kt for XML consumers.
+-->
+<resources>
+    <!-- Touch targets: 56 dp minimum per CLAUDE.md hard rule -->
+    <dimen name="min_touch_target">56dp</dimen>
+
+    <!-- Standard page horizontal padding -->
+    <dimen name="page_padding_horizontal">16dp</dimen>
+
+    <!-- Spacings (4 dp grid) -->
+    <dimen name="spacing_xxs">4dp</dimen>
+    <dimen name="spacing_xs">8dp</dimen>
+    <dimen name="spacing_s">12dp</dimen>
+    <dimen name="spacing_m">16dp</dimen>
+    <dimen name="spacing_l">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+
+    <!-- Component dimensions -->
+    <dimen name="top_bar_height">64dp</dimen>
+    <dimen name="bottom_nav_height">80dp</dimen>
+    <dimen name="card_corner_radius">12dp</dimen>
+    <dimen name="button_corner_radius">8dp</dimen>
+</resources>

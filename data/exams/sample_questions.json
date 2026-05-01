@@ -1,0 +1,1892 @@
+[
+  {
+    "id": "hsk1_listen_001",
+    "hsk_level": 1,
+    "section": "listening",
+    "question_type": "choose_correct_picture",
+    "question_text": "Listen to the word and choose the correct picture.",
+    "audio_text_chinese": "水",
+    "audio_text_pinyin": "shuǐ",
+    "options": [
+      "A. 水 (water)",
+      "B. 茶 (tea)",
+      "C. 牛奶 (milk)",
+      "D. 果汁 (juice)"
+    ],
+    "correct_answer": "A",
+    "explanation": "The word 水 (shuǐ) means 'water'."
+  },
+  {
+    "id": "hsk1_listen_002",
+    "hsk_level": 1,
+    "section": "listening",
+    "question_type": "judge_true_false",
+    "question_text": "Listen to the sentence and judge whether it matches the picture of a cat.",
+    "audio_text_chinese": "这是一只猫。",
+    "audio_text_pinyin": "zhè shì yī zhī māo.",
+    "options": [
+      "A. 对 (Correct)",
+      "B. 错 (Incorrect)"
+    ],
+    "correct_answer": "A",
+    "explanation": "The sentence says 'This is a cat,' which matches the picture."
+  },
+  {
+    "id": "hsk1_listen_003",
+    "hsk_level": 1,
+    "section": "listening",
+    "question_type": "choose_correct_picture",
+    "question_text": "Listen and choose the picture that matches what you hear.",
+    "audio_text_chinese": "我要吃米饭。",
+    "audio_text_pinyin": "wǒ yào chī mǐfàn.",
+    "options": [
+      "A. 米饭 (rice)",
+      "B. 面条 (noodles)",
+      "C. 包子 (steamed bun)",
+      "D. 饺子 (dumplings)"
+    ],
+    "correct_answer": "A",
+    "explanation": "The speaker says they want to eat rice (米饭 mǐfàn)."
+  },
+  {
+    "id": "hsk1_listen_004",
+    "hsk_level": 1,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "Listen to the question and choose the correct answer.",
+    "audio_text_chinese": "你叫什么名字？",
+    "audio_text_pinyin": "nǐ jiào shénme míngzì?",
+    "options": [
+      "A. 我叫小明。",
+      "B. 我很好。",
+      "C. 我是学生。",
+      "D. 我在学校。"
+    ],
+    "correct_answer": "A",
+    "explanation": "The question asks 'What is your name?' The correct response is to give your name."
+  },
+  {
+    "id": "hsk1_listen_005",
+    "hsk_level": 1,
+    "section": "listening",
+    "question_type": "judge_true_false",
+    "question_text": "Listen to the sentence and judge if the picture (showing a man going to school) matches.",
+    "audio_text_chinese": "他去学校了。",
+    "audio_text_pinyin": "tā qù xuéxiào le.",
+    "options": [
+      "A. 对 (Correct)",
+      "B. 错 (Incorrect)"
+    ],
+    "correct_answer": "A",
+    "explanation": "The sentence says 'He went to school,' which matches a picture of a man going to school."
+  },
+  {
+    "id": "hsk1_listen_006",
+    "hsk_level": 1,
+    "section": "listening",
+    "question_type": "choose_correct_picture",
+    "question_text": "Listen to the number and choose the correct written form.",
+    "audio_text_chinese": "九",
+    "audio_text_pinyin": "jiǔ",
+    "options": [
+      "A. 7",
+      "B. 8",
+      "C. 9",
+      "D. 10"
+    ],
+    "correct_answer": "C",
+    "explanation": "九 (jiǔ) means the number 9."
+  },
+  {
+    "id": "hsk1_listen_007",
+    "hsk_level": 1,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "Listen to the dialogue and answer the question.",
+    "audio_text_chinese": "A: 你好！你是老师吗？ B: 不是，我是学生。",
+    "audio_text_pinyin": "A: nǐ hǎo! nǐ shì lǎoshī ma? B: bù shì, wǒ shì xuésheng.",
+    "options": [
+      "A. 他是老师。",
+      "B. 他是学生。",
+      "C. 他是医生。",
+      "D. 他是爸爸。"
+    ],
+    "correct_answer": "B",
+    "explanation": "Person B says 'No, I am a student (学生 xuésheng).' So the answer is B."
+  },
+  {
+    "id": "hsk1_listen_008",
+    "hsk_level": 1,
+    "section": "listening",
+    "question_type": "choose_correct_picture",
+    "question_text": "Listen and choose the picture that shows the correct time.",
+    "audio_text_chinese": "现在三点钟。",
+    "audio_text_pinyin": "xiànzài sān diǎn zhōng.",
+    "options": [
+      "A. 1:00",
+      "B. 2:00",
+      "C. 3:00",
+      "D. 4:00"
+    ],
+    "correct_answer": "C",
+    "explanation": "三点钟 (sān diǎn zhōng) means 'three o'clock'."
+  },
+  {
+    "id": "hsk1_listen_009",
+    "hsk_level": 1,
+    "section": "listening",
+    "question_type": "judge_true_false",
+    "question_text": "Listen and judge if the picture (showing hot weather/sun) matches the sentence.",
+    "audio_text_chinese": "今天天气很热。",
+    "audio_text_pinyin": "jīntiān tiānqì hěn rè.",
+    "options": [
+      "A. 对 (Correct)",
+      "B. 错 (Incorrect)"
+    ],
+    "correct_answer": "A",
+    "explanation": "The sentence says 'The weather is very hot today,' which matches a picture showing hot/sunny weather."
+  },
+  {
+    "id": "hsk1_listen_010",
+    "hsk_level": 1,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "Listen and choose the correct response.",
+    "audio_text_chinese": "谢谢你！",
+    "audio_text_pinyin": "xièxie nǐ!",
+    "options": [
+      "A. 不客气！",
+      "B. 对不起！",
+      "C. 再见！",
+      "D. 你好！"
+    ],
+    "correct_answer": "A",
+    "explanation": "The natural response to 谢谢 (Thank you) is 不客气 (You're welcome)."
+  },
+  {
+    "id": "hsk1_read_001",
+    "hsk_level": 1,
+    "section": "reading",
+    "question_type": "match_picture_to_word",
+    "question_text": "Match the word to the correct picture.",
+    "audio_text_chinese": "苹果",
+    "audio_text_pinyin": "píngguǒ",
+    "options": [
+      "A. Picture of an apple",
+      "B. Picture of a banana",
+      "C. Picture of an orange",
+      "D. Picture of a pear"
+    ],
+    "correct_answer": "A",
+    "explanation": "苹果 (píngguǒ) means 'apple'."
+  },
+  {
+    "id": "hsk1_read_002",
+    "hsk_level": 1,
+    "section": "reading",
+    "question_type": "select_correct_word",
+    "question_text": "Choose the correct word to fill in the blank: 我___北京人。",
+    "audio_text_chinese": "我___北京人。",
+    "audio_text_pinyin": "wǒ ___ Běijīng rén.",
+    "options": [
+      "A. 是",
+      "B. 有",
+      "C. 去",
+      "D. 来"
+    ],
+    "correct_answer": "A",
+    "explanation": "是 (shì) means 'to be' and is used to link subject to identity: 我是北京人 (I am from Beijing)."
+  },
+  {
+    "id": "hsk1_read_003",
+    "hsk_level": 1,
+    "section": "reading",
+    "question_type": "match_picture_to_word",
+    "question_text": "Which character means 'big'?",
+    "audio_text_chinese": "大",
+    "audio_text_pinyin": "dà",
+    "options": [
+      "A. 大",
+      "B. 小",
+      "C. 多",
+      "D. 少"
+    ],
+    "correct_answer": "A",
+    "explanation": "大 (dà) means 'big/large'."
+  },
+  {
+    "id": "hsk1_read_004",
+    "hsk_level": 1,
+    "section": "reading",
+    "question_type": "select_correct_word",
+    "question_text": "Choose the correct word: 他___学校去了。",
+    "audio_text_chinese": "他___学校去了。",
+    "audio_text_pinyin": "tā ___ xuéxiào qù le.",
+    "options": [
+      "A. 在",
+      "B. 去",
+      "C. 上",
+      "D. 到"
+    ],
+    "correct_answer": "A",
+    "explanation": "在 (zài) is used here to indicate location. However, 上 is also common in 上学. For this simple HSK1 context, 上 fits as 上学校 means 'go to school'."
+  },
+  {
+    "id": "hsk1_read_005",
+    "hsk_level": 1,
+    "section": "reading",
+    "question_type": "match_sentence_to_word",
+    "question_text": "Read the sentence and choose the correct response: 你好！",
+    "audio_text_chinese": "你好！",
+    "audio_text_pinyin": "nǐ hǎo!",
+    "options": [
+      "A. 你好！",
+      "B. 谢谢！",
+      "C. 再见！",
+      "D. 对不起！"
+    ],
+    "correct_answer": "A",
+    "explanation": "你好 (Hello) is reciprocated with 你好 (Hello)."
+  },
+  {
+    "id": "hsk1_read_006",
+    "hsk_level": 1,
+    "section": "reading",
+    "question_type": "select_correct_word",
+    "question_text": "Choose the word that means 'to drink': 我想___水。",
+    "audio_text_chinese": "我想___水。",
+    "audio_text_pinyin": "wǒ xiǎng ___ shuǐ.",
+    "options": [
+      "A. 吃",
+      "B. 喝",
+      "C. 看",
+      "D. 买"
+    ],
+    "correct_answer": "B",
+    "explanation": "喝 (hē) means 'to drink'. One drinks water: 喝水."
+  },
+  {
+    "id": "hsk1_read_007",
+    "hsk_level": 1,
+    "section": "reading",
+    "question_type": "match_picture_to_word",
+    "question_text": "Which character means 'mother'?",
+    "audio_text_chinese": "妈妈",
+    "audio_text_pinyin": "māma",
+    "options": [
+      "A. 妈妈",
+      "B. 爸爸",
+      "C. 哥哥",
+      "D. 姐姐"
+    ],
+    "correct_answer": "A",
+    "explanation": "妈妈 (māma) means 'mother'."
+  },
+  {
+    "id": "hsk1_read_008",
+    "hsk_level": 1,
+    "section": "reading",
+    "question_type": "select_correct_word",
+    "question_text": "Which day is 星期一?",
+    "audio_text_chinese": "星期一是___。",
+    "audio_text_pinyin": "xīngqīyī shì ___.",
+    "options": [
+      "A. Sunday",
+      "B. Monday",
+      "C. Tuesday",
+      "D. Saturday"
+    ],
+    "correct_answer": "B",
+    "explanation": "星期一 (xīngqīyī) means Monday (the first day of the week in the Chinese week system)."
+  },
+  {
+    "id": "hsk1_read_009",
+    "hsk_level": 1,
+    "section": "reading",
+    "question_type": "select_correct_word",
+    "question_text": "Choose the correct question word: ___是你的朋友？",
+    "audio_text_chinese": "___是你的朋友？",
+    "audio_text_pinyin": "___ shì nǐ de péngyou?",
+    "options": [
+      "A. 谁",
+      "B. 什么",
+      "C. 哪里",
+      "D. 怎么"
+    ],
+    "correct_answer": "A",
+    "explanation": "谁 (shuí/shéi) means 'who' and is used to ask about people."
+  },
+  {
+    "id": "hsk1_read_010",
+    "hsk_level": 1,
+    "section": "reading",
+    "question_type": "select_correct_word",
+    "question_text": "Choose the correct number: 我有___个苹果。(I have five apples.)",
+    "audio_text_chinese": "我有___个苹果。",
+    "audio_text_pinyin": "wǒ yǒu ___ gè píngguǒ.",
+    "options": [
+      "A. 三",
+      "B. 四",
+      "C. 五",
+      "D. 六"
+    ],
+    "correct_answer": "C",
+    "explanation": "五 (wǔ) means 'five'."
+  },
+  {
+    "id": "hsk2_listen_001",
+    "hsk_level": 2,
+    "section": "listening",
+    "question_type": "judge_true_false",
+    "question_text": "Listen to the dialogue and judge if the statement is correct.",
+    "audio_text_chinese": "A: 你去图书馆吗？ B: 不去，我要去超市买东西。",
+    "audio_text_pinyin": "A: nǐ qù túshūguǎn ma? B: bù qù, wǒ yào qù chāoshì mǎi dōngxi.",
+    "options": [
+      "A. 对：他去图书馆。",
+      "B. 错：他去超市，不去图书馆。"
+    ],
+    "correct_answer": "B",
+    "explanation": "Person B says they are going to the supermarket (超市), not the library."
+  },
+  {
+    "id": "hsk2_listen_002",
+    "hsk_level": 2,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "Listen to the dialogue. Where is the man going?",
+    "audio_text_chinese": "A: 你现在要去哪里？ B: 我要去医院，我有点儿不舒服。",
+    "audio_text_pinyin": "A: nǐ xiànzài yào qù nǎlǐ? B: wǒ yào qù yīyuàn, wǒ yǒudiǎnr bù shūfu.",
+    "options": [
+      "A. 医院",
+      "B. 学校",
+      "C. 超市",
+      "D. 公司"
+    ],
+    "correct_answer": "A",
+    "explanation": "Person B says he is going to the hospital (医院) because he feels a bit unwell."
+  },
+  {
+    "id": "hsk2_listen_003",
+    "hsk_level": 2,
+    "section": "listening",
+    "question_type": "choose_correct_picture",
+    "question_text": "Listen and choose the correct sport.",
+    "audio_text_chinese": "他喜欢打篮球。",
+    "audio_text_pinyin": "tā xǐhuān dǎ lánqiú.",
+    "options": [
+      "A. 篮球 (basketball)",
+      "B. 足球 (football)",
+      "C. 网球 (tennis)",
+      "D. 游泳 (swimming)"
+    ],
+    "correct_answer": "A",
+    "explanation": "打篮球 (dǎ lánqiú) means 'to play basketball'."
+  },
+  {
+    "id": "hsk2_listen_004",
+    "hsk_level": 2,
+    "section": "listening",
+    "question_type": "judge_true_false",
+    "question_text": "Listen and judge: Does the woman like her job?",
+    "audio_text_chinese": "A: 你喜欢你的工作吗？ B: 喜欢，我觉得很有意思。",
+    "audio_text_pinyin": "A: nǐ xǐhuān nǐ de gōngzuò ma? B: xǐhuān, wǒ juéde hěn yǒu yìsi.",
+    "options": [
+      "A. 对：她喜欢她的工作。",
+      "B. 错：她不喜欢她的工作。"
+    ],
+    "correct_answer": "A",
+    "explanation": "Person B says she likes her job and finds it interesting (有意思)."
+  },
+  {
+    "id": "hsk2_listen_005",
+    "hsk_level": 2,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "Listen to the dialogue. What time does the movie start?",
+    "audio_text_chinese": "A: 电影几点开始？ B: 下午两点半开始。",
+    "audio_text_pinyin": "A: diànyǐng jǐ diǎn kāishǐ? B: xiàwǔ liǎng diǎn bàn kāishǐ.",
+    "options": [
+      "A. 1:30",
+      "B. 2:00",
+      "C. 2:30",
+      "D. 3:00"
+    ],
+    "correct_answer": "C",
+    "explanation": "两点半 (liǎng diǎn bàn) means 2:30 (two-thirty)."
+  },
+  {
+    "id": "hsk2_listen_006",
+    "hsk_level": 2,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "Listen and choose what the woman wants to buy.",
+    "audio_text_chinese": "我想买一件新衣服，因为明天有个重要的会议。",
+    "audio_text_pinyin": "wǒ xiǎng mǎi yī jiàn xīn yīfu, yīnwèi míngtiān yǒu gè zhòngyào de huìyì.",
+    "options": [
+      "A. 新书包",
+      "B. 新衣服",
+      "C. 新手机",
+      "D. 新鞋子"
+    ],
+    "correct_answer": "B",
+    "explanation": "The woman says she wants to buy a new piece of clothing (新衣服 xīn yīfu)."
+  },
+  {
+    "id": "hsk2_listen_007",
+    "hsk_level": 2,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "Listen to the dialogue. How does the man travel to work?",
+    "audio_text_chinese": "A: 你每天怎么去上班？ B: 我骑自行车去。",
+    "audio_text_pinyin": "A: nǐ měitiān zěnme qù shàngbān? B: wǒ qí zìxíngchē qù.",
+    "options": [
+      "A. 公共汽车",
+      "B. 地铁",
+      "C. 自行车",
+      "D. 出租车"
+    ],
+    "correct_answer": "C",
+    "explanation": "Person B says he rides a bicycle (骑自行车 qí zìxíngchē) to work."
+  },
+  {
+    "id": "hsk2_listen_008",
+    "hsk_level": 2,
+    "section": "listening",
+    "question_type": "judge_true_false",
+    "question_text": "Listen and judge: Is the child's score better than last time?",
+    "audio_text_chinese": "这次考试我考了九十分，比上次好多了。",
+    "audio_text_pinyin": "zhè cì kǎoshì wǒ kǎo le jiǔshí fēn, bǐ shàng cì hǎo duō le.",
+    "options": [
+      "A. 对：这次比上次好。",
+      "B. 错：这次比上次差。"
+    ],
+    "correct_answer": "A",
+    "explanation": "The speaker scored 90 points and says it's much better than last time (比上次好多了)."
+  },
+  {
+    "id": "hsk2_listen_009",
+    "hsk_level": 2,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "What season does the woman like most?",
+    "audio_text_chinese": "我最喜欢秋天，因为天气凉快，不冷也不热。",
+    "audio_text_pinyin": "wǒ zuì xǐhuān qiūtiān, yīnwèi tiānqì liángkuài, bù lěng yě bù rè.",
+    "options": [
+      "A. 春天",
+      "B. 夏天",
+      "C. 秋天",
+      "D. 冬天"
+    ],
+    "correct_answer": "C",
+    "explanation": "She says she likes autumn (秋天 qiūtiān) most because the weather is cool."
+  },
+  {
+    "id": "hsk2_listen_010",
+    "hsk_level": 2,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "Where does the man's wife work?",
+    "audio_text_chinese": "我妻子在一家医院工作，她是护士。",
+    "audio_text_pinyin": "wǒ qīzi zài yī jiā yīyuàn gōngzuò, tā shì hùshi.",
+    "options": [
+      "A. 学校",
+      "B. 医院",
+      "C. 银行",
+      "D. 公司"
+    ],
+    "correct_answer": "B",
+    "explanation": "His wife works at a hospital (医院 yīyuàn) and is a nurse (护士 hùshi)."
+  },
+  {
+    "id": "hsk2_read_001",
+    "hsk_level": 2,
+    "section": "reading",
+    "question_type": "choose_correct_word",
+    "question_text": "Choose the correct word: 我比他___高。",
+    "audio_text_chinese": "我比他___高。",
+    "audio_text_pinyin": "wǒ bǐ tā ___ gāo.",
+    "options": [
+      "A. 还",
+      "B. 更",
+      "C. 太",
+      "D. 都"
+    ],
+    "correct_answer": "B",
+    "explanation": "更 (gèng) means 'even more' and is correctly used after 比 comparisons: 我比他更高 (I am even taller than him)."
+  },
+  {
+    "id": "hsk2_read_002",
+    "hsk_level": 2,
+    "section": "reading",
+    "question_type": "fill_in_blank",
+    "question_text": "Choose the correct word to complete the sentence: 他___已经回家了。",
+    "audio_text_chinese": "他___已经回家了。",
+    "audio_text_pinyin": "tā ___ yǐjīng huí jiā le.",
+    "options": [
+      "A. 说",
+      "B. 可能",
+      "C. 因为",
+      "D. 虽然"
+    ],
+    "correct_answer": "B",
+    "explanation": "可能 (kěnéng) means 'maybe/possibly' and fits the sentence 'He has possibly already gone home.'"
+  },
+  {
+    "id": "hsk2_read_003",
+    "hsk_level": 2,
+    "section": "reading",
+    "question_type": "choose_correct_word",
+    "question_text": "Select the correct word: 这道菜很好吃，我___想再吃一碗。",
+    "audio_text_chinese": "这道菜很好吃，我___想再吃一碗。",
+    "audio_text_pinyin": "zhè dào cài hěn hǎochī, wǒ ___ xiǎng zài chī yī wǎn.",
+    "options": [
+      "A. 还",
+      "B. 也",
+      "C. 都",
+      "D. 又"
+    ],
+    "correct_answer": "A",
+    "explanation": "还 (hái) means 'still/also' and is used here to express wanting to eat another bowl."
+  },
+  {
+    "id": "hsk2_read_004",
+    "hsk_level": 2,
+    "section": "reading",
+    "question_type": "sentence_order",
+    "question_text": "Arrange the words into the correct order: 了 / 我 / 作业 / 完成",
+    "audio_text_chinese": "了 / 我 / 作业 / 完成",
+    "audio_text_pinyin": "le / wǒ / zuòyè / wánchéng",
+    "options": [
+      "A. 我完成了作业。",
+      "B. 作业我完成了。",
+      "C. 完成我了作业。",
+      "D. 我作业完成了。"
+    ],
+    "correct_answer": "A",
+    "explanation": "The correct sentence is 我完成了作业 (I finished my homework)."
+  },
+  {
+    "id": "hsk2_read_005",
+    "hsk_level": 2,
+    "section": "reading",
+    "question_type": "choose_correct_word",
+    "question_text": "Choose the correct conjunction: 他很忙，___他还是来了。",
+    "audio_text_chinese": "他很忙，___他还是来了。",
+    "audio_text_pinyin": "tā hěn máng, ___ tā háishi lái le.",
+    "options": [
+      "A. 因为",
+      "B. 但是",
+      "C. 如果",
+      "D. 虽然"
+    ],
+    "correct_answer": "B",
+    "explanation": "但是 (dànshì) means 'but/however' — He was very busy, but he still came."
+  },
+  {
+    "id": "hsk2_read_006",
+    "hsk_level": 2,
+    "section": "reading",
+    "question_type": "choose_correct_word",
+    "question_text": "Choose the correct particle: 他说得很___。",
+    "audio_text_chinese": "他说得很___。",
+    "audio_text_pinyin": "tā shuō de hěn ___.",
+    "options": [
+      "A. 快",
+      "B. 快地",
+      "C. 快的",
+      "D. 快得"
+    ],
+    "correct_answer": "A",
+    "explanation": "After 得 (degree complement marker), an adjective like 快 (fast) is used directly: 说得很快 (speaks very quickly)."
+  },
+  {
+    "id": "hsk2_read_007",
+    "hsk_level": 2,
+    "section": "reading",
+    "question_type": "sentence_order",
+    "question_text": "Arrange the words correctly: 喜欢 / 游泳 / 很 / 她",
+    "audio_text_chinese": "喜欢 / 游泳 / 很 / 她",
+    "audio_text_pinyin": "xǐhuān / yóuyǒng / hěn / tā",
+    "options": [
+      "A. 她很喜欢游泳。",
+      "B. 很她喜欢游泳。",
+      "C. 游泳她很喜欢。",
+      "D. 她喜欢很游泳。"
+    ],
+    "correct_answer": "A",
+    "explanation": "The correct sentence is 她很喜欢游泳 (She really likes swimming)."
+  },
+  {
+    "id": "hsk2_read_008",
+    "hsk_level": 2,
+    "section": "reading",
+    "question_type": "choose_correct_word",
+    "question_text": "Choose the correct time word: ___我去图书馆了。",
+    "audio_text_chinese": "___我去图书馆了。",
+    "audio_text_pinyin": "___ wǒ qù túshūguǎn le.",
+    "options": [
+      "A. 昨天",
+      "B. 明天",
+      "C. 每天",
+      "D. 今天晚上"
+    ],
+    "correct_answer": "A",
+    "explanation": "昨天 (zuótiān) means 'yesterday' and is the most natural fit for a past action using 了."
+  },
+  {
+    "id": "hsk2_read_009",
+    "hsk_level": 2,
+    "section": "reading",
+    "question_type": "choose_correct_word",
+    "question_text": "Choose the word that fits: 我们___一起吃晚饭吧。",
+    "audio_text_chinese": "我们___一起吃晚饭吧。",
+    "audio_text_pinyin": "wǒmen ___ yīqǐ chī wǎnfàn ba.",
+    "options": [
+      "A. 今天晚上",
+      "B. 明天上午",
+      "C. 上个星期",
+      "D. 昨天"
+    ],
+    "correct_answer": "A",
+    "explanation": "今天晚上 (jīntiān wǎnshang) means 'this evening' and fits best for planning to eat dinner."
+  },
+  {
+    "id": "hsk2_read_010",
+    "hsk_level": 2,
+    "section": "reading",
+    "question_type": "sentence_order",
+    "question_text": "Arrange correctly: 上班 / 每天 / 地铁 / 坐 / 他",
+    "audio_text_chinese": "上班 / 每天 / 地铁 / 坐 / 他",
+    "audio_text_pinyin": "shàngbān / měitiān / dìtiě / zuò / tā",
+    "options": [
+      "A. 他每天坐地铁上班。",
+      "B. 坐每天他地铁上班。",
+      "C. 每天他上班坐地铁。",
+      "D. 他上班坐每天地铁。"
+    ],
+    "correct_answer": "A",
+    "explanation": "The correct sentence is 他每天坐地铁上班 (He takes the subway to work every day)."
+  },
+  {
+    "id": "hsk3_listen_001",
+    "hsk_level": 3,
+    "section": "listening",
+    "question_type": "judge_true_false",
+    "question_text": "Listen and judge: Is the man satisfied with the new apartment?",
+    "audio_text_chinese": "这个新公寓很好，交通方便，价格也合理，我很满意。",
+    "audio_text_pinyin": "zhège xīn gōngyù hěn hǎo, jiāotōng fāngbiàn, jiàgé yě hélǐ, wǒ hěn mǎnyì.",
+    "options": [
+      "A. 对：他对新公寓很满意。",
+      "B. 错：他对新公寓不满意。"
+    ],
+    "correct_answer": "A",
+    "explanation": "He says the apartment has convenient transport, a reasonable price, and he is very satisfied (满意 mǎnyì)."
+  },
+  {
+    "id": "hsk3_listen_002",
+    "hsk_level": 3,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "Why didn't the woman go to the party?",
+    "audio_text_chinese": "A: 你昨天为什么没来参加聚会？B: 因为我加班到很晚，实在太累了。",
+    "audio_text_pinyin": "A: nǐ zuótiān wèishéme méi lái cānjiā jùhuì? B: yīnwèi wǒ jiābān dào hěn wǎn, shízài tài lèi le.",
+    "options": [
+      "A. 她生病了。",
+      "B. 她忘了。",
+      "C. 她加班太累了。",
+      "D. 她去旅游了。"
+    ],
+    "correct_answer": "C",
+    "explanation": "She says she worked overtime (加班 jiābān) very late and was too tired (太累了)."
+  },
+  {
+    "id": "hsk3_listen_003",
+    "hsk_level": 3,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "What does the man suggest they do?",
+    "audio_text_chinese": "A: 你想去哪里玩？B: 我觉得我们可以去爬山，天气这么好，正适合户外活动。",
+    "audio_text_pinyin": "A: nǐ xiǎng qù nǎlǐ wán? B: wǒ juéde wǒmen kěyǐ qù pá shān, tiānqì zhème hǎo, zhèng shìhé hùwài huódòng.",
+    "options": [
+      "A. 去购物",
+      "B. 去爬山",
+      "C. 去看电影",
+      "D. 在家休息"
+    ],
+    "correct_answer": "B",
+    "explanation": "The man suggests going hiking (爬山 pá shān) because the weather is so good."
+  },
+  {
+    "id": "hsk3_listen_004",
+    "hsk_level": 3,
+    "section": "listening",
+    "question_type": "judge_true_false",
+    "question_text": "Listen and judge: Has the woman been to China before?",
+    "audio_text_chinese": "这是我第一次来中国，一切都让我感到非常新奇。",
+    "audio_text_pinyin": "zhè shì wǒ dì yī cì lái Zhōngguó, yīqiè dōu ràng wǒ gǎndào fēicháng xīnqí.",
+    "options": [
+      "A. 对：她以前没来过中国。",
+      "B. 错：她以前来过中国。"
+    ],
+    "correct_answer": "A",
+    "explanation": "She says this is her first time (第一次 dì yī cì) coming to China, meaning she hasn't been before."
+  },
+  {
+    "id": "hsk3_listen_005",
+    "hsk_level": 3,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "What time will they meet?",
+    "audio_text_chinese": "A: 我们几点见面？B: 下午三点怎么样？A: 好，三点在图书馆门口见。",
+    "audio_text_pinyin": "A: wǒmen jǐ diǎn jiànmiàn? B: xiàwǔ sān diǎn zěnmeyàng? A: hǎo, sān diǎn zài túshūguǎn ménkǒu jiàn.",
+    "options": [
+      "A. 两点",
+      "B. 三点",
+      "C. 四点",
+      "D. 五点"
+    ],
+    "correct_answer": "B",
+    "explanation": "They agree to meet at three o'clock (三点 sān diǎn) at the library entrance."
+  },
+  {
+    "id": "hsk3_listen_006",
+    "hsk_level": 3,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "What is the woman's job?",
+    "audio_text_chinese": "我在一所中学当老师，主要教数学，已经工作十年了。",
+    "audio_text_pinyin": "wǒ zài yī suǒ zhōngxué dāng lǎoshī, zhǔyào jiāo shùxué, yǐjīng gōngzuò shí nián le.",
+    "options": [
+      "A. 医生",
+      "B. 数学老师",
+      "C. 英语老师",
+      "D. 护士"
+    ],
+    "correct_answer": "B",
+    "explanation": "She teaches mathematics (数学 shùxué) at a middle school."
+  },
+  {
+    "id": "hsk3_listen_007",
+    "hsk_level": 3,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "How does the man feel about his Chinese learning progress?",
+    "audio_text_chinese": "我觉得我的中文进步很慢，特别是写汉字的时候，总是写错。",
+    "audio_text_pinyin": "wǒ juéde wǒ de zhōngwén jìnbù hěn màn, tèbié shì xiě hànzì de shíhou, zǒngshì xiě cuò.",
+    "options": [
+      "A. 他觉得进步很快。",
+      "B. 他觉得进步很慢。",
+      "C. 他觉得汉语很容易。",
+      "D. 他觉得汉字很简单。"
+    ],
+    "correct_answer": "B",
+    "explanation": "He says his Chinese progress is very slow (进步很慢 jìnbù hěn màn), especially when writing characters."
+  },
+  {
+    "id": "hsk3_listen_008",
+    "hsk_level": 3,
+    "section": "listening",
+    "question_type": "judge_true_false",
+    "question_text": "Listen and judge: Will the library be open on Sunday?",
+    "audio_text_chinese": "图书馆周一到周六开放，周日休息，不对外开放。",
+    "audio_text_pinyin": "túshūguǎn zhōuyī dào zhōuliù kāifàng, zhōurì xiūxi, bù duì wài kāifàng.",
+    "options": [
+      "A. 对：图书馆周日开放。",
+      "B. 错：图书馆周日不开放。"
+    ],
+    "correct_answer": "B",
+    "explanation": "The library is open Monday to Saturday and closed (休息 xiūxi) on Sunday."
+  },
+  {
+    "id": "hsk3_listen_009",
+    "hsk_level": 3,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "What does the woman recommend the man do?",
+    "audio_text_chinese": "你应该多锻炼，少吃油腻的食物，这样身体会越来越好的。",
+    "audio_text_pinyin": "nǐ yīnggāi duō duànliàn, shǎo chī yóunì de shíwù, zhèyàng shēntǐ huì yuèláiyuè hǎo de.",
+    "options": [
+      "A. 多休息",
+      "B. 多看书",
+      "C. 多锻炼，少吃油腻",
+      "D. 多喝汤"
+    ],
+    "correct_answer": "C",
+    "explanation": "She recommends exercising more (多锻炼 duō duànliàn) and eating less greasy food (少吃油腻 shǎo chī yóunì)."
+  },
+  {
+    "id": "hsk3_listen_010",
+    "hsk_level": 3,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "Why is the man late?",
+    "audio_text_chinese": "对不起，我迟到了！路上堵车，我等了半个多小时的公共汽车。",
+    "audio_text_pinyin": "duìbuqǐ, wǒ chídào le! lùshàng dǔchē, wǒ děng le bàn gè duō xiǎoshí de gōnggòng qìchē.",
+    "options": [
+      "A. 他找不到地方。",
+      "B. 他睡过头了。",
+      "C. 路上堵车了。",
+      "D. 他忘记了。"
+    ],
+    "correct_answer": "C",
+    "explanation": "He was late because of a traffic jam (堵车 dǔchē) and had to wait for the bus for over half an hour."
+  },
+  {
+    "id": "hsk3_read_001",
+    "hsk_level": 3,
+    "section": "reading",
+    "question_type": "choose_correct_word",
+    "question_text": "Choose the correct word: 这件事情___你来决定。",
+    "audio_text_chinese": "这件事情___你来决定。",
+    "audio_text_pinyin": "zhè jiàn shìqíng ___ nǐ lái juédìng.",
+    "options": [
+      "A. 由",
+      "B. 被",
+      "C. 把",
+      "D. 让"
+    ],
+    "correct_answer": "A",
+    "explanation": "由 (yóu) means 'by/up to' and is used to indicate who performs an action: 由你来决定 (for you to decide)."
+  },
+  {
+    "id": "hsk3_read_002",
+    "hsk_level": 3,
+    "section": "reading",
+    "question_type": "reading_comprehension",
+    "question_text": "Read the passage and answer: Why does the author prefer autumn?",
+    "audio_text_chinese": "我最喜欢秋天。秋天天气凉爽，不像夏天那么热，也不像冬天那么冷。秋天还有很多好吃的水果，比如苹果、梨和橘子。",
+    "audio_text_pinyin": "wǒ zuì xǐhuān qiūtiān. qiūtiān tiānqì liángshuǎng, bù xiàng xiàtiān nàme rè, yě bù xiàng dōngtiān nàme lěng. qiūtiān hái yǒu hěn duō hǎochī de shuǐguǒ, bǐrú píngguǒ, lí hé júzi.",
+    "options": [
+      "A. 秋天可以滑雪。",
+      "B. 秋天天气凉爽，水果多。",
+      "C. 秋天可以游泳。",
+      "D. 秋天很热。"
+    ],
+    "correct_answer": "B",
+    "explanation": "The passage says autumn is cool and pleasant, and there are many delicious fruits like apples, pears, and oranges."
+  },
+  {
+    "id": "hsk3_read_003",
+    "hsk_level": 3,
+    "section": "reading",
+    "question_type": "choose_correct_word",
+    "question_text": "Choose the correct connector: ___他很累，___他还坚持跑完了马拉松。",
+    "audio_text_chinese": "___他很累，___他还坚持跑完了马拉松。",
+    "audio_text_pinyin": "___ tā hěn lèi, ___ tā hái jiānchí pǎo wán le mǎlāsōng.",
+    "options": [
+      "A. 因为…所以",
+      "B. 虽然…但是",
+      "C. 如果…就",
+      "D. 只要…就"
+    ],
+    "correct_answer": "B",
+    "explanation": "虽然…但是 (suīrán…dànshì) means 'although…but' — Although he was very tired, he still persisted in finishing the marathon."
+  },
+  {
+    "id": "hsk3_read_004",
+    "hsk_level": 3,
+    "section": "reading",
+    "question_type": "reading_comprehension",
+    "question_text": "Read and answer: What is the main advice given to students?",
+    "audio_text_chinese": "学习语言最重要的是多说多练习。不要怕说错，错误是进步的老师。每天坚持练习，哪怕只有十分钟，也会有很大进步的。",
+    "audio_text_pinyin": "xuéxí yǔyán zuì zhòngyào de shì duō shuō duō liànxí. bùyào pà shuō cuò, cuòwù shì jìnbù de lǎoshī. měitiān jiānchí liànxí, nǎpà zhǐyǒu shí fēnzhōng, yě huì yǒu hěn dà jìnbù de.",
+    "options": [
+      "A. 多读书",
+      "B. 多说多练习，不怕犯错",
+      "C. 找外国朋友",
+      "D. 背很多词汇"
+    ],
+    "correct_answer": "B",
+    "explanation": "The passage advises to speak and practice more (多说多练习), not be afraid of making mistakes, and persist daily."
+  },
+  {
+    "id": "hsk3_read_005",
+    "hsk_level": 3,
+    "section": "reading",
+    "question_type": "choose_correct_word",
+    "question_text": "Choose the correct preposition: 他把书___桌子上。",
+    "audio_text_chinese": "他把书___桌子上。",
+    "audio_text_pinyin": "tā bǎ shū ___ zhuōzi shàng.",
+    "options": [
+      "A. 放",
+      "B. 放在",
+      "C. 在放",
+      "D. 上放"
+    ],
+    "correct_answer": "B",
+    "explanation": "放在 (fàng zài) means 'to place on'. The sentence means 'He placed the book on the table.'"
+  },
+  {
+    "id": "hsk3_write_001",
+    "hsk_level": 3,
+    "section": "writing",
+    "question_type": "reorder_sentence",
+    "question_text": "Reorder the words into a correct sentence: 越来越 / 他的 / 中文 / 好 / 说得",
+    "audio_text_chinese": "越来越 / 他的 / 中文 / 好 / 说得",
+    "audio_text_pinyin": "yuèláiyuè / tā de / zhōngwén / hǎo / shuō de",
+    "options": [
+      "A. 他的中文说得越来越好。",
+      "B. 越来越他的中文说得好。",
+      "C. 他的越来越中文好说得。",
+      "D. 说得他的越来越中文好。"
+    ],
+    "correct_answer": "A",
+    "explanation": "The correct sentence is 他的中文说得越来越好 (His Chinese is getting better and better)."
+  },
+  {
+    "id": "hsk3_write_002",
+    "hsk_level": 3,
+    "section": "writing",
+    "question_type": "fill_in_blank",
+    "question_text": "Write the character for this pinyin in context: 他非常___心 (xì) 地检查了作业。",
+    "audio_text_chinese": "他非常___心地检查了作业。",
+    "audio_text_pinyin": "tā fēicháng ___ xīn de jiǎnchá le zuòyè.",
+    "options": [
+      "A. 细",
+      "B. 系",
+      "C. 西",
+      "D. 希"
+    ],
+    "correct_answer": "A",
+    "explanation": "细心 (xìxīn) means 'careful/attentive'. He very carefully checked his homework."
+  },
+  {
+    "id": "hsk3_write_003",
+    "hsk_level": 3,
+    "section": "writing",
+    "question_type": "reorder_sentence",
+    "question_text": "Reorder correctly: 下 / 明天 / 可能 / 雪 / 会",
+    "audio_text_chinese": "下 / 明天 / 可能 / 雪 / 会",
+    "audio_text_pinyin": "xià / míngtiān / kěnéng / xuě / huì",
+    "options": [
+      "A. 明天可能会下雪。",
+      "B. 会下雪明天可能。",
+      "C. 可能明天下会雪。",
+      "D. 明天下雪可能会。"
+    ],
+    "correct_answer": "A",
+    "explanation": "The correct sentence is 明天可能会下雪 (It might snow tomorrow)."
+  },
+  {
+    "id": "hsk3_write_004",
+    "hsk_level": 3,
+    "section": "writing",
+    "question_type": "fill_in_blank",
+    "question_text": "Fill in the blank with the correct character: 她___（xiào）着对我说谢谢。",
+    "audio_text_chinese": "她___着对我说谢谢。",
+    "audio_text_pinyin": "tā ___ zhe duì wǒ shuō xièxie.",
+    "options": [
+      "A. 笑",
+      "B. 校",
+      "C. 效",
+      "D. 孝"
+    ],
+    "correct_answer": "A",
+    "explanation": "笑 (xiào) means 'to smile/laugh'. She smiled and said thank you to me."
+  },
+  {
+    "id": "hsk3_write_005",
+    "hsk_level": 3,
+    "section": "writing",
+    "question_type": "reorder_sentence",
+    "question_text": "Reorder: 你 / 如果 / 需要帮助 / 告诉 / 我",
+    "audio_text_chinese": "你 / 如果 / 需要帮助 / 告诉 / 我",
+    "audio_text_pinyin": "nǐ / rúguǒ / xūyào bāngzhù / gàosu / wǒ",
+    "options": [
+      "A. 如果你需要帮助，告诉我。",
+      "B. 你告诉我如果需要帮助。",
+      "C. 告诉我你如果需要帮助。",
+      "D. 如果告诉我你需要帮助。"
+    ],
+    "correct_answer": "A",
+    "explanation": "The correct sentence is 如果你需要帮助，告诉我 (If you need help, tell me)."
+  },
+  {
+    "id": "hsk4_listen_001",
+    "hsk_level": 4,
+    "section": "listening",
+    "question_type": "judge_true_false",
+    "question_text": "Listen and judge: Is the speaker optimistic about the company's future?",
+    "audio_text_chinese": "尽管目前市场竞争非常激烈，但我们公司的产品质量有口皆碑，我相信只要坚持创新，前景一定是光明的。",
+    "audio_text_pinyin": "jǐnguǎn mùqián shìchǎng jìngzhēng fēicháng jīliè, dàn wǒmen gōngsī de chǎnpǐn zhìliàng yǒukǒu jiēbēi, wǒ xiāngxìn zhǐyào jiānchí chuàngxīn, qiánjǐng yīdìng shì guāngmíng de.",
+    "options": [
+      "A. 对：他对公司前景很乐观。",
+      "B. 错：他对公司前景不乐观。"
+    ],
+    "correct_answer": "A",
+    "explanation": "The speaker believes that as long as they persist with innovation, the future will be bright (光明), indicating optimism."
+  },
+  {
+    "id": "hsk4_listen_002",
+    "hsk_level": 4,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "What does the woman think is the most important quality for a leader?",
+    "audio_text_chinese": "我认为领导者最重要的品质不是聪明，而是有同理心，能够理解和关心团队成员。",
+    "audio_text_pinyin": "wǒ rènwéi lǐngdǎo zhě zuì zhòngyào de pǐnzhì bùshì cōngmíng, ér shì yǒu tónglǐxīn, nénggòu lǐjiě hé guānxīn tuánduì chéngyuán.",
+    "options": [
+      "A. 聪明",
+      "B. 有同理心",
+      "C. 工作努力",
+      "D. 有经验"
+    ],
+    "correct_answer": "B",
+    "explanation": "She says the most important quality is empathy (同理心 tónglǐxīn), not being smart."
+  },
+  {
+    "id": "hsk4_listen_003",
+    "hsk_level": 4,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "What is the main topic of the radio programme?",
+    "audio_text_chinese": "今天的节目主要讨论当前年轻人面临的就业压力以及如何通过提升自身技能来应对这一挑战。",
+    "audio_text_pinyin": "jīntiān de jiémù zhǔyào tǎolùn dāngqián niánqīngrén miànlín de jiùyè yālì yǐjí rúhé tōngguò tíshēng zìshēn jìnéng lái yìngduì zhè yī tiǎozhàn.",
+    "options": [
+      "A. 旅游文化",
+      "B. 年轻人的就业压力",
+      "C. 老年人健康",
+      "D. 教育改革"
+    ],
+    "correct_answer": "B",
+    "explanation": "The programme discusses the employment pressure (就业压力 jiùyè yālì) faced by young people."
+  },
+  {
+    "id": "hsk4_listen_004",
+    "hsk_level": 4,
+    "section": "listening",
+    "question_type": "judge_true_false",
+    "question_text": "Listen and judge: Did the project finish on time?",
+    "audio_text_chinese": "由于团队成员加班加点，这个项目终于在截止日期前一天完成了，大家都松了一口气。",
+    "audio_text_pinyin": "yóuyú tuánduì chéngyuán jiābān jiādiǎn, zhège xiàngmù zhōngyú zài jiézhǐ rìqī qián yī tiān wánchéng le, dàjiā dōu sōng le yī kǒu qì.",
+    "options": [
+      "A. 对：项目提前一天完成了。",
+      "B. 错：项目没有完成。"
+    ],
+    "correct_answer": "A",
+    "explanation": "The project was completed one day before the deadline (截止日期前一天 jiézhǐ rìqī qián yī tiān), meaning it finished on time/early."
+  },
+  {
+    "id": "hsk4_listen_005",
+    "hsk_level": 4,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "What will the man do to improve his health?",
+    "audio_text_chinese": "医生建议我每周至少锻炼三次，每次不少于三十分钟，并且要减少高脂肪食物的摄入。",
+    "audio_text_pinyin": "yīshēng jiànyì wǒ měi zhōu zhìshǎo duànliàn sān cì, měi cì bù shǎo yú sānshí fēnzhōng, bìngqiě yào jiǎnshǎo gāo zhīfáng shíwù de shèrù.",
+    "options": [
+      "A. 每天锻炼一小时",
+      "B. 每周锻炼至少三次，减少高脂肪摄入",
+      "C. 每天吃药",
+      "D. 多睡觉"
+    ],
+    "correct_answer": "B",
+    "explanation": "The doctor advised exercising at least three times a week (每周至少三次) and reducing high-fat food intake."
+  },
+  {
+    "id": "hsk4_read_001",
+    "hsk_level": 4,
+    "section": "reading",
+    "question_type": "choose_correct_word",
+    "question_text": "Choose the correct word: 他的演讲非常精彩，台下观众___鼓掌。",
+    "audio_text_chinese": "他的演讲非常精彩，台下观众___鼓掌。",
+    "audio_text_pinyin": "tā de yǎnjiǎng fēicháng jīngcǎi, táixià guānzhòng ___ gǔzhǎng.",
+    "options": [
+      "A. 纷纷",
+      "B. 慢慢",
+      "C. 稍微",
+      "D. 几乎"
+    ],
+    "correct_answer": "A",
+    "explanation": "纷纷 (fēnfēn) means 'one after another/in great numbers' — the audience burst into applause."
+  },
+  {
+    "id": "hsk4_read_002",
+    "hsk_level": 4,
+    "section": "reading",
+    "question_type": "passage_comprehension",
+    "question_text": "Read the passage and choose the best title.",
+    "audio_text_chinese": "随着互联网的发展，越来越多的人选择网上购物。这不仅节省了时间，而且可以轻松比较不同商品的价格。然而，网上购物也存在一些风险，如商品质量难以保证、个人信息泄露等。",
+    "audio_text_pinyin": "suízhe hùliánwǎng de fāzhǎn, yuèláiyuè duō de rén xuǎnzé wǎngshàng gòuwù. zhè bùjǐn jiéshěngle shíjiān, érqiě kěyǐ qīngsōng bǐjiào bùtóng shāngpǐn de jiàgé. rán ér, wǎngshàng gòuwù yě cúnzài yīxiē fēngxiǎn, rú shāngpǐn zhìliàng nányǐ bǎozhèng, gèrén xìnxī xìlòu děng.",
+    "options": [
+      "A. 网上购物的利与弊",
+      "B. 互联网的历史",
+      "C. 如何比较商品价格",
+      "D. 网络安全的重要性"
+    ],
+    "correct_answer": "A",
+    "explanation": "The passage discusses both the advantages (saves time, easy price comparison) and risks (quality, privacy) of online shopping."
+  },
+  {
+    "id": "hsk4_read_003",
+    "hsk_level": 4,
+    "section": "reading",
+    "question_type": "choose_correct_word",
+    "question_text": "Choose the correct word: 这个问题___很复杂，需要认真研究。",
+    "audio_text_chinese": "这个问题___很复杂，需要认真研究。",
+    "audio_text_pinyin": "zhège wèntí ___ hěn fùzá, xūyào rènzhēn yánjiū.",
+    "options": [
+      "A. 相当",
+      "B. 相比",
+      "C. 相互",
+      "D. 相信"
+    ],
+    "correct_answer": "A",
+    "explanation": "相当 (xiāngdāng) means 'quite/rather' as an adverb — This issue is quite complex."
+  },
+  {
+    "id": "hsk4_read_004",
+    "hsk_level": 4,
+    "section": "reading",
+    "question_type": "passage_comprehension",
+    "question_text": "According to the passage, what is the biggest challenge of city life?",
+    "audio_text_chinese": "城市生活为人们提供了更多的就业机会和便利设施，但同时也带来了巨大的生活压力。许多城市居民感到孤独，缺乏真实的人际交往。快节奏的生活使人们没有时间关心身边的人。",
+    "audio_text_pinyin": "chéngshì shēnghuó wèi rénmen tígōng le gèng duō de jiùyè jīhuì hé biànlì shèshī, dàn tóngshí yě dàilái le jùdà de shēnghuó yālì. xǔduō chéngshì jūmín gǎndào gūdú, quēfá zhēnshí de rénjì jiāowǎng. kuài jiézòu de shēnghuó shǐ rénmen méiyǒu shíjiān guānxīn shēnbiān de rén.",
+    "options": [
+      "A. 交通堵塞",
+      "B. 孤独感和缺乏真实人际交往",
+      "C. 工作机会少",
+      "D. 空气污染"
+    ],
+    "correct_answer": "B",
+    "explanation": "The passage says city residents feel lonely (孤独 gūdú) and lack genuine human connection (真实的人际交往)."
+  },
+  {
+    "id": "hsk4_read_005",
+    "hsk_level": 4,
+    "section": "reading",
+    "question_type": "sentence_matching",
+    "question_text": "Choose the sentence that best completes the paragraph about environmental protection.",
+    "audio_text_chinese": "保护环境是每个人的责任。___只有每个人都积极行动起来，才能真正改变现状。",
+    "audio_text_pinyin": "bǎohù huánjìng shì měi gè rén de zérèn. ___ zhǐyǒu měi gè rén dōu jījí xíngdòng qǐlái, cái néng zhēnzhèng gǎibiàn xiànzhuàng.",
+    "options": [
+      "A. 我喜欢旅行。",
+      "B. 我们不能把这个问题留给政府去解决。",
+      "C. 今天天气很好。",
+      "D. 学校很重要。"
+    ],
+    "correct_answer": "B",
+    "explanation": "The sentence about not leaving the problem to the government connects logically to emphasizing individual responsibility and collective action."
+  },
+  {
+    "id": "hsk4_write_001",
+    "hsk_level": 4,
+    "section": "writing",
+    "question_type": "reorder_sentence",
+    "question_text": "Reorder: 对 / 重要 / 的 / 影响 / 社会 / 科技 / 越来越",
+    "audio_text_chinese": "对 / 重要 / 的 / 影响 / 社会 / 科技 / 越来越",
+    "audio_text_pinyin": "duì / zhòngyào / de / yǐngxiǎng / shèhuì / kējì / yuèláiyuè",
+    "options": [
+      "A. 科技对社会的影响越来越重要。",
+      "B. 社会对科技的越来越重要影响。",
+      "C. 越来越重要科技对社会的影响。",
+      "D. 对社会科技越来越的重要影响。"
+    ],
+    "correct_answer": "A",
+    "explanation": "The correct sentence is 科技对社会的影响越来越重要 (Technology's impact on society is becoming increasingly important)."
+  },
+  {
+    "id": "hsk4_write_002",
+    "hsk_level": 4,
+    "section": "writing",
+    "question_type": "reorder_sentence",
+    "question_text": "Reorder: 不仅 / 还 / 英语 / 他 / 汉语 / 说 / 会 / 会说",
+    "audio_text_chinese": "不仅 / 还 / 英语 / 他 / 汉语 / 说 / 会 / 会说",
+    "audio_text_pinyin": "bùjǐn / hái / yīngyǔ / tā / hànyǔ / shuō / huì / huìshuō",
+    "options": [
+      "A. 他不仅会说汉语，还会说英语。",
+      "B. 他汉语不仅会说还英语会说。",
+      "C. 不仅汉语还他会说英语会说。",
+      "D. 还会说英语不仅他汉语。"
+    ],
+    "correct_answer": "A",
+    "explanation": "不仅…还 (bùjǐn…hái) means 'not only…but also' — He can speak not only Chinese but also English."
+  },
+  {
+    "id": "hsk4_write_003",
+    "hsk_level": 4,
+    "section": "writing",
+    "question_type": "guided_writing",
+    "question_text": "Write a short paragraph (at least 80 characters) describing the advantages and disadvantages of living in a big city.",
+    "audio_text_chinese": "题目：住在大城市的利与弊",
+    "audio_text_pinyin": "tímù: zhù zài dà chéngshì de lì yǔ bì",
+    "options": [
+      "Sample response: 住在大城市有很多优点：工作机会多，交通方便，文化活动丰富。但是，大城市也有一些缺点，比如房价贵、生活压力大、空气质量差等。总的来说，住在大城市的选择因人而异，取决于个人的需求和生活方式。"
+    ],
+    "correct_answer": "Sample response",
+    "explanation": "A good response should mention both advantages (opportunities, convenience) and disadvantages (high cost, stress, pollution) of city life."
+  },
+  {
+    "id": "hsk5_listen_001",
+    "hsk_level": 5,
+    "section": "listening",
+    "question_type": "judge_true_false",
+    "question_text": "Listen and judge: Does the speaker believe AI will replace all human jobs?",
+    "audio_text_chinese": "人工智能的崛起并不意味着人类工作的终结。相反，它将催生大量新型职业，并将人类从重复性劳动中解放出来，使我们有更多精力投入创造性工作。",
+    "audio_text_pinyin": "réngōng zhìnéng de juéqǐ bìng bù yìwèizhe rénlèi gōngzuò de zhōngjié. xiāngfǎn, tā jiāng cuīshēng dàliàng xīnxíng zhíyè, bìng jiāng rénlèi cóng chóngfùxìng láodòng zhōng jiěfàng chūlái, shǐ wǒmen yǒu gèng duō jīnglì tóurù chuàngzàoxìng gōngzuò.",
+    "options": [
+      "A. 对：AI会替代所有人类工作。",
+      "B. 错：AI不会替代所有工作，还会创造新型职业。"
+    ],
+    "correct_answer": "B",
+    "explanation": "The speaker says AI will not end human work but will create new types of jobs and free people from repetitive labor for creative work."
+  },
+  {
+    "id": "hsk5_listen_002",
+    "hsk_level": 5,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "What does the professor say is the core problem with modern education?",
+    "audio_text_chinese": "现代教育最大的问题在于，它把学生培养成了信息的接收者，而不是问题的提出者和解决者。我们需要一种能激发学生批判性思维和创新精神的教学方法。",
+    "audio_text_pinyin": "xiàndài jiàoyù zuì dà de wèntí zài yú, tā bǎ xuéshēng péiyǎng chéng le xìnxī de jiēshōu zhě, ér bùshì wèntí de tíchū zhě hé jiějué zhě. wǒmen xūyào yī zhǒng néng jīfā xuéshēng pīpànxìng sīwéi hé chuàngxīn jīngshén de jiāoxué fāngfǎ.",
+    "options": [
+      "A. 学生学习时间不够",
+      "B. 学生是信息接收者而非问题解决者",
+      "C. 老师资历不足",
+      "D. 学校资金短缺"
+    ],
+    "correct_answer": "B",
+    "explanation": "The professor says education's biggest problem is that students are trained as information receivers, not as problem-posers and problem-solvers."
+  },
+  {
+    "id": "hsk5_listen_003",
+    "hsk_level": 5,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "What is the speaker's main argument about cultural heritage?",
+    "audio_text_chinese": "文化遗产的保护不能仅仅停留在博物馆里，它必须融入当代人的日常生活，成为活生生的传统，才能真正得到传承和发扬。",
+    "audio_text_pinyin": "wénhuà yíchǎn de bǎohù bùnéng jǐnjǐn tínglíu zài bówùguǎn lǐ, tā bìxū róngrù dāngdài rén de rìcháng shēnghuó, chéngwéi huóshēngshēng de chuántǒng, cái néng zhēnzhèng dédào chuánchéng hé fāyáng.",
+    "options": [
+      "A. 文化遗产只需要放在博物馆里保护",
+      "B. 文化遗产必须融入日常生活才能传承",
+      "C. 文化遗产已经不重要了",
+      "D. 博物馆是保护文化遗产最好的方式"
+    ],
+    "correct_answer": "B",
+    "explanation": "The speaker argues that cultural heritage must be integrated into daily life (融入当代人的日常生活) to be truly passed down."
+  },
+  {
+    "id": "hsk5_listen_004",
+    "hsk_level": 5,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "According to the lecture, what is 'flow state'?",
+    "audio_text_chinese": "心流状态是指一个人完全沉浸在某项活动中，以至于忘记了时间的流逝。在这种状态下，人的效率和创造力往往是最高的。",
+    "audio_text_pinyin": "xīnliú zhuàngtài shì zhǐ yī gè rén wánquán chénjìn zài mǒu xiàng huódòng zhōng, yǐzhì wàngjì le shíjiān de liúshì. zài zhè zhǒng zhuàngtài xià, rén de xiàolǜ hé chuàngzàolì wǎngwǎng shì zuì gāo de.",
+    "options": [
+      "A. 一种放松的状态",
+      "B. 完全沉浸于活动、忘记时间的高效状态",
+      "C. 一种睡眠状态",
+      "D. 感到无聊的状态"
+    ],
+    "correct_answer": "B",
+    "explanation": "Flow state (心流状态) is described as being completely immersed in an activity and forgetting the passage of time, resulting in peak efficiency and creativity."
+  },
+  {
+    "id": "hsk5_listen_005",
+    "hsk_level": 5,
+    "section": "listening",
+    "question_type": "judge_true_false",
+    "question_text": "Listen and judge: Is the speaker saying that globalization benefits only wealthy countries?",
+    "audio_text_chinese": "全球化的好处并不只限于发达国家。事实上，许多发展中国家通过参与全球贸易，实现了快速的经济增长，数百万人因此摆脱了贫困。",
+    "audio_text_pinyin": "quánqiúhuà de hǎochu bìng bù zhǐ xiànyú fādá guójiā. shìshí shàng, xǔduō fāzhǎnzhōng guójiā tōngguò cānyù quánqiú màoyì, shíxiàn le kuàisù de jīngjì zēngzhǎng, shùbǎi wàn rén yīncǐ bǎituō le pínkùn.",
+    "options": [
+      "A. 对：全球化只对富国有好处。",
+      "B. 错：全球化也帮助了发展中国家摆脱贫困。"
+    ],
+    "correct_answer": "B",
+    "explanation": "The speaker says globalization is NOT limited to wealthy countries — many developing countries have grown economically and millions have escaped poverty."
+  },
+  {
+    "id": "hsk5_read_001",
+    "hsk_level": 5,
+    "section": "reading",
+    "question_type": "choose_correct_word",
+    "question_text": "Choose the correct word: 他的发言虽然简短，却___地表达了大家的心声。",
+    "audio_text_chinese": "他的发言虽然简短，却___地表达了大家的心声。",
+    "audio_text_pinyin": "tā de fāyán suīrán jiǎnduǎn, què ___ de biǎodá le dàjiā de xīnshēng.",
+    "options": [
+      "A. 深刻",
+      "B. 浅薄",
+      "C. 随便",
+      "D. 仓促"
+    ],
+    "correct_answer": "A",
+    "explanation": "深刻 (shēnkè) means 'profound/deep' — his short speech profoundly expressed everyone's sentiments."
+  },
+  {
+    "id": "hsk5_read_002",
+    "hsk_level": 5,
+    "section": "reading",
+    "question_type": "long_text_analysis",
+    "question_text": "Read the passage and choose the author's main viewpoint.",
+    "audio_text_chinese": "在信息爆炸的时代，我们面临的最大挑战不是信息的匮乏，而是如何从海量数据中筛选出有价值的内容。批判性思维的培养因此变得尤为重要。只有具备独立判断能力的人，才能在信息的洪流中保持清醒的头脑，作出明智的决策。",
+    "audio_text_pinyin": "zài xìnxī bàozhà de shídài, wǒmen miànlín de zuì dà tiǎozhàn bùshì xìnxī de kuìfá, ér shì rúhé cóng hǎiliàng shùjù zhōng shāixuǎn chū yǒu jiàzhí de nèiróng. pīpànxìng sīwéi de péiyǎng yīncǐ biàn de yóuwéi zhòngyào. zhǐyǒu jùbèi dúlì pànduàn nénglì de rén, cái néng zài xìnxī de hónglíu zhōng bǎochí qīngxǐng de tóunǎo, zuòchū míngzhì de juécè.",
+    "options": [
+      "A. 我们应该减少使用网络",
+      "B. 在信息时代，培养批判性思维和独立判断能力至关重要",
+      "C. 信息越多越好",
+      "D. 科技发展带来了太多问题"
+    ],
+    "correct_answer": "B",
+    "explanation": "The author's main point is that in the information age, developing critical thinking and independent judgment (批判性思维，独立判断能力) is crucial."
+  },
+  {
+    "id": "hsk5_read_003",
+    "hsk_level": 5,
+    "section": "reading",
+    "question_type": "choose_correct_word",
+    "question_text": "Choose the best word to complete: 他___了多年的心血，终于完成了这部巨著。",
+    "audio_text_chinese": "他___了多年的心血，终于完成了这部巨著。",
+    "audio_text_pinyin": "tā ___ le duō nián de xīnxuè, zhōngyú wánchéng le zhè bù jùzhù.",
+    "options": [
+      "A. 积累",
+      "B. 浪费",
+      "C. 节省",
+      "D. 忽视"
+    ],
+    "correct_answer": "A",
+    "explanation": "积累 (jīlěi) means 'to accumulate' — He accumulated years of painstaking effort and finally completed this masterpiece."
+  },
+  {
+    "id": "hsk5_read_004",
+    "hsk_level": 5,
+    "section": "reading",
+    "question_type": "long_text_analysis",
+    "question_text": "Read the passage. What does the writer suggest as a solution to urban loneliness?",
+    "audio_text_chinese": "都市化进程造成了人与人之间的疏离。越来越多的城市居民生活在人群中却感到孤独。解决这一问题的关键不在于技术，而在于重建真实的社区纽带——鼓励邻里之间的互动，打造共同的公共空间，培养人与人之间的信任与归属感。",
+    "audio_text_pinyin": "dūshìhuà jìnchéng zàochéng le rén yǔ rén zhī jiān de shūlí. yuèláiyuè duō de chéngshì jūmín shēnghuó zài rénqún zhōng què gǎndào gūdú. jiějué zhè yī wèntí de guānjiàn bù zài yú jìshù, ér zài yú chóngjiàn zhēnshí de shèqū niǔdài——gǔlì lín lǐ zhī jiān de hùdòng, dǎzào gòngtóng de gōnggòng kōngjiān, péiyǎng rén yǔ rén zhī jiān de xìnrèn yǔ guīshǔgǎn.",
+    "options": [
+      "A. 使用更多社交媒体",
+      "B. 发展更先进的技术",
+      "C. 重建社区纽带和公共空间",
+      "D. 搬到农村去住"
+    ],
+    "correct_answer": "C",
+    "explanation": "The writer says the solution lies in rebuilding genuine community bonds (重建真实的社区纽带) and creating shared public spaces."
+  },
+  {
+    "id": "hsk5_read_005",
+    "hsk_level": 5,
+    "section": "reading",
+    "question_type": "choose_correct_word",
+    "question_text": "Fill in the blank with the most appropriate expression: 这项研究的结论与主流观点___，引发了学界广泛争议。",
+    "audio_text_chinese": "这项研究的结论与主流观点___，引发了学界广泛争议。",
+    "audio_text_pinyin": "zhè xiàng yánjiū de jiélùn yǔ zhǔliú guāndiǎn ___, yǐnfā le xuéjiè guǎngfàn zhēngyì.",
+    "options": [
+      "A. 截然相反",
+      "B. 完全一致",
+      "C. 大同小异",
+      "D. 相辅相成"
+    ],
+    "correct_answer": "A",
+    "explanation": "截然相反 (jiérán xiāngfǎn) means 'diametrically opposed' — The conclusions of this study are completely opposite to mainstream views, sparking widespread debate."
+  },
+  {
+    "id": "hsk5_write_001",
+    "hsk_level": 5,
+    "section": "writing",
+    "question_type": "summary_writing",
+    "question_text": "Read the following passage and write a summary of approximately 400 characters.",
+    "audio_text_chinese": "【原文】人工智能技术的迅猛发展正在深刻重塑全球经济格局。一方面，AI极大地提升了生产效率，催生了新型产业和就业岗位。另一方面，大量传统职位面临被自动化取代的风险，这引发了社会各界对就业安全的广泛担忧。专家认为，应对这一挑战的关键在于教育体系的变革，培养具备批判性思维、创造力和跨学科能力的人才，而不仅仅是掌握技术操作的工人。政府、企业和教育机构需要协同合作，共同推动劳动力的技能转型，确保AI带来的红利能够惠及全社会，而非仅仅集中在少数技术精英阶层。",
+    "audio_text_pinyin": "rén gōng zhì néng jì shù de xùn měng fā zhǎn zhèng zài shēn kè chóng sù quán qiú jīng jì gé jú...",
+    "options": [
+      "Sample summary: 人工智能快速发展对全球经济产生深远影响。AI提升了生产效率、创造了新岗位，但也导致许多传统职业面临自动化威胁。专家建议教育体系应注重培养批判性思维和创造力，而非单纯技术技能。政府、企业和教育机构需协作，推动劳动力技能转型，使AI发展成果能公平惠及全社会。"
+    ],
+    "correct_answer": "Sample summary",
+    "explanation": "A good summary identifies: 1) AI's positive impacts (efficiency, new jobs), 2) negative impacts (job displacement), 3) the solution (education reform, reskilling, multi-stakeholder cooperation), and 4) the goal (equitable distribution of AI benefits)."
+  },
+  {
+    "id": "hsk5_write_002",
+    "hsk_level": 5,
+    "section": "writing",
+    "question_type": "essay_writing",
+    "question_text": "Write a composition of at least 80 characters based on the picture prompt (a person standing at a crossroads).",
+    "audio_text_chinese": "图片描述：一个人站在十字路口，面对不同方向的路。",
+    "audio_text_pinyin": "túpiàn miáoshù: yī gè rén zhàn zài shízì lùkǒu, miànduì bùtóng fāngxiàng de lù.",
+    "options": [
+      "Sample essay: 人生就如同行走在一条不断分叉的道路上。每一个十字路口，都代表着一次选择，而每一次选择，都将引领我们走向不同的未来。面对人生的岔路口，我们既要倾听内心的声音，也要理性地权衡利弊。无论最终选择哪条路，最重要的是全力以赴，不留遗憾，因为人生的意义不在于走哪条路，而在于如何走好脚下的路。"
+    ],
+    "correct_answer": "Sample essay",
+    "explanation": "A good essay should: 1) connect the image metaphorically to life choices, 2) discuss the significance of decision-making, 3) offer insight or a personal view, and 4) demonstrate command of advanced vocabulary and complex sentence structures."
+  },
+  {
+    "id": "hsk5_write_003",
+    "hsk_level": 5,
+    "section": "writing",
+    "question_type": "summary_writing",
+    "question_text": "Summarize the key arguments in the passage about environmental protection.",
+    "audio_text_chinese": "【原文】气候变化已经不再是遥远的未来威胁，而是当下正在发生的现实危机。极端天气事件的频繁出现、海平面的持续上升以及生物多样性的急剧减少，都是全球变暖的直接后果。然而，国际社会在气候治理方面的合作依然面临重重障碍。发达国家和发展中国家在减排责任和资金分配方面存在根本性分歧，而部分政治力量出于短期经济利益考量，对气候行动持消极态度。要真正解决气候危机，需要各国超越政治分歧，建立基于科学共识的全球合作机制，并将可持续发展理念内化为国家治理的核心原则。",
+    "audio_text_pinyin": "qìhòu biànhuà yǐjīng bù zài shì yáoyuǎn de wèilái wēixié...",
+    "options": [
+      "Sample summary: 气候变化已是现实危机，表现为极端天气、海平面上升和生物多样性减少。国际合作受阻于发达国家与发展中国家的分歧，以及部分政治力量的短视。解决气候危机需各国超越政治分歧，建立基于科学的全球合作机制，将可持续发展作为治国核心。"
+    ],
+    "correct_answer": "Sample summary",
+    "explanation": "A strong summary covers: 1) the current reality of climate change and its manifestations, 2) obstacles to international cooperation (developed vs developing nation disagreements, political resistance), and 3) the proposed solution (transcend politics, build science-based global mechanisms)."
+  },
+  {
+    "id": "hsk4_listen_006",
+    "hsk_level": 4,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "What is the woman planning to do during the holiday?",
+    "audio_text_chinese": "我打算利用这个假期报一个网络营销课程，提升自己的职业竞争力。",
+    "audio_text_pinyin": "wǒ dǎsuàn lìyòng zhège jiàqī bào yī gè wǎngluò yíngxiāo kèchéng, tíshēng zìjǐ de zhíyè jìngzhēnglì.",
+    "options": [
+      "A. 去旅游",
+      "B. 报网络营销课程",
+      "C. 找新工作",
+      "D. 在家休息"
+    ],
+    "correct_answer": "B",
+    "explanation": "She plans to use the holiday to take an online marketing course to improve her career competitiveness."
+  },
+  {
+    "id": "hsk4_listen_007",
+    "hsk_level": 4,
+    "section": "listening",
+    "question_type": "judge_true_false",
+    "question_text": "Listen and judge: Does the man think the new policy is fair to small businesses?",
+    "audio_text_chinese": "这个新政策表面上合理，但实际上对中小企业非常不公平，加重了他们的税务负担。",
+    "audio_text_pinyin": "zhège xīn zhèngcè biǎomiàn shàng hélǐ, dàn shíjì shàng duì zhōngxiǎo qǐyè fēicháng bù gōngpíng.",
+    "options": [
+      "A. 对：他认为新政策公平合理。",
+      "B. 错：他认为新政策对中小企业不公平。"
+    ],
+    "correct_answer": "B",
+    "explanation": "He says the policy appears reasonable on the surface but is unfair to small and medium enterprises."
+  },
+  {
+    "id": "hsk4_listen_008",
+    "hsk_level": 4,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "What surprised the woman in the dialogue?",
+    "audio_text_chinese": "A: 你知道吗？小王辞职了，去创业了。B: 真的吗？他之前工作那么稳定，怎么突然有这个决定？",
+    "audio_text_pinyin": "A: nǐ zhīdào ma? Xiǎo Wáng cízhí le, qù chuàngyè le. B: zhēn de ma?",
+    "options": [
+      "A. 小王升职了",
+      "B. 小王辞职去创业了",
+      "C. 小王结婚了",
+      "D. 小王出国了"
+    ],
+    "correct_answer": "B",
+    "explanation": "Person B is surprised that Xiao Wang resigned to start a business, given his previously stable job."
+  },
+  {
+    "id": "hsk4_listen_009",
+    "hsk_level": 4,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "What does the speaker say about traditional Chinese medicine vs. Western medicine?",
+    "audio_text_chinese": "中医在慢性病管理上有独特优势，但对急性病的处理效果不如西医迅速。",
+    "audio_text_pinyin": "zhōngyī zài mànxìng bìng guǎnlǐ shàng yǒu dútè yōushì, dàn duì jíxìng bìng de chǔlǐ xiàoguǒ bùrú xīyī xùnsù.",
+    "options": [
+      "A. 中医比西医好",
+      "B. 中医在慢性病方面有优势但急性病不如西医",
+      "C. 中医不能治病",
+      "D. 西医完全取代了中医"
+    ],
+    "correct_answer": "B",
+    "explanation": "TCM has advantages managing chronic diseases but is less quick than Western medicine for acute conditions."
+  },
+  {
+    "id": "hsk4_listen_010",
+    "hsk_level": 4,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "What is cited as the main cause of urban air pollution?",
+    "audio_text_chinese": "城市空气污染的主要来源是工业排放和机动车尾气，随着电动汽车普及，部分城市空气质量有所改善。",
+    "audio_text_pinyin": "chéngshì kōngqì wūrǎn de zhǔyào láiyuán shì gōngyè páifàng hé jīdòngchē wěiqì.",
+    "options": [
+      "A. 工业排放和机动车尾气",
+      "B. 人口过多",
+      "C. 建筑工地",
+      "D. 树木减少"
+    ],
+    "correct_answer": "A",
+    "explanation": "The main sources of urban air pollution are industrial emissions and vehicle exhaust."
+  },
+  {
+    "id": "hsk4_read_006",
+    "hsk_level": 4,
+    "section": "reading",
+    "question_type": "passage_comprehension",
+    "question_text": "What does the author identify as the key to effective communication?",
+    "audio_text_chinese": "有效的沟通不只是说话，更重要的是倾听。认真倾听能帮助我们更好地理解他人，建立相互信任的关系。许多人际冲突源于误解，而误解往往来自不认真倾听。",
+    "audio_text_pinyin": "yǒuxiào de gōutōng bù zhǐshì shuōhuà, gèng zhòngyào de shì qīngtīng.",
+    "options": [
+      "A. 说话要大声",
+      "B. 认真倾听是有效沟通的关键",
+      "C. 要有高超的语言技巧",
+      "D. 避免所有冲突"
+    ],
+    "correct_answer": "B",
+    "explanation": "The author says effective communication is more about listening than speaking, and most conflicts arise from misunderstandings caused by not listening carefully."
+  },
+  {
+    "id": "hsk4_read_007",
+    "hsk_level": 4,
+    "section": "reading",
+    "question_type": "choose_correct_word",
+    "question_text": "Choose the correct word: 这个项目的成功___于团队每个成员的努力合作。",
+    "audio_text_chinese": "这个项目的成功___于团队每个成员的努力合作。",
+    "audio_text_pinyin": "zhège xiàngmù de chénggōng ___ yú tuánduì měi gè chéngyuán de nǔlì hézuò.",
+    "options": [
+      "A. 得益",
+      "B. 满足",
+      "C. 来自",
+      "D. 导致"
+    ],
+    "correct_answer": "A",
+    "explanation": "得益于 means 'thanks to/benefit from' — The project success is thanks to every team member's collaborative efforts."
+  },
+  {
+    "id": "hsk4_read_008",
+    "hsk_level": 4,
+    "section": "reading",
+    "question_type": "passage_comprehension",
+    "question_text": "According to the text, what should we do when facing failure?",
+    "audio_text_chinese": "失败是成功之母。每一次失败都是学习的机会，关键在于从失败中总结经验，调整策略，而不是一蹶不振。",
+    "audio_text_pinyin": "shībài shì chénggōng zhī mǔ. měi yī cì shībài dōu shì xuéxí de jīhuì.",
+    "options": [
+      "A. 放弃努力",
+      "B. 怨天尤人",
+      "C. 总结经验，调整策略",
+      "D. 忘记失败"
+    ],
+    "correct_answer": "C",
+    "explanation": "The text says to learn from failure — summarize experiences and adjust strategies, not give up or blame others."
+  },
+  {
+    "id": "hsk4_read_009",
+    "hsk_level": 4,
+    "section": "reading",
+    "question_type": "sentence_matching",
+    "question_text": "Choose the sentence that best continues: 读书不仅仅是获取知识的途径。___",
+    "audio_text_chinese": "读书不仅仅是获取知识的途径。___",
+    "audio_text_pinyin": "dúshū bùjǐnjǐn shì huòqǔ zhīshi de tújìng.",
+    "options": [
+      "A. 它还能培养我们的思维能力和人文素养。",
+      "B. 我昨天去图书馆了。",
+      "C. 书店里的书很贵。",
+      "D. 网络上也有很多信息。"
+    ],
+    "correct_answer": "A",
+    "explanation": "The logical continuation discusses another benefit of reading — developing thinking abilities and humanistic literacy."
+  },
+  {
+    "id": "hsk4_read_010",
+    "hsk_level": 4,
+    "section": "reading",
+    "question_type": "choose_correct_word",
+    "question_text": "Fill in the blank: 这部电影的情节___复杂，观众需要仔细思考才能理解。",
+    "audio_text_chinese": "这部电影的情节___复杂，观众需要仔细思考才能理解。",
+    "audio_text_pinyin": "zhè bù diànyǐng de qíngjié ___ fùzá.",
+    "options": [
+      "A. 极其",
+      "B. 有点儿",
+      "C. 稍微",
+      "D. 不够"
+    ],
+    "correct_answer": "A",
+    "explanation": "极其 means 'extremely' — The plot is extremely complex, requiring careful thought to understand."
+  },
+  {
+    "id": "hsk4_write_004",
+    "hsk_level": 4,
+    "section": "writing",
+    "question_type": "reorder_sentence",
+    "question_text": "Reorder: 受到 / 这 / 政策 / 项新 / 欢迎 / 广泛",
+    "audio_text_chinese": "受到 / 这 / 政策 / 项新 / 欢迎 / 广泛",
+    "audio_text_pinyin": "shòudào / zhè / zhèngcè / xiàng xīn / huānyíng / guǎngfàn",
+    "options": [
+      "A. 这项新政策受到了广泛欢迎。",
+      "B. 广泛这项新政策受到欢迎。",
+      "C. 受到广泛欢迎这项新政策。",
+      "D. 新政策这广泛受到欢迎项。"
+    ],
+    "correct_answer": "A",
+    "explanation": "Correct: 这项新政策受到了广泛欢迎 (This new policy has received widespread welcome)."
+  },
+  {
+    "id": "hsk4_write_005",
+    "hsk_level": 4,
+    "section": "writing",
+    "question_type": "reorder_sentence",
+    "question_text": "Reorder: 一旦 / 错过 / 机会 / 再来 / 就 / 这次 / 不会",
+    "audio_text_chinese": "一旦 / 错过 / 机会 / 再来 / 就 / 这次 / 不会",
+    "audio_text_pinyin": "yīdàn / cuòguò / jīhuì / zài lái / jiù / zhè cì / bù huì",
+    "options": [
+      "A. 这次机会一旦错过就不会再来。",
+      "B. 机会一旦再来就不会这次错过。",
+      "C. 一旦错过这次机会就不会再来。",
+      "D. 错过机会一旦就不会这次再来。"
+    ],
+    "correct_answer": "A",
+    "explanation": "Correct: 这次机会一旦错过就不会再来 (Once this opportunity is missed, it will not come again)."
+  },
+  {
+    "id": "hsk4_write_006",
+    "hsk_level": 4,
+    "section": "writing",
+    "question_type": "guided_writing",
+    "question_text": "Write at least 80 characters giving advice to a friend who wants to learn a foreign language.",
+    "audio_text_chinese": "题目：如何有效学习外语",
+    "audio_text_pinyin": "tímù: rúhé yǒuxiào xuéxí wàiyǔ",
+    "options": [
+      "Sample: 学习外语最重要的是每天坚持练习。不要怕犯错，错误是进步的阶梯。多看该语言的电视节目，培养语感。找语言伙伴练习口语也非常有效。坚持是成功的关键！"
+    ],
+    "correct_answer": "Sample",
+    "explanation": "A good response gives concrete advice: daily practice, not fearing mistakes, immersion through media, finding conversation partners, and emphasizing persistence."
+  },
+  {
+    "id": "hsk4_write_007",
+    "hsk_level": 4,
+    "section": "writing",
+    "question_type": "guided_writing",
+    "question_text": "Write at least 80 characters about what qualities a good teacher should have.",
+    "audio_text_chinese": "题目：好老师应该具备哪些品质？",
+    "audio_text_pinyin": "tímù: hǎo lǎoshī yīnggāi jùbèi nǎxiē pǐnzhì?",
+    "options": [
+      "Sample: 好老师首先要有丰富的专业知识，其次要有耐心和爱心。好老师不仅教授知识，还要启发学生思考，培养学习兴趣。此外，要公平对待每位学生，因材施教，帮助每个人发挥潜力。"
+    ],
+    "correct_answer": "Sample",
+    "explanation": "A quality response covers: subject expertise, patience, inspiration of thought, equal treatment, and individualized teaching."
+  },
+  {
+    "id": "hsk5_listen_006",
+    "hsk_level": 5,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "What does the sociologist argue about individualism?",
+    "audio_text_chinese": "现代社会的个人主义固然促进了个体自由，但过度的个人主义削弱了社会凝聚力，使集体行动愈加困难，这在应对气候变化时尤为明显。",
+    "audio_text_pinyin": "xiàndài shèhuì de gèrén zhǔyì gùrán cùjìn le gètǐ zìyóu, dàn guòdù de gèrén zhǔyì xuēruò le shèhuì níngjùlì.",
+    "options": [
+      "A. 个人主义完全是积极的",
+      "B. 个人主义促进自由但过度时削弱社会凝聚力",
+      "C. 集体主义优于个人主义",
+      "D. 个人主义与气候变化无关"
+    ],
+    "correct_answer": "B",
+    "explanation": "The sociologist says individualism promotes freedom but excessive individualism weakens social cohesion, making collective action harder."
+  },
+  {
+    "id": "hsk5_listen_007",
+    "hsk_level": 5,
+    "section": "listening",
+    "question_type": "judge_true_false",
+    "question_text": "Does the speaker believe happiness can be scientifically studied?",
+    "audio_text_chinese": "幸福感不仅仅是主观体验，也可以通过科学方法加以研究。心理学家已发现若干与幸福感密切相关的因素，如社会联结和目标感。",
+    "audio_text_pinyin": "xìngfúgǎn bùjǐnjǐn shì zhǔguān tǐyàn, yě kěyǐ tōngguò kēxué fāngfǎ jiāyǐ yánjiū.",
+    "options": [
+      "A. 对：幸福感可以通过科学方法研究。",
+      "B. 错：幸福感只是主观体验，无法科学研究。"
+    ],
+    "correct_answer": "A",
+    "explanation": "The speaker says happiness is not only subjective but can be studied scientifically, and psychologists have already identified related factors."
+  },
+  {
+    "id": "hsk5_listen_008",
+    "hsk_level": 5,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "What does the economist say drives long-term economic growth?",
+    "audio_text_chinese": "短期经济增长可靠资源投入驱动，但长远来看，技术创新和制度改革才是推动经济持续增长的根本动力。",
+    "audio_text_pinyin": "duǎnqī jīngjì zēngzhǎng kě kào zīyuán tóurù qūdòng, dàn chángyuǎn lái kàn, jìshù chuàngxīn hé zhìdù gǎigé cái shì gēnběn dònglì.",
+    "options": [
+      "A. 资源投入",
+      "B. 劳动力增长",
+      "C. 技术创新和制度改革",
+      "D. 出口增加"
+    ],
+    "correct_answer": "C",
+    "explanation": "Long-term economic growth is fundamentally driven by technological innovation and institutional reform."
+  },
+  {
+    "id": "hsk5_listen_009",
+    "hsk_level": 5,
+    "section": "listening",
+    "question_type": "choose_correct_answer",
+    "question_text": "What is the literary critic's argument about literature and society?",
+    "audio_text_chinese": "文学不仅仅是社会现实的镜子，更是推动社会变革的力量。伟大的文学作品能唤醒人们的良知，催化社会进步。",
+    "audio_text_pinyin": "wénxué bùjǐnjǐn shì shèhuì xiànshí de jìngzi, gèng shì tuīdòng shèhuì biàngé de lìliàng.",
+    "options": [
+      "A. 文学只是娱乐工具",
+      "B. 文学是社会现实的反映也是推动变革的力量",
+      "C. 文学与社会没有关系",
+      "D. 只有悲剧才能推动进步"
+    ],
+    "correct_answer": "B",
+    "explanation": "The critic argues literature is both a mirror of social reality AND a force for social change — awakening conscience and catalyzing progress."
+  },
+  {
+    "id": "hsk5_listen_010",
+    "hsk_level": 5,
+    "section": "listening",
+    "question_type": "judge_true_false",
+    "question_text": "Does the speaker think digital reading will completely replace physical books?",
+    "audio_text_chinese": "纸质书籍独特的触感是电子设备无法完全复制的。数字阅读和纸质阅读各有优势，未来最可能是两者并存，而非完全取代。",
+    "audio_text_pinyin": "zhǐzhì shūjí dútè de chùgǎn shì diànzǐ shèbèi wúfǎ wánquán fùzhì de.",
+    "options": [
+      "A. 对：数字阅读将完全取代纸质书。",
+      "B. 错：两种阅读方式将并存，不会完全取代。"
+    ],
+    "correct_answer": "B",
+    "explanation": "The speaker says digital and physical reading will coexist — digital will not completely replace physical books."
+  },
+  {
+    "id": "hsk5_read_006",
+    "hsk_level": 5,
+    "section": "reading",
+    "question_type": "long_text_analysis",
+    "question_text": "What is the author's view on tradition and modernity?",
+    "audio_text_chinese": "传统与现代并非水火不容。最具生命力的文化是能在坚守核心价值的同时灵活吸纳新元素的文化。真正的文化自信在于有选择地继承传统，有判断力地接受新事物，实现文化的创造性转化。",
+    "audio_text_pinyin": "chuántǒng yǔ xiàndài bìng fēi shuǐhuǒ bùróng. zuì jù shēngmìnglì de wénhuà shì néng zài jiānshǒu héxīn jiàzhí de tóngshí línghuo xīnà xīn yuánsù de wénhuà.",
+    "options": [
+      "A. 传统必须完全抛弃",
+      "B. 现代化必须优先于传统",
+      "C. 传统与现代可以兼容，关键在于有选择地继承与创新",
+      "D. 传统比现代更重要"
+    ],
+    "correct_answer": "C",
+    "explanation": "The author argues tradition and modernity are not incompatible — the best approach is selective inheritance of tradition and judicious acceptance of new elements."
+  },
+  {
+    "id": "hsk5_read_007",
+    "hsk_level": 5,
+    "section": "reading",
+    "question_type": "choose_correct_word",
+    "question_text": "Choose the correct word: 这位科学家的研究成果___了医学界长期以来的传统观念。",
+    "audio_text_chinese": "这位科学家的研究成果___了医学界长期以来的传统观念。",
+    "audio_text_pinyin": "zhè wèi kēxuéjiā de yánjiū chéngguǒ ___ le yīxuéjiè chángqī yǐlái de chuántǒng guānniàn.",
+    "options": [
+      "A. 颠覆",
+      "B. 支持",
+      "C. 强化",
+      "D. 忽视"
+    ],
+    "correct_answer": "A",
+    "explanation": "颠覆 (diānfù) means to overturn/subvert — This research overturned the longstanding traditional views of the medical community."
+  },
+  {
+    "id": "hsk5_read_008",
+    "hsk_level": 5,
+    "section": "reading",
+    "question_type": "long_text_analysis",
+    "question_text": "What does the passage suggest about the nature of expertise?",
+    "audio_text_chinese": "专业知识积累是漫长的过程。心理学家提出一万小时定律——要达到世界级水平需约一万小时刻意练习。然而练习的质量同样重要。有反馈、有目标的刻意练习远比漫无目的的重复更能促进技能提升。",
+    "audio_text_pinyin": "zhuānyè zhīshi jīlěi shì màncháng de guòchéng. xīnlǐ xuéjiā tíchū yī wàn xiǎoshí dìnglǜ.",
+    "options": [
+      "A. 任何人只要花一万小时就能成为专家",
+      "B. 专业技能无法通过练习获得",
+      "C. 有质量有目标的刻意练习比单纯时间积累更重要",
+      "D. 天赋比练习更重要"
+    ],
+    "correct_answer": "C",
+    "explanation": "The passage argues quality of practice — deliberate, feedback-driven, goal-oriented — matters more than mere time accumulation."
+  },
+  {
+    "id": "hsk5_read_009",
+    "hsk_level": 5,
+    "section": "reading",
+    "question_type": "choose_correct_word",
+    "question_text": "Fill in the blank: 面对逆境，她没有___，而是愈战愈勇，最终实现了自己的梦想。",
+    "audio_text_chinese": "面对逆境，她没有___，而是愈战愈勇，最终实现了自己的梦想。",
+    "audio_text_pinyin": "miànduì nìjìng, tā méiyǒu ___, ér shì yù zhàn yù yǒng.",
+    "options": [
+      "A. 一蹶不振",
+      "B. 勇往直前",
+      "C. 坚持不懈",
+      "D. 积极进取"
+    ],
+    "correct_answer": "A",
+    "explanation": "一蹶不振 means to collapse and never recover. She did NOT collapse but became ever braver — contrasting with the following clause."
+  },
+  {
+    "id": "hsk5_read_010",
+    "hsk_level": 5,
+    "section": "reading",
+    "question_type": "long_text_analysis",
+    "question_text": "According to the text, what is the difference between knowledge and wisdom?",
+    "audio_text_chinese": "知识是信息的积累，而智慧是对知识的深刻理解与灵活运用。一个人可以博学多识，却未必有智慧。有智慧的人能在复杂情境中作出正确判断，将知识转化为解决实际问题的能力。培养智慧需要不断反思、批判和实践。",
+    "audio_text_pinyin": "zhīshi shì xìnxī de jīlěi, ér zhìhuì shì duì zhīshi de shēnkè lǐjiě yǔ línghuó yùnyòng.",
+    "options": [
+      "A. 知识比智慧更重要",
+      "B. 知识是信息积累，智慧是对知识的深刻理解和灵活运用",
+      "C. 有很多知识的人一定有智慧",
+      "D. 智慧可以通过读书获得"
+    ],
+    "correct_answer": "B",
+    "explanation": "The text defines knowledge as information accumulation, while wisdom is deep understanding and flexible application. Wisdom requires reflection, critical thinking, and practice."
+  },
+  {
+    "id": "hsk5_write_004",
+    "hsk_level": 5,
+    "section": "writing",
+    "question_type": "summary_writing",
+    "question_text": "Summarize the passage about technology and human well-being.",
+    "audio_text_chinese": "技术进步是双刃剑。提升便利和效率的同时，也带来工作变革、隐私威胁和情感疏离。应建立伦理框架和监管机制，确保技术增进人类福祉，并提升公民数字素养。",
+    "audio_text_pinyin": "jìshù jìnbù shì shuāngrèn jiàn.",
+    "options": [
+      "Sample: 技术进步带来便利和效率，但也引发工作变革、隐私安全和情感疏离等挑战。应建立伦理框架和监管机制，确保技术服务于人类福祉，同时提升公民数字素养。"
+    ],
+    "correct_answer": "Sample",
+    "explanation": "A strong summary captures: technology as double-edged, specific challenges, and the proposed solutions (ethical frameworks, regulation, digital literacy)."
+  },
+  {
+    "id": "hsk5_write_005",
+    "hsk_level": 5,
+    "section": "writing",
+    "question_type": "essay_writing",
+    "question_text": "Write at least 80 characters on whether money brings happiness.",
+    "audio_text_chinese": "题目：金钱能带来幸福吗？",
+    "audio_text_pinyin": "tímù: jīnqián néng dàilái xìngfú ma?",
+    "options": [
+      "Sample: 金钱与幸福关系复杂。一定程度的物质保障是幸福的基础，但超过阈值后，金钱的增加并不按比例提升幸福感。真正的幸福来自有意义的人际关系、明确的人生目标和内心的平和，这些都是金钱无法直接购买的。"
+    ],
+    "correct_answer": "Sample",
+    "explanation": "An excellent response: money is necessary for basic well-being but beyond a threshold yields diminishing returns. True happiness comes from relationships, purpose, and inner peace."
+  },
+  {
+    "id": "hsk5_write_006",
+    "hsk_level": 5,
+    "section": "writing",
+    "question_type": "summary_writing",
+    "question_text": "Summarize the passage about language extinction.",
+    "audio_text_chinese": "全球每两周有一种语言消失。约七千种语言中逾半数濒危。语言消亡不仅是词汇丧失，更是独特世界观和文化知识体系的终结。保护语言多样性需政策支持、学术记录和社区自觉传承。",
+    "audio_text_pinyin": "quánqiú měi liǎng zhōu yǒu yī zhǒng yǔyán xiāoshī.",
+    "options": [
+      "Sample: 全球每两周有一种语言消失，逾半数语言濒危。语言消亡意味着独特世界观和文化知识永久丧失。保护语言多样性需政策扶持、学术记录，以及语言社区自觉传承。"
+    ],
+    "correct_answer": "Sample",
+    "explanation": "A quality summary includes: alarming rate of extinction, what is lost beyond words, and multi-pronged solutions."
+  },
+  {
+    "id": "hsk5_write_007",
+    "hsk_level": 5,
+    "section": "writing",
+    "question_type": "essay_writing",
+    "question_text": "Write at least 80 characters: Is competition beneficial or harmful to society?",
+    "audio_text_chinese": "题目：竞争是利还是弊？",
+    "audio_text_pinyin": "tímù: jìngzhēng shì lì háishì bì?",
+    "options": [
+      "Sample: 适度的竞争是社会进步的催化剂，激励个人提升自我，推动企业创新。然而过度竞争带来焦虑和不道德行为，削弱社会凝聚力。关键在于建立公平竞争机制，鼓励进取的同时维护合作精神和集体福祉。"
+    ],
+    "correct_answer": "Sample",
+    "explanation": "An excellent essay acknowledges both benefits (motivation, innovation) and costs (stress, unethical behavior), argues for balance, and uses advanced structures."
+  },
+  {
+    "id": "hsk5_write_008",
+    "hsk_level": 5,
+    "section": "writing",
+    "question_type": "essay_writing",
+    "question_text": "Write at least 80 characters on the value of lifelong learning.",
+    "audio_text_chinese": "题目：终身学习的价值",
+    "audio_text_pinyin": "tímù: zhōngshēn xuéxí de jiàzhí",
+    "options": [
+      "Sample: 在知识迅速更新的时代，终身学习已是时代必然要求。一个停止学习的人，终将被时代淘汰。保持好奇心和学习热情的人，能不断适应变化，发现新可能。终身学习不仅提升职业竞争力，更丰富精神世界，使人生更充实有意义。"
+    ],
+    "correct_answer": "Sample",
+    "explanation": "A quality response connects lifelong learning to the pace of modern change, discusses both professional and personal benefits, and demonstrates sophisticated vocabulary appropriate for HSK 5."
+  }
+]

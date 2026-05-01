@@ -1,0 +1,96 @@
+name: Android CI — build debug APK
+
+# What this does:
+#   On every push to main (or manual trigger), builds the debug APK and uploads it
+#   as a workflow artifact you can download from the Actions run page.
+#
+#   The Gemini API key is injected at build time from the GEMINI_API_KEY repository
+#   secret (set this in GitHub → Settings → Secrets and variables → Actions).
+#   If the secret is missing, the build still succeeds but the in-app AI features
+#   show "AI features unavailable" — exactly the degraded mode documented in
+#   ARCHITECTURE.md §4.1.
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:        # lets you trigger manually from the Actions tab
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build debug APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Cache Gradle packages
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties', '**/libs.versions.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Generate Gradle wrapper if missing
+        # The wrapper jar is gitignored (binary, regenerated per environment).
+        # Generate it on the runner if absent.
+        run: |
+          if [ ! -f gradle/wrapper/gradle-wrapper.jar ] && [ ! -f app/gradle/wrapper/gradle-wrapper.jar ]; then
+            echo "gradle-wrapper.jar missing — bootstrapping via system gradle"
+            gradle wrapper --gradle-version 8.4 --distribution-type bin
+          fi
+          chmod +x ./gradlew || true
+
+      - name: Inject Gemini API key into local.properties
+        # Empty key is fine — app falls into degraded mode per ARCHITECTURE §4.1.
+        run: |
+          echo "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}" > local.properties
+          echo "sdk.dir=$ANDROID_HOME" >> local.properties
+
+      - name: Build debug APK
+        run: ./gradlew :app:assembleDebug --stacktrace --no-daemon
+
+      - name: Locate APK
+        id: apk
+        run: |
+          APK_PATH=$(find app/build/outputs/apk/debug -name "*.apk" | head -1)
+          echo "Found APK at: $APK_PATH"
+          echo "apk_path=$APK_PATH" >> "$GITHUB_OUTPUT"
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mandarin-learn-debug-apk
+          path: ${{ steps.apk.outputs.apk_path }}
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Build summary
+        run: |
+          echo "### Mandarin Learn — debug APK built" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Download the APK from the **Artifacts** section at the top of this run page." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Install on Android:" >> $GITHUB_STEP_SUMMARY
+          echo "1. Download \`mandarin-learn-debug-apk.zip\`, unzip → \`app-debug.apk\`" >> $GITHUB_STEP_SUMMARY
+          echo "2. Transfer to your Android phone (USB, email, Drive, etc.)" >> $GITHUB_STEP_SUMMARY
+          echo "3. Settings → Security → Install unknown apps → allow your file manager" >> $GITHUB_STEP_SUMMARY
+          echo "4. Tap the .apk in Files → Install" >> $GITHUB_STEP_SUMMARY

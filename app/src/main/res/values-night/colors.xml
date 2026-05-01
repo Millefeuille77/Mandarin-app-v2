@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    values-night/colors.xml — Mandarin Learn (dark theme overrides)
+    Dark theme hex values per UX_SPECIFICATION.md §1.2.
+    Applied automatically by Android when dark mode is active.
+-->
+<resources>
+    <!-- Dark palette overrides -->
+    <color name="color_primary">#90CAF9</color>
+    <color name="color_on_primary">#0D47A1</color>
+    <color name="color_secondary">#BCAAA4</color>
+    <color name="color_on_secondary">#3E2723</color>
+    <color name="color_background">#121212</color>
+    <color name="color_on_background">#F5F5F5</color>
+    <color name="color_surface">#1E1E1E</color>
+    <color name="color_on_surface">#F5F5F5</color>
+    <color name="color_surface_variant">#2A2A2A</color>
+    <color name="color_on_surface_variant">#BDBDBD</color>
+    <color name="color_error">#EF9A9A</color>
+    <color name="color_on_error">#B71C1C</color>
+    <color name="color_success">#A5D6A7</color>
+    <color name="color_warning">#FFCC80</color>
+</resources>

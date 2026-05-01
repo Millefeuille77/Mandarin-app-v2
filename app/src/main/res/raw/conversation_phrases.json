@@ -1,0 +1,902 @@
+[
+  {
+    "id": "conv_hsk1_001",
+    "hsk_level": 1,
+    "category": "greetings",
+    "chinese": "你好！",
+    "pinyin": "nǐ hǎo!",
+    "english": "Hello!",
+    "usage_context": "General greeting for any occasion"
+  },
+  {
+    "id": "conv_hsk1_002",
+    "hsk_level": 1,
+    "category": "greetings",
+    "chinese": "早上好！",
+    "pinyin": "zǎoshang hǎo!",
+    "english": "Good morning!",
+    "usage_context": "Morning greeting"
+  },
+  {
+    "id": "conv_hsk1_003",
+    "hsk_level": 1,
+    "category": "greetings",
+    "chinese": "再见！",
+    "pinyin": "zàijiàn!",
+    "english": "Goodbye!",
+    "usage_context": "Farewell at any time of day"
+  },
+  {
+    "id": "conv_hsk1_004",
+    "hsk_level": 1,
+    "category": "greetings",
+    "chinese": "你叫什么名字？",
+    "pinyin": "nǐ jiào shénme míngzì?",
+    "english": "What is your name?",
+    "usage_context": "When meeting someone for the first time"
+  },
+  {
+    "id": "conv_hsk1_005",
+    "hsk_level": 1,
+    "category": "greetings",
+    "chinese": "你好吗？",
+    "pinyin": "nǐ hǎo ma?",
+    "english": "How are you?",
+    "usage_context": "Casual greeting to ask how someone is doing"
+  },
+  {
+    "id": "conv_hsk1_006",
+    "hsk_level": 1,
+    "category": "shopping",
+    "chinese": "这个多少钱？",
+    "pinyin": "zhège duōshao qián?",
+    "english": "How much is this?",
+    "usage_context": "Asking the price of an item in a store"
+  },
+  {
+    "id": "conv_hsk1_007",
+    "hsk_level": 1,
+    "category": "shopping",
+    "chinese": "我要买这个。",
+    "pinyin": "wǒ yào mǎi zhège.",
+    "english": "I want to buy this.",
+    "usage_context": "Expressing intent to purchase an item"
+  },
+  {
+    "id": "conv_hsk1_008",
+    "hsk_level": 1,
+    "category": "dining",
+    "chinese": "我要喝水。",
+    "pinyin": "wǒ yào hē shuǐ.",
+    "english": "I want to drink water.",
+    "usage_context": "Requesting water at a restaurant or home"
+  },
+  {
+    "id": "conv_hsk1_009",
+    "hsk_level": 1,
+    "category": "dining",
+    "chinese": "好吃！",
+    "pinyin": "hǎochī!",
+    "english": "Delicious!",
+    "usage_context": "Expressing that food is tasty"
+  },
+  {
+    "id": "conv_hsk1_010",
+    "hsk_level": 1,
+    "category": "directions",
+    "chinese": "这是哪里？",
+    "pinyin": "zhè shì nǎlǐ?",
+    "english": "Where is this place?",
+    "usage_context": "When lost or unfamiliar with location"
+  },
+  {
+    "id": "conv_hsk1_011",
+    "hsk_level": 1,
+    "category": "directions",
+    "chinese": "我不知道。",
+    "pinyin": "wǒ bù zhīdào.",
+    "english": "I don't know.",
+    "usage_context": "When you don't have information"
+  },
+  {
+    "id": "conv_hsk1_012",
+    "hsk_level": 1,
+    "category": "family",
+    "chinese": "这是我妈妈。",
+    "pinyin": "zhè shì wǒ māma.",
+    "english": "This is my mother.",
+    "usage_context": "Introducing a family member"
+  },
+  {
+    "id": "conv_hsk1_013",
+    "hsk_level": 1,
+    "category": "family",
+    "chinese": "我有一个哥哥。",
+    "pinyin": "wǒ yǒu yī gè gēge.",
+    "english": "I have an older brother.",
+    "usage_context": "Describing family members"
+  },
+  {
+    "id": "conv_hsk1_014",
+    "hsk_level": 1,
+    "category": "school",
+    "chinese": "我是学生。",
+    "pinyin": "wǒ shì xuésheng.",
+    "english": "I am a student.",
+    "usage_context": "Introducing yourself or your role"
+  },
+  {
+    "id": "conv_hsk1_015",
+    "hsk_level": 1,
+    "category": "school",
+    "chinese": "我喜欢学习汉语。",
+    "pinyin": "wǒ xǐhuān xuéxí hànyǔ.",
+    "english": "I like studying Chinese.",
+    "usage_context": "Expressing interest in learning Chinese"
+  },
+  {
+    "id": "conv_hsk1_016",
+    "hsk_level": 1,
+    "category": "weather",
+    "chinese": "今天天气很好。",
+    "pinyin": "jīntiān tiānqì hěn hǎo.",
+    "english": "The weather is very good today.",
+    "usage_context": "Commenting on nice weather"
+  },
+  {
+    "id": "conv_hsk1_017",
+    "hsk_level": 1,
+    "category": "weather",
+    "chinese": "外面很冷。",
+    "pinyin": "wàimiàn hěn lěng.",
+    "english": "It's very cold outside.",
+    "usage_context": "Warning someone about cold weather"
+  },
+  {
+    "id": "conv_hsk1_018",
+    "hsk_level": 1,
+    "category": "greetings",
+    "chinese": "谢谢！",
+    "pinyin": "xièxie!",
+    "english": "Thank you!",
+    "usage_context": "Expressing gratitude"
+  },
+  {
+    "id": "conv_hsk1_019",
+    "hsk_level": 1,
+    "category": "greetings",
+    "chinese": "不客气！",
+    "pinyin": "bù kèqi!",
+    "english": "You're welcome!",
+    "usage_context": "Responding to someone's thanks"
+  },
+  {
+    "id": "conv_hsk1_020",
+    "hsk_level": 1,
+    "category": "greetings",
+    "chinese": "对不起！",
+    "pinyin": "duìbuqǐ!",
+    "english": "Sorry!",
+    "usage_context": "Apologizing for a mistake"
+  },
+  {
+    "id": "conv_hsk2_001",
+    "hsk_level": 2,
+    "category": "greetings",
+    "chinese": "好久不见！",
+    "pinyin": "hǎo jiǔ bù jiàn!",
+    "english": "Long time no see!",
+    "usage_context": "Greeting someone you haven't seen in a while"
+  },
+  {
+    "id": "conv_hsk2_002",
+    "hsk_level": 2,
+    "category": "greetings",
+    "chinese": "你最近怎么样？",
+    "pinyin": "nǐ zuìjìn zěnmeyàng?",
+    "english": "How have you been lately?",
+    "usage_context": "Asking about someone's recent life"
+  },
+  {
+    "id": "conv_hsk2_003",
+    "hsk_level": 2,
+    "category": "shopping",
+    "chinese": "有没有更便宜的？",
+    "pinyin": "yǒu méiyǒu gèng piányí de?",
+    "english": "Do you have anything cheaper?",
+    "usage_context": "Asking for a lower-priced option"
+  },
+  {
+    "id": "conv_hsk2_004",
+    "hsk_level": 2,
+    "category": "shopping",
+    "chinese": "我可以刷卡吗？",
+    "pinyin": "wǒ kěyǐ shuā kǎ ma?",
+    "english": "Can I pay by card?",
+    "usage_context": "Asking if credit/debit card payment is accepted"
+  },
+  {
+    "id": "conv_hsk2_005",
+    "hsk_level": 2,
+    "category": "dining",
+    "chinese": "请给我看一下菜单。",
+    "pinyin": "qǐng gěi wǒ kàn yīxià càidān.",
+    "english": "Please show me the menu.",
+    "usage_context": "Requesting the menu at a restaurant"
+  },
+  {
+    "id": "conv_hsk2_006",
+    "hsk_level": 2,
+    "category": "dining",
+    "chinese": "我对花生过敏。",
+    "pinyin": "wǒ duì huāshēng guòmǐn.",
+    "english": "I am allergic to peanuts.",
+    "usage_context": "Informing others about a food allergy"
+  },
+  {
+    "id": "conv_hsk2_007",
+    "hsk_level": 2,
+    "category": "directions",
+    "chinese": "从这里怎么走？",
+    "pinyin": "cóng zhèlǐ zěnme zǒu?",
+    "english": "How do I get there from here?",
+    "usage_context": "Asking for directions"
+  },
+  {
+    "id": "conv_hsk2_008",
+    "hsk_level": 2,
+    "category": "directions",
+    "chinese": "坐地铁去要多长时间？",
+    "pinyin": "zuò dìtiě qù yào duō cháng shíjiān?",
+    "english": "How long does it take by subway?",
+    "usage_context": "Asking about travel time by subway"
+  },
+  {
+    "id": "conv_hsk2_009",
+    "hsk_level": 2,
+    "category": "health",
+    "chinese": "我肚子不舒服。",
+    "pinyin": "wǒ dùzi bù shūfu.",
+    "english": "My stomach doesn't feel well.",
+    "usage_context": "Expressing stomach discomfort"
+  },
+  {
+    "id": "conv_hsk2_010",
+    "hsk_level": 2,
+    "category": "health",
+    "chinese": "我需要看医生。",
+    "pinyin": "wǒ xūyào kàn yīshēng.",
+    "english": "I need to see a doctor.",
+    "usage_context": "Expressing the need for medical attention"
+  },
+  {
+    "id": "conv_hsk2_011",
+    "hsk_level": 2,
+    "category": "family",
+    "chinese": "你家有几口人？",
+    "pinyin": "nǐ jiā yǒu jǐ kǒu rén?",
+    "english": "How many people are in your family?",
+    "usage_context": "Asking about family size"
+  },
+  {
+    "id": "conv_hsk2_012",
+    "hsk_level": 2,
+    "category": "work",
+    "chinese": "你做什么工作？",
+    "pinyin": "nǐ zuò shénme gōngzuò?",
+    "english": "What kind of work do you do?",
+    "usage_context": "Asking about someone's job"
+  },
+  {
+    "id": "conv_hsk2_013",
+    "hsk_level": 2,
+    "category": "travel",
+    "chinese": "我要去机场，坐什么车？",
+    "pinyin": "wǒ yào qù jīchǎng, zuò shénme chē?",
+    "english": "I need to go to the airport, what vehicle should I take?",
+    "usage_context": "Asking about transportation to the airport"
+  },
+  {
+    "id": "conv_hsk2_014",
+    "hsk_level": 2,
+    "category": "travel",
+    "chinese": "请帮我叫一辆出租车。",
+    "pinyin": "qǐng bāng wǒ jiào yī liàng chūzū chē.",
+    "english": "Please help me call a taxi.",
+    "usage_context": "Asking someone to call a taxi for you"
+  },
+  {
+    "id": "conv_hsk2_015",
+    "hsk_level": 2,
+    "category": "school",
+    "chinese": "这道题我不会做。",
+    "pinyin": "zhè dào tí wǒ bù huì zuò.",
+    "english": "I don't know how to do this problem.",
+    "usage_context": "Asking for help with a homework problem"
+  },
+  {
+    "id": "conv_hsk2_016",
+    "hsk_level": 2,
+    "category": "weather",
+    "chinese": "今天会下雨吗？",
+    "pinyin": "jīntiān huì xià yǔ ma?",
+    "english": "Will it rain today?",
+    "usage_context": "Asking about the chance of rain"
+  },
+  {
+    "id": "conv_hsk2_017",
+    "hsk_level": 2,
+    "category": "greetings",
+    "chinese": "请多关照！",
+    "pinyin": "qǐng duō guānzhào!",
+    "english": "Please take care of me! / I'm in your care.",
+    "usage_context": "Said when starting a new relationship or job"
+  },
+  {
+    "id": "conv_hsk2_018",
+    "hsk_level": 2,
+    "category": "shopping",
+    "chinese": "我只是随便看看。",
+    "pinyin": "wǒ zhǐ shì suíbiàn kànkàn.",
+    "english": "I'm just browsing.",
+    "usage_context": "Telling a shop assistant you're just looking"
+  },
+  {
+    "id": "conv_hsk2_019",
+    "hsk_level": 2,
+    "category": "dining",
+    "chinese": "结账，谢谢！",
+    "pinyin": "jiézhàng, xièxie!",
+    "english": "Check, please! Thank you.",
+    "usage_context": "Asking for the bill at a restaurant"
+  },
+  {
+    "id": "conv_hsk2_020",
+    "hsk_level": 2,
+    "category": "health",
+    "chinese": "你要多休息。",
+    "pinyin": "nǐ yào duō xiūxi.",
+    "english": "You should rest more.",
+    "usage_context": "Giving advice to someone who is unwell"
+  },
+  {
+    "id": "conv_hsk3_001",
+    "hsk_level": 3,
+    "category": "greetings",
+    "chinese": "幸会幸会！",
+    "pinyin": "xìnghuì xìnghuì!",
+    "english": "Pleased to meet you! (formal)",
+    "usage_context": "Formal expression when meeting someone new"
+  },
+  {
+    "id": "conv_hsk3_002",
+    "hsk_level": 3,
+    "category": "work",
+    "chinese": "请问，您贵姓？",
+    "pinyin": "qǐngwèn, nín guì xìng?",
+    "english": "May I ask your honorable surname?",
+    "usage_context": "Formal way to ask someone's surname"
+  },
+  {
+    "id": "conv_hsk3_003",
+    "hsk_level": 3,
+    "category": "shopping",
+    "chinese": "能不能再便宜一点儿？",
+    "pinyin": "néng bù néng zài piányí yīdiǎnr?",
+    "english": "Can it be a little cheaper?",
+    "usage_context": "Bargaining or negotiating a price"
+  },
+  {
+    "id": "conv_hsk3_004",
+    "hsk_level": 3,
+    "category": "dining",
+    "chinese": "我对海鲜过敏，请不要放。",
+    "pinyin": "wǒ duì hǎixiān guòmǐn, qǐng bùyào fàng.",
+    "english": "I'm allergic to seafood, please don't add it.",
+    "usage_context": "Telling a restaurant not to include seafood"
+  },
+  {
+    "id": "conv_hsk3_005",
+    "hsk_level": 3,
+    "category": "directions",
+    "chinese": "请问附近有银行吗？",
+    "pinyin": "qǐngwèn fùjìn yǒu yínháng ma?",
+    "english": "Excuse me, is there a bank nearby?",
+    "usage_context": "Asking for a nearby service or facility"
+  },
+  {
+    "id": "conv_hsk3_006",
+    "hsk_level": 3,
+    "category": "directions",
+    "chinese": "往前走，然后左转。",
+    "pinyin": "wǎng qián zǒu, rán hòu zuǒ zhuǎn.",
+    "english": "Go straight, then turn left.",
+    "usage_context": "Giving directions"
+  },
+  {
+    "id": "conv_hsk3_007",
+    "hsk_level": 3,
+    "category": "health",
+    "chinese": "我感冒了，头很疼。",
+    "pinyin": "wǒ gǎnmào le, tóu hěn téng.",
+    "english": "I have a cold, my head hurts a lot.",
+    "usage_context": "Describing cold symptoms"
+  },
+  {
+    "id": "conv_hsk3_008",
+    "hsk_level": 3,
+    "category": "health",
+    "chinese": "请给我开一张处方。",
+    "pinyin": "qǐng gěi wǒ kāi yī zhāng chǔfāng.",
+    "english": "Please write me a prescription.",
+    "usage_context": "Requesting a prescription from a doctor"
+  },
+  {
+    "id": "conv_hsk3_009",
+    "hsk_level": 3,
+    "category": "travel",
+    "chinese": "请问这班火车几点出发？",
+    "pinyin": "qǐngwèn zhè bān huǒchē jǐ diǎn chūfā?",
+    "english": "Excuse me, when does this train depart?",
+    "usage_context": "Asking about train departure time"
+  },
+  {
+    "id": "conv_hsk3_010",
+    "hsk_level": 3,
+    "category": "travel",
+    "chinese": "我想预订一间单人房。",
+    "pinyin": "wǒ xiǎng yùdìng yī jiān dānrén fáng.",
+    "english": "I would like to book a single room.",
+    "usage_context": "Making a hotel reservation"
+  },
+  {
+    "id": "conv_hsk3_011",
+    "hsk_level": 3,
+    "category": "family",
+    "chinese": "你是哪里人？",
+    "pinyin": "nǐ shì nǎlǐ rén?",
+    "english": "Where are you from?",
+    "usage_context": "Asking about someone's hometown or origin"
+  },
+  {
+    "id": "conv_hsk3_012",
+    "hsk_level": 3,
+    "category": "school",
+    "chinese": "这次考试你考了几分？",
+    "pinyin": "zhè cì kǎoshì nǐ kǎo le jǐ fēn?",
+    "english": "What score did you get on this exam?",
+    "usage_context": "Asking about exam results"
+  },
+  {
+    "id": "conv_hsk3_013",
+    "hsk_level": 3,
+    "category": "work",
+    "chinese": "这个报告什么时候要交？",
+    "pinyin": "zhège bàogào shénme shíhou yào jiāo?",
+    "english": "When is this report due?",
+    "usage_context": "Asking about a report deadline"
+  },
+  {
+    "id": "conv_hsk3_014",
+    "hsk_level": 3,
+    "category": "weather",
+    "chinese": "天气预报说明天有大风。",
+    "pinyin": "tiānqì yùbào shuō míngtiān yǒu dàfēng.",
+    "english": "The weather forecast says there will be strong wind tomorrow.",
+    "usage_context": "Sharing weather forecast information"
+  },
+  {
+    "id": "conv_hsk3_015",
+    "hsk_level": 3,
+    "category": "greetings",
+    "chinese": "恭喜恭喜！",
+    "pinyin": "gōngxǐ gōngxǐ!",
+    "english": "Congratulations!",
+    "usage_context": "Congratulating someone on an achievement or happy event"
+  },
+  {
+    "id": "conv_hsk3_016",
+    "hsk_level": 3,
+    "category": "dining",
+    "chinese": "可以打包吗？",
+    "pinyin": "kěyǐ dǎbāo ma?",
+    "english": "Can I get this to go? / Can I have a doggy bag?",
+    "usage_context": "Asking to take leftover food home"
+  },
+  {
+    "id": "conv_hsk3_017",
+    "hsk_level": 3,
+    "category": "shopping",
+    "chinese": "这件衣服有大一号的吗？",
+    "pinyin": "zhè jiàn yīfu yǒu dà yī hào de ma?",
+    "english": "Do you have this clothing in one size larger?",
+    "usage_context": "Asking for a different size at a clothing store"
+  },
+  {
+    "id": "conv_hsk3_018",
+    "hsk_level": 3,
+    "category": "travel",
+    "chinese": "请问洗手间在哪里？",
+    "pinyin": "qǐngwèn xǐshǒujiān zài nǎlǐ?",
+    "english": "Excuse me, where is the restroom?",
+    "usage_context": "Asking for the location of a restroom"
+  },
+  {
+    "id": "conv_hsk3_019",
+    "hsk_level": 3,
+    "category": "work",
+    "chinese": "我们改天再谈吧。",
+    "pinyin": "wǒmen gǎitiān zài tán ba.",
+    "english": "Let's talk about it another day.",
+    "usage_context": "Postponing a conversation to another time"
+  },
+  {
+    "id": "conv_hsk3_020",
+    "hsk_level": 3,
+    "category": "school",
+    "chinese": "你能帮我解释一下吗？",
+    "pinyin": "nǐ néng bāng wǒ jiěshì yīxià ma?",
+    "english": "Can you help me explain this?",
+    "usage_context": "Asking for clarification or explanation"
+  },
+  {
+    "id": "conv_hsk4_001",
+    "hsk_level": 4,
+    "category": "work",
+    "chinese": "请问，您方便接受一个小时的采访吗？",
+    "pinyin": "qǐngwèn, nín fāngbiàn jiēshòu yī gè xiǎoshí de cǎifǎng ma?",
+    "english": "May I ask, would it be convenient for you to accept a one-hour interview?",
+    "usage_context": "Requesting a formal interview"
+  },
+  {
+    "id": "conv_hsk4_002",
+    "hsk_level": 4,
+    "category": "work",
+    "chinese": "我们能否达成共识？",
+    "pinyin": "wǒmen néng fǒu dáchéng gòngshí?",
+    "english": "Can we reach a consensus?",
+    "usage_context": "Suggesting agreement in a meeting or negotiation"
+  },
+  {
+    "id": "conv_hsk4_003",
+    "hsk_level": 4,
+    "category": "shopping",
+    "chinese": "这是最新款式吗？",
+    "pinyin": "zhè shì zuì xīn kuǎnshì ma?",
+    "english": "Is this the latest style?",
+    "usage_context": "Asking about the newest product model or style"
+  },
+  {
+    "id": "conv_hsk4_004",
+    "hsk_level": 4,
+    "category": "dining",
+    "chinese": "这道菜有什么特色？",
+    "pinyin": "zhè dào cài yǒu shénme tèsè?",
+    "english": "What's special about this dish?",
+    "usage_context": "Asking about the characteristics of a menu item"
+  },
+  {
+    "id": "conv_hsk4_005",
+    "hsk_level": 4,
+    "category": "health",
+    "chinese": "这种药有副作用吗？",
+    "pinyin": "zhè zhǒng yào yǒu fùzuòyòng ma?",
+    "english": "Does this medicine have side effects?",
+    "usage_context": "Asking a doctor or pharmacist about side effects"
+  },
+  {
+    "id": "conv_hsk4_006",
+    "hsk_level": 4,
+    "category": "travel",
+    "chinese": "我的护照丢了，应该怎么办？",
+    "pinyin": "wǒ de hùzhào diū le, yīnggāi zěnme bàn?",
+    "english": "I lost my passport, what should I do?",
+    "usage_context": "Reporting a lost passport to authorities"
+  },
+  {
+    "id": "conv_hsk4_007",
+    "hsk_level": 4,
+    "category": "travel",
+    "chinese": "请问，这里可以兑换外币吗？",
+    "pinyin": "qǐngwèn, zhèlǐ kěyǐ duìhuàn wàibì ma?",
+    "english": "Excuse me, can I exchange foreign currency here?",
+    "usage_context": "Asking about currency exchange services"
+  },
+  {
+    "id": "conv_hsk4_008",
+    "hsk_level": 4,
+    "category": "school",
+    "chinese": "这篇论文的主题是什么？",
+    "pinyin": "zhè piān lùnwén de zhǔtí shì shénme?",
+    "english": "What is the topic of this paper?",
+    "usage_context": "Asking about the subject of an academic paper"
+  },
+  {
+    "id": "conv_hsk4_009",
+    "hsk_level": 4,
+    "category": "family",
+    "chinese": "您父母身体还好吗？",
+    "pinyin": "nín fùmǔ shēntǐ hái hǎo ma?",
+    "english": "Are your parents in good health?",
+    "usage_context": "Politely asking about someone's parents' health"
+  },
+  {
+    "id": "conv_hsk4_010",
+    "hsk_level": 4,
+    "category": "weather",
+    "chinese": "这场台风影响到我们这里了。",
+    "pinyin": "zhè chǎng táifēng yǐngxiǎng dào wǒmen zhèlǐ le.",
+    "english": "This typhoon has affected our area.",
+    "usage_context": "Describing weather-related impact"
+  },
+  {
+    "id": "conv_hsk4_011",
+    "hsk_level": 4,
+    "category": "directions",
+    "chinese": "这条路堵车很厉害，建议走另一条。",
+    "pinyin": "zhè tiáo lù dǔchē hěn lìhài, jiànyì zǒu lìng yī tiáo.",
+    "english": "Traffic is very bad on this road, I suggest taking another route.",
+    "usage_context": "Giving route advice based on traffic"
+  },
+  {
+    "id": "conv_hsk4_012",
+    "hsk_level": 4,
+    "category": "work",
+    "chinese": "这个项目的预算是多少？",
+    "pinyin": "zhège xiàngmù de yùsuàn shì duōshao?",
+    "english": "What is the budget for this project?",
+    "usage_context": "Asking about a project's financial budget"
+  },
+  {
+    "id": "conv_hsk4_013",
+    "hsk_level": 4,
+    "category": "greetings",
+    "chinese": "您辛苦了！",
+    "pinyin": "nín xīnkǔ le!",
+    "english": "You've worked hard! Thank you for your efforts.",
+    "usage_context": "Showing appreciation for someone's hard work"
+  },
+  {
+    "id": "conv_hsk4_014",
+    "hsk_level": 4,
+    "category": "shopping",
+    "chinese": "这个产品有质量保证吗？",
+    "pinyin": "zhège chǎnpǐn yǒu zhìliàng bǎozhèng ma?",
+    "english": "Does this product come with a quality guarantee?",
+    "usage_context": "Asking about product warranty"
+  },
+  {
+    "id": "conv_hsk4_015",
+    "hsk_level": 4,
+    "category": "dining",
+    "chinese": "我们分开付账吧。",
+    "pinyin": "wǒmen fēnkāi fù zhàng ba.",
+    "english": "Let's split the bill.",
+    "usage_context": "Suggesting to pay separately at a restaurant"
+  },
+  {
+    "id": "conv_hsk4_016",
+    "hsk_level": 4,
+    "category": "health",
+    "chinese": "我需要预约挂号。",
+    "pinyin": "wǒ xūyào yùyuē guàhào.",
+    "english": "I need to make an appointment (at the hospital).",
+    "usage_context": "Registering for a hospital appointment"
+  },
+  {
+    "id": "conv_hsk4_017",
+    "hsk_level": 4,
+    "category": "school",
+    "chinese": "请问这门课有哪些选修内容？",
+    "pinyin": "qǐngwèn zhè mén kè yǒu nǎxiē xuǎnxiū nèiróng?",
+    "english": "May I ask what elective content this course has?",
+    "usage_context": "Asking about elective course options"
+  },
+  {
+    "id": "conv_hsk4_018",
+    "hsk_level": 4,
+    "category": "travel",
+    "chinese": "这里的风景真的让人叹为观止。",
+    "pinyin": "zhèlǐ de fēngjǐng zhēn de ràng rén tàn wéi guān zhǐ.",
+    "english": "The scenery here is truly breathtaking.",
+    "usage_context": "Expressing awe at a beautiful landscape"
+  },
+  {
+    "id": "conv_hsk4_019",
+    "hsk_level": 4,
+    "category": "family",
+    "chinese": "孩子的教育是最重要的投资。",
+    "pinyin": "háizi de jiàoyù shì zuì zhòngyào de tóuzī.",
+    "english": "A child's education is the most important investment.",
+    "usage_context": "Discussing the value of education in family"
+  },
+  {
+    "id": "conv_hsk4_020",
+    "hsk_level": 4,
+    "category": "work",
+    "chinese": "我们需要尽快解决这个问题。",
+    "pinyin": "wǒmen xūyào jǐn kuài jiějué zhège wèntí.",
+    "english": "We need to solve this problem as soon as possible.",
+    "usage_context": "Expressing urgency in solving a work problem"
+  },
+  {
+    "id": "conv_hsk5_001",
+    "hsk_level": 5,
+    "category": "work",
+    "chinese": "在我看来，这个方案还有待商榷。",
+    "pinyin": "zài wǒ kàn lái, zhège fāng'àn hái yǒu dài shāngquè.",
+    "english": "In my view, this proposal is still open to discussion.",
+    "usage_context": "Diplomatically expressing reservations about a plan"
+  },
+  {
+    "id": "conv_hsk5_002",
+    "hsk_level": 5,
+    "category": "greetings",
+    "chinese": "久仰大名！",
+    "pinyin": "jiǔ yǎng dà míng!",
+    "english": "I've long admired your reputation!",
+    "usage_context": "Very formal expression upon meeting a respected person"
+  },
+  {
+    "id": "conv_hsk5_003",
+    "hsk_level": 5,
+    "category": "work",
+    "chinese": "请问您对这件事有何高见？",
+    "pinyin": "qǐngwèn nín duì zhè jiàn shì yǒu hé gāojiàn?",
+    "english": "May I ask what your distinguished opinion is on this matter?",
+    "usage_context": "Formally and respectfully requesting someone's opinion"
+  },
+  {
+    "id": "conv_hsk5_004",
+    "hsk_level": 5,
+    "category": "school",
+    "chinese": "这篇文章的论点缺乏充分的实证支持。",
+    "pinyin": "zhè piān wénzhāng de lùndiǎn quēfá chōngfèn de shízhèng zhīchí.",
+    "english": "The arguments in this article lack sufficient empirical support.",
+    "usage_context": "Academic critique of an article's argument quality"
+  },
+  {
+    "id": "conv_hsk5_005",
+    "hsk_level": 5,
+    "category": "travel",
+    "chinese": "当地的风土人情令我深深着迷。",
+    "pinyin": "dāngdì de fēngtǔ rénqíng lìng wǒ shēnshēn zháomí.",
+    "english": "The local customs and human warmth deeply fascinated me.",
+    "usage_context": "Expressing fascination with local culture while traveling"
+  },
+  {
+    "id": "conv_hsk5_006",
+    "hsk_level": 5,
+    "category": "health",
+    "chinese": "长期的精神压力会对身心健康造成严重损害。",
+    "pinyin": "chángqī de jīngshén yālì huì duì shēnxīn jiànkāng zàochéng yánzhòng sǔnhài.",
+    "english": "Long-term mental stress can cause serious harm to physical and mental health.",
+    "usage_context": "Discussing the health effects of chronic stress"
+  },
+  {
+    "id": "conv_hsk5_007",
+    "hsk_level": 5,
+    "category": "family",
+    "chinese": "代际之间的沟通需要双方的理解与包容。",
+    "pinyin": "dàijì zhī jiān de gōutōng xūyào shuāngfāng de lǐjiě yǔ bāoróng.",
+    "english": "Communication between generations requires mutual understanding and tolerance.",
+    "usage_context": "Discussing intergenerational family dynamics"
+  },
+  {
+    "id": "conv_hsk5_008",
+    "hsk_level": 5,
+    "category": "work",
+    "chinese": "这项政策的实施将面临诸多挑战。",
+    "pinyin": "zhè xiàng zhèngcè de shíshī jiāng miànlín zhūduō tiǎozhàn.",
+    "english": "The implementation of this policy will face many challenges.",
+    "usage_context": "Discussing challenges in policy implementation"
+  },
+  {
+    "id": "conv_hsk5_009",
+    "hsk_level": 5,
+    "category": "dining",
+    "chinese": "这道菜的烹饪工艺相当复杂，需要精心准备。",
+    "pinyin": "zhè dào cài de pēngrèn gōngyì xiāngdāng fùzá, xūyào jīngxīn zhǔnbèi.",
+    "english": "The cooking technique for this dish is quite complex and requires careful preparation.",
+    "usage_context": "Describing a sophisticated culinary technique"
+  },
+  {
+    "id": "conv_hsk5_010",
+    "hsk_level": 5,
+    "category": "weather",
+    "chinese": "极端气候现象的频繁出现与全球变暖密切相关。",
+    "pinyin": "jíduān qìhòu xiànxiàng de pínfán chūxiàn yǔ quánqiú biànnuǎn mìqiē xiāngguān.",
+    "english": "The frequent occurrence of extreme weather events is closely related to global warming.",
+    "usage_context": "Discussing the connection between extreme weather and climate change"
+  },
+  {
+    "id": "conv_hsk5_011",
+    "hsk_level": 5,
+    "category": "greetings",
+    "chinese": "感谢您百忙之中抽出时间接待我。",
+    "pinyin": "gǎnxiè nín bǎi máng zhī zhōng chōu chū shíjiān jiēdài wǒ.",
+    "english": "Thank you for taking the time to receive me despite your busy schedule.",
+    "usage_context": "Formally thanking someone for making time to meet"
+  },
+  {
+    "id": "conv_hsk5_012",
+    "hsk_level": 5,
+    "category": "school",
+    "chinese": "批判性思维是现代教育不可或缺的核心素养。",
+    "pinyin": "pīpànxìng sīwéi shì xiàndài jiàoyù bùkě huòquē de héxīn sùyǎng.",
+    "english": "Critical thinking is an indispensable core competency in modern education.",
+    "usage_context": "Discussing the importance of critical thinking in education"
+  },
+  {
+    "id": "conv_hsk5_013",
+    "hsk_level": 5,
+    "category": "shopping",
+    "chinese": "这个品牌在国际市场上享有很高的声誉。",
+    "pinyin": "zhège pǐnpái zài guójì shìchǎng shàng xiǎngyǒu hěn gāo de shēngyù.",
+    "english": "This brand enjoys a very high reputation in the international market.",
+    "usage_context": "Describing a well-regarded brand in global markets"
+  },
+  {
+    "id": "conv_hsk5_014",
+    "hsk_level": 5,
+    "category": "travel",
+    "chinese": "跨文化交流有助于增进不同民族之间的相互了解。",
+    "pinyin": "kuà wénhuà jiāoliú yǒu zhù yú zēngjìn bùtóng mínzú zhī jiān de xiānghù liǎojiě.",
+    "english": "Cross-cultural exchange helps promote mutual understanding between different peoples.",
+    "usage_context": "Discussing the benefits of international travel and cultural exchange"
+  },
+  {
+    "id": "conv_hsk5_015",
+    "hsk_level": 5,
+    "category": "work",
+    "chinese": "这次合作对双方而言都是互利共赢的。",
+    "pinyin": "zhè cì hézuò duì shuāngfāng ér yán dōu shì hùlì gòng yíng de.",
+    "english": "This cooperation is mutually beneficial and a win-win for both parties.",
+    "usage_context": "Describing a mutually beneficial business partnership"
+  },
+  {
+    "id": "conv_hsk5_016",
+    "hsk_level": 5,
+    "category": "health",
+    "chinese": "定期进行体检是预防疾病的有效手段。",
+    "pinyin": "dìngqī jìnxíng tǐjiǎn shì yùfáng jíbìng de yǒuxiào shǒuduàn.",
+    "english": "Regular physical examinations are an effective means of disease prevention.",
+    "usage_context": "Recommending regular health checkups"
+  },
+  {
+    "id": "conv_hsk5_017",
+    "hsk_level": 5,
+    "category": "family",
+    "chinese": "孝顺父母是中华民族的传统美德。",
+    "pinyin": "xiàoshùn fùmǔ shì Zhōnghuá mínzú de chuántǒng měidé.",
+    "english": "Filial piety toward one's parents is a traditional virtue of the Chinese nation.",
+    "usage_context": "Discussing the Confucian value of filial piety"
+  },
+  {
+    "id": "conv_hsk5_018",
+    "hsk_level": 5,
+    "category": "school",
+    "chinese": "知识的积累需要长年的坚持与努力。",
+    "pinyin": "zhīshi de jīlěi xūyào cháng nián de jiānchí yǔ nǔlì.",
+    "english": "The accumulation of knowledge requires years of persistence and effort.",
+    "usage_context": "Motivating students to commit to long-term learning"
+  },
+  {
+    "id": "conv_hsk5_019",
+    "hsk_level": 5,
+    "category": "directions",
+    "chinese": "请沿着这条干线一直往北走，大约二十分钟就到了。",
+    "pinyin": "qǐng yán zhe zhè tiáo gànxiàn yīzhí wǎng běi zǒu, dàyuē èrshí fēnzhōng jiù dào le.",
+    "english": "Please go north along this main road, and you'll arrive in about twenty minutes.",
+    "usage_context": "Giving detailed directions along a main road"
+  },
+  {
+    "id": "conv_hsk5_020",
+    "hsk_level": 5,
+    "category": "greetings",
+    "chinese": "失礼了，我要先告辞。",
+    "pinyin": "shīlǐ le, wǒ yào xiān gàocí.",
+    "english": "Excuse my rudeness, I must take my leave first.",
+    "usage_context": "Formally excusing yourself from a gathering or meeting"
+  }
+]

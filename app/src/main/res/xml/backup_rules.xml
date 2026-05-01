@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    backup_rules.xml — Mandarin Learn
+    Controls which files are included/excluded in Android Auto Backup.
+    Room database is excluded (too large; user exports via Settings → Export progress).
+    DataStore preferences ARE backed up (settings only, no sensitive data).
+-->
+<full-backup-content>
+    <!-- Exclude Room database files (large binary blobs, export-on-demand instead) -->
+    <exclude domain="database" path="mandarin_learn.db" />
+    <exclude domain="database" path="mandarin_learn.db-shm" />
+    <exclude domain="database" path="mandarin_learn.db-wal" />
+
+    <!-- Exclude audio cache (can be re-fetched from Gemini) -->
+    <exclude domain="file" path="audio_cache/" />
+
+    <!-- Exclude local.properties derivative — API key must never be backed up -->
+    <exclude domain="sharedpref" path="gemini_api_key" />
+</full-backup-content>
