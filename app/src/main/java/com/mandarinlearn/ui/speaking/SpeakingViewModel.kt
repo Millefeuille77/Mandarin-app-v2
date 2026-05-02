@@ -123,7 +123,7 @@ class SpeakingViewModel(
         viewModelScope.launch {
             val phrase = speakingRepository.getRandomPhrase(hsk)
             if (phrase == null) {
-                _uiState.value = SpeakingUiState.Error("No speaking phrases found for HSK $hsk.")
+                _uiState.value = SpeakingUiState.Error(SpeakingErrorCode.NO_PHRASES)
             } else {
                 currentPhrase = phrase
                 _uiState.value = SpeakingUiState.Idle(phrase, hsk)
@@ -137,9 +137,7 @@ class SpeakingViewModel(
             return
         }
         if (!networkMonitor.isOnline()) {
-            _uiState.value = SpeakingUiState.Error(
-                "You’re offline. Speaking practice needs internet."
-            )
+            _uiState.value = SpeakingUiState.Error(SpeakingErrorCode.OFFLINE)
             return
         }
 
@@ -172,7 +170,7 @@ class SpeakingViewModel(
                 },
                 onFailure = { error ->
                     Logger.e(TAG, "Recording failed", error)
-                    _uiState.value = SpeakingUiState.Error("Could not start recording. Please try again.")
+                    _uiState.value = SpeakingUiState.Error(SpeakingErrorCode.RECORD_FAILED)
                 }
             )
         }
@@ -187,13 +185,14 @@ class SpeakingViewModel(
                     _uiState.value = SpeakingUiState.Result(phrase, hsk, pronunciation)
                 },
                 onFailure = { error ->
-                    val message = when (error) {
-                        is GeminiError.Offline -> "You’re offline. Speaking practice needs internet."
-                        is GeminiError.NoApiKey -> "AI features unavailable — set your API key in Settings."
-                        is GeminiError.Timeout -> "Scoring timed out. Please try again."
-                        else -> "Could not score pronunciation. Please try again."
+                    // Map GeminiError to a SpeakingErrorCode — ViewModel stays Context-free.
+                    val errorCode = when (error) {
+                        is GeminiError.Offline  -> SpeakingErrorCode.OFFLINE
+                        is GeminiError.NoApiKey -> SpeakingErrorCode.NO_API_KEY
+                        is GeminiError.Timeout  -> SpeakingErrorCode.TIMEOUT
+                        else                    -> SpeakingErrorCode.UNKNOWN
                     }
-                    _uiState.value = SpeakingUiState.Error(message)
+                    _uiState.value = SpeakingUiState.Error(errorCode)
                 }
             )
         } finally {

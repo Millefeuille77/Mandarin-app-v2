@@ -70,11 +70,34 @@ sealed class SpeakingUiState {
 
     /**
      * An error occurred (offline, timeout, no phrases loaded, etc.).
-     * The screen shows an ErrorState card with [message].
+     * The screen maps [errorCode] to a localised string via [SpeakingErrorCode].
+     * Using an error code keeps ViewModels free of Context (ARCHITECTURE.md §6).
      */
     data class Error(
-        val message: String,
+        val errorCode: SpeakingErrorCode,
     ) : SpeakingUiState()
+}
+
+/**
+ * Error codes for [SpeakingUiState.Error].
+ * Mapped to user-facing strings in [SpeakingScreen] via stringResource().
+ * This keeps ViewModels free of Context references.
+ */
+enum class SpeakingErrorCode {
+    /** No microphone permission granted. */
+    NO_PERMISSION,
+    /** No conversation phrases found in the database for this HSK level. */
+    NO_PHRASES,
+    /** Device is offline — speaking practice requires internet for STT. */
+    OFFLINE,
+    /** Gemini API key is not configured in local.properties. */
+    NO_API_KEY,
+    /** Gemini STT timed out — transient, user can retry. */
+    TIMEOUT,
+    /** MediaRecorder failed to start — hardware issue. */
+    RECORD_FAILED,
+    /** Catch-all for unexpected errors. */
+    UNKNOWN,
 }
 
 /** One-time events emitted by [SpeakingViewModel] via a SharedFlow. */

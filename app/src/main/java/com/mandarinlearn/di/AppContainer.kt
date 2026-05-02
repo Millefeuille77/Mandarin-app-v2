@@ -49,7 +49,6 @@ import kotlinx.serialization.json.Json
  * All singletons are lazy-initialised here and injected into ViewModels via
  * their companion-object factory functions.
  *
- * TODO(phase_9): Add SettingsRepository.
  */
 class AppContainer(val context: Context) {
 

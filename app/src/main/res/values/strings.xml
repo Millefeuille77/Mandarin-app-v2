@@ -201,9 +201,13 @@
     <string name="speaking_open_settings">Open device settings</string>
     <string name="speaking_permission_permanently_denied">Open your device settings to enable microphone access for Mandarin Learn.</string>
 
-    <!-- Offline / error messages -->
+    <!-- Offline / error messages (Phase 10: moved from hardcoded ViewModel strings) -->
     <string name="speaking_offline_error">You\'re offline. Speaking practice needs internet.</string>
     <string name="speaking_no_phrases_error">No speaking phrases found. Please restart the app.</string>
+    <string name="speaking_error_no_api_key">AI features are not available — add your Gemini API key in Settings.</string>
+    <string name="speaking_error_timeout">Scoring timed out — please check your connection and try again.</string>
+    <string name="speaking_error_record_failed">Could not start recording. Please check your microphone and try again.</string>
+    <string name="speaking_mic_icon_desc">Microphone</string>
 
     <!-- Phase 7: Exam section strings (UX_SPECIFICATION.md §4 Screens 8 and 9) -->
     <!-- ExamHubScreen -->
@@ -393,4 +397,11 @@
     <string name="settings_gemini_key_set">Set</string>
     <string name="settings_gemini_key_not_set">Not set</string>
     <string name="settings_gemini_key_helper">Set via local.properties at build time.</string>
+
+    <!-- Phase 10: Additional error messages (audit pass — friendly language, no jargon) -->
+    <string name="error_import_corrupt_json">The data file appears to be corrupted. Please reinstall the app to reset.</string>
+    <string name="error_offline_no_retry">You\'re offline. This feature requires an internet connection.</string>
+    <string name="error_database_generic">Something went wrong with local storage. Please try again.</string>
+    <string name="error_exam_no_data">No exam questions found. Please restart the app to reload data.</string>
+    <string name="error_reading_no_passages">No reading passages found for this level. Please restart the app.</string>
 </resources>

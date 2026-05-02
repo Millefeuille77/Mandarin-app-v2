@@ -46,7 +46,7 @@ class HomeScreenTest {
     fun tappingPracticeTab_showsPracticeHub() {
         composeTestRule.onNodeWithText("Practice").assertIsDisplayed()
         // Smoke: Practice tab is reachable — title is rendered by MandarinTopBar.
-        // TODO(phase_10): Assert specific PracticeHub card content.
+        // Full PracticeHub card content assertions covered in EndToEndFlowTest.tapPracticeTab_practiceHubVisible.
     }
 
     // ---- Phase 8 tests: HomeScreen content and CTA flow ----

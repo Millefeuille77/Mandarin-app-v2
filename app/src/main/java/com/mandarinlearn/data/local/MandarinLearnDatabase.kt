@@ -32,6 +32,7 @@ import com.mandarinlearn.data.local.entity.StreakEntity
 import com.mandarinlearn.data.local.entity.ToneDrillEntity
 import com.mandarinlearn.data.local.entity.UserProgressEntity
 import com.mandarinlearn.data.local.entity.VocabularyEntity
+import com.mandarinlearn.BuildConfig
 import com.mandarinlearn.data.local.migrations.MIGRATIONS
 
 /**
@@ -84,9 +85,14 @@ abstract class MandarinLearnDatabase : RoomDatabase() {
             } else {
                 Room.databaseBuilder(context, MandarinLearnDatabase::class.java, DB_NAME)
             }
+            // Phase 10: fallbackToDestructiveMigration guarded to DEBUG builds only.
+            // In release, a missing migration will surface as a proper crash so it is
+            // caught before shipping rather than silently wiping user data.
+            if (BuildConfig.DEBUG) {
+                builder.fallbackToDestructiveMigration()
+            }
             return builder
                 .addMigrations(*MIGRATIONS)
-                .fallbackToDestructiveMigration() // dev safety net only — remove before 1.0
                 .build()
         }
     }

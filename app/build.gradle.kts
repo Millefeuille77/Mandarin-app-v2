@@ -2,6 +2,7 @@
 // Implements ARCHITECTURE.md §1: minSdk 26, targetSdk 34, compileSdk 34, JVM 17.
 // Compose compiler version 1.5.8 must match Kotlin 1.9.22.
 // Phase 2 adds: Room (KSP), kotlinx-serialization, DataStore.
+// Phase 10: versionCode = 1, versionName = "1.0.0" (final release).
 
 import java.util.Properties
 

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
     ic_launcher_foreground.xml — Mandarin Learn
-    Adaptive icon foreground layer. Simple "ML" monogram in white.
-    Phase 10: replace with a proper branded icon asset.
+    Adaptive icon foreground layer. Rendered as the Chinese character 中 ("middle/China"),
+    centered on the safe-zone of an adaptive icon (108dp viewport, 72dp safe-zone for the
+    glyph so launchers can mask circle/squircle/rounded-square without clipping).
+
+    The white-on-blue palette matches the app theme (Primary #1565C0).
 -->
 <vector
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -11,13 +14,31 @@
     android:viewportWidth="108"
     android:viewportHeight="108">
 
-    <!-- White circle background for the monogram -->
+    <!--
+        Chinese character 中 (zhōng) constructed from rectangles.
+        Bounding box: 36..72 horizontally, 36..78 vertically (within the 27..81 safe zone).
+        Strokes are 5dp wide for legibility at 48dp launcher size.
+    -->
+
+    <!-- Outer rectangle (口 component): top stroke -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M54,24 A30,30 0 1,0 54,84 A30,30 0 1,0 54,24" />
-
-    <!-- "M" letter in primary color — simplified path -->
+        android:pathData="M40,40 L68,40 L68,46 L40,46 Z" />
+    <!-- Outer rectangle: bottom stroke -->
     <path
-        android:fillColor="#1565C0"
-        android:pathData="M36,72 L36,40 L45,58 L54,40 L63,58 L72,40 L72,72 L67,72 L67,52 L59,68 L49,68 L41,52 L41,72 Z" />
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,68 L68,68 L68,74 L40,74 Z" />
+    <!-- Outer rectangle: left stroke -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M40,40 L46,40 L46,74 L40,74 Z" />
+    <!-- Outer rectangle: right stroke -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M62,40 L68,40 L68,74 L62,74 Z" />
+
+    <!-- Vertical stroke through the rectangle (the | of 中) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M51,30 L57,30 L57,84 L51,84 Z" />
 </vector>
