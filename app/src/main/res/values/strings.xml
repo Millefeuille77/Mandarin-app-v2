@@ -170,6 +170,41 @@
     <string name="audio_play_all">Play all</string>
     <string name="audio_coming_soon">Audio coming soon</string>
 
+    <!-- Phase 6: Speaking section strings (UX_SPECIFICATION.md §4 Screen 6) -->
+    <string name="speaking_tap_to_record">Tap to record</string>
+    <string name="speaking_recording_timer">Recording… (%1$ds)</string>
+    <string name="speaking_processing">Processing…</string>
+    <string name="speaking_recording_limit">Recording stopped — 10 second limit</string>
+    <string name="speaking_try_again">Try again</string>
+    <string name="speaking_next_phrase">Next phrase</string>
+
+    <!-- Score bands (paired with icons — color is never sole indicator) -->
+    <string name="speaking_score_excellent">Excellent!</string>
+    <string name="speaking_score_good">Good</string>
+    <string name="speaking_score_keep_trying">Keep practising</string>
+
+    <!-- Score card content description for TalkBack -->
+    <string name="speaking_score_content_desc">Score %1$d out of 100. %2$s. %3$s</string>
+
+    <!-- Transcription label -->
+    <string name="speaking_transcription">Heard: %1$s</string>
+
+    <!-- Mic button content descriptions -->
+    <string name="speaking_mic_desc_idle">Record your pronunciation</string>
+    <string name="speaking_mic_desc_recording">Recording, tap to stop</string>
+    <string name="speaking_mic_desc_processing">Processing your recording</string>
+
+    <!-- Permission rationale (UX §5.4) -->
+    <string name="speaking_permission_title">Microphone access needed</string>
+    <string name="speaking_permission_rationale">Mandarin Learn needs your microphone to score your pronunciation. Audio is uploaded to Google Gemini for analysis and is not stored.</string>
+    <string name="speaking_grant_permission">Allow microphone</string>
+    <string name="speaking_open_settings">Open device settings</string>
+    <string name="speaking_permission_permanently_denied">Open your device settings to enable microphone access for Mandarin Learn.</string>
+
+    <!-- Offline / error messages -->
+    <string name="speaking_offline_error">You\'re offline. Speaking practice needs internet.</string>
+    <string name="speaking_no_phrases_error">No speaking phrases found. Please restart the app.</string>
+
     <!-- Phase 2: Import loading screen strings (ARCHITECTURE.md §3.4) -->
     <string name="import_setting_up">Setting up your lessons…</string>
     <string name="import_importing_vocabulary">Importing vocabulary…</string>

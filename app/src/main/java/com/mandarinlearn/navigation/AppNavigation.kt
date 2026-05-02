@@ -2,7 +2,8 @@
 // Central NavHost that wires every route in the app.
 // UX_SPECIFICATION.md §2 defines the full navigation tree.
 // Phase 2: IMPORT is the start destination; gated on JsonImporter completion.
-// Phase 4: carries over nav wiring task — ViewModels injected from AppContainer factory.
+// Phase 4: ViewModels injected from AppContainer factory.
+// Phase 6: SpeakingScreen wired with real SpeakingViewModel.
 
 package com.mandarinlearn.navigation
 
@@ -31,6 +32,7 @@ import com.mandarinlearn.ui.reading.ReadingListScreen
 import com.mandarinlearn.ui.reading.ReadingListViewModel
 import com.mandarinlearn.ui.settings.SettingsScreen
 import com.mandarinlearn.ui.speaking.SpeakingScreen
+import com.mandarinlearn.ui.speaking.SpeakingViewModel
 import com.mandarinlearn.ui.vocabulary.FlashcardScreen
 import com.mandarinlearn.ui.vocabulary.FlashcardViewModel
 import com.mandarinlearn.ui.vocabulary.VocabularyScreen
@@ -230,10 +232,27 @@ fun AppNavigation(
             arguments = listOf(navArgument("hsk") { type = NavType.IntType; defaultValue = 1 })
         ) { backStackEntry ->
             val hsk = backStackEntry.arguments?.getInt("hsk") ?: 1
-            SpeakingScreen(
-                hsk            = hsk,
-                onNavigateBack = { navController.popBackStack() },
-            )
+            if (appContainer != null) {
+                val vm: SpeakingViewModel = viewModel(
+                    factory = SpeakingViewModel.factory(
+                        speakingRepository        = appContainer.speakingRepository,
+                        scorePronunciationUseCase = appContainer.scorePronunciationUseCase,
+                        audioRecorder             = appContainer.audioRecorder,
+                        networkMonitor            = appContainer.networkMonitor,
+                        context                   = appContainer.context,
+                        hsk                       = hsk,
+                    )
+                )
+                SpeakingScreen(
+                    viewModel      = vm,
+                    onNavigateBack = { navController.popBackStack() },
+                )
+            } else {
+                SpeakingScreen(
+                    hsk            = hsk,
+                    onNavigateBack = { navController.popBackStack() },
+                )
+            }
         }
 
         // --- Exam screens (Phase 7) ---

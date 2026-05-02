@@ -5,12 +5,14 @@
 // Phase 4: PlayChineseAudioUseCase.
 // Phase 5: GeminiService, NetworkMonitor, AndroidTtsFallback, AudioRepository (full),
 //           ListeningRepository (full).
+// Phase 6: AudioRecorder, SpeakingRepository (full), ScorePronunciationUseCase.
 
 package com.mandarinlearn.di
 
 import android.content.Context
 import com.mandarinlearn.BuildConfig
 import com.mandarinlearn.data.audio.AndroidTtsFallback
+import com.mandarinlearn.data.audio.AudioRecorder
 import com.mandarinlearn.data.local.MandarinLearnDatabase
 import com.mandarinlearn.data.local.import.JsonImporter
 import com.mandarinlearn.data.preferences.UserPreferencesRepository
@@ -25,6 +27,7 @@ import com.mandarinlearn.data.repository.StreakRepository
 import com.mandarinlearn.data.repository.VocabularyRepository
 import com.mandarinlearn.domain.usecase.PlayChineseAudioUseCase
 import com.mandarinlearn.domain.usecase.ReviewVocabularyUseCase
+import com.mandarinlearn.domain.usecase.ScorePronunciationUseCase
 import com.mandarinlearn.util.DefaultDispatcherProvider
 import com.mandarinlearn.util.DispatcherProvider
 import com.mandarinlearn.util.NetworkMonitor
@@ -139,8 +142,18 @@ class AppContainer(val context: Context) {
         )
     }
 
+    /** Phase 6: AudioRecorder wraps MediaRecorder for voice recordings. */
+    val audioRecorder: AudioRecorder by lazy {
+        AudioRecorder(context)
+    }
+
+    /** Phase 6: Full SpeakingRepository — replaces the Phase 2 stub. */
     val speakingRepository: SpeakingRepository by lazy {
-        SpeakingRepository(dispatchers)
+        SpeakingRepository(
+            conversationPhraseDao = database.conversationPhraseDao(),
+            geminiService         = geminiService,
+            dispatchers           = dispatchers,
+        )
     }
 
     // ---- Phase 3: Domain use cases ----
@@ -153,6 +166,12 @@ class AppContainer(val context: Context) {
 
     val playChineseAudioUseCase: PlayChineseAudioUseCase by lazy {
         PlayChineseAudioUseCase(audioRepository)
+    }
+
+    // ---- Phase 6: Speaking use case ----
+
+    val scorePronunciationUseCase: ScorePronunciationUseCase by lazy {
+        ScorePronunciationUseCase(speakingRepository)
     }
 
     // ---- Preferences (DataStore-backed) ----
