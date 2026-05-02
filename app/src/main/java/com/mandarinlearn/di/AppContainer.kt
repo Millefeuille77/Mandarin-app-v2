@@ -8,6 +8,7 @@
 // Phase 6: AudioRecorder, SpeakingRepository (full), ScorePronunciationUseCase.
 // Phase 7: StartExamUseCase, SubmitExamUseCase, ExamGrader.
 // Phase 8: GetDashboardUseCase.
+// Phase 9: SettingsRepository, ExportProgressUseCase, ImportProgressUseCase, ResetProgressUseCase.
 
 package com.mandarinlearn.di
 
@@ -25,9 +26,13 @@ import com.mandarinlearn.data.repository.ListeningRepository
 import com.mandarinlearn.data.repository.ProgressRepository
 import com.mandarinlearn.data.repository.ReadingRepository
 import com.mandarinlearn.data.repository.SpeakingRepository
+import com.mandarinlearn.data.repository.SettingsRepository
 import com.mandarinlearn.data.repository.StreakRepository
 import com.mandarinlearn.data.repository.VocabularyRepository
 import com.mandarinlearn.domain.grading.ExamGrader
+import com.mandarinlearn.domain.usecase.ExportProgressUseCase
+import com.mandarinlearn.domain.usecase.ImportProgressUseCase
+import com.mandarinlearn.domain.usecase.ResetProgressUseCase
 import com.mandarinlearn.domain.usecase.GetDashboardUseCase
 import com.mandarinlearn.domain.usecase.PlayChineseAudioUseCase
 import com.mandarinlearn.domain.usecase.ReviewVocabularyUseCase
@@ -214,5 +219,27 @@ class AppContainer(val context: Context) {
 
     val userPreferencesRepository: UserPreferencesRepository by lazy {
         UserPreferencesRepository(context)
+    }
+
+    // ---- Phase 9: Settings ----
+
+    /** Thin wrapper over UserPreferencesRepository for SettingsViewModel injection. */
+    val settingsRepository: SettingsRepository by lazy {
+        SettingsRepository(userPreferencesRepository)
+    }
+
+    /** Exports SRS state, exam history, streak, and progress to a SAF JSON file. */
+    val exportProgressUseCase: ExportProgressUseCase by lazy {
+        ExportProgressUseCase(context, database, json)
+    }
+
+    /** Reads a SAF JSON export and replaces user-state in Room (validates version == 1). */
+    val importProgressUseCase: ImportProgressUseCase by lazy {
+        ImportProgressUseCase(context, database, json)
+    }
+
+    /** Atomically resets all SM-2 fields, exam results, streak, and progress counts. */
+    val resetProgressUseCase: ResetProgressUseCase by lazy {
+        ResetProgressUseCase(database)
     }
 }

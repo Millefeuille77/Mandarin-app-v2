@@ -47,4 +47,8 @@ interface ExamResultDao {
     /** Deletes all results (used by ResetProgressUseCase). */
     @Query("DELETE FROM exam_results")
     suspend fun deleteAll()
+
+    /** Returns all exam results once (non-reactive). Used by ExportProgressUseCase. */
+    @Query("SELECT * FROM exam_results ORDER BY finished_at ASC")
+    suspend fun getAllOnce(): List<ExamResultEntity>
 }

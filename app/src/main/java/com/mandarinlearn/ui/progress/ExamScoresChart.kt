@@ -3,6 +3,7 @@
 // Phase 8: Progress & Dashboard (IMPLEMENTATION_PLAN.md §B; UX_SPECIFICATION.md §4 Screen 10).
 // NO third-party charting library per ARCHITECTURE.md §1.1.
 // Handles 0, 1, 2, and 5+ data points correctly.
+// Phase 9 fix (QA M-1): single-point renders 56dp tappable Box overlay (was 8f canvas dot).
 
 package com.mandarinlearn.ui.progress
 
@@ -14,7 +15,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -28,7 +31,9 @@ import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -54,8 +59,16 @@ fun ExamScoresChart(
     val onSurfaceVariant = MaterialTheme.colorScheme.onSurfaceVariant
     val surfaceVariant = MaterialTheme.colorScheme.surfaceVariant
 
-    // Build accessibility description from results.
-    val accessibilityDesc = buildChartAccessibilityDescription(results)
+    // Phase 9 QA m-1 fix: use string resources for all TalkBack strings.
+    val accEmpty      = stringResource(R.string.chart_acc_empty)
+    val accSingle     = stringResource(R.string.chart_acc_single)
+    val accGain       = stringResource(R.string.chart_acc_gain)
+    val accLoss       = stringResource(R.string.chart_acc_loss)
+    val accNoChange   = stringResource(R.string.chart_acc_no_change)
+    val accMulti      = stringResource(R.string.chart_acc_multi)
+    val accessibilityDesc = buildChartAccessibilityDescription(
+        results, accEmpty, accSingle, accGain, accLoss, accNoChange, accMulti
+    )
 
     // Pre-compute tap-zone x positions — recalculated on each draw.
     val pointPositions = remember(results) { mutableListOf<Pair<Float, Long>>() }
@@ -74,6 +87,20 @@ fun ExamScoresChart(
                 color = onSurfaceVariant,
             )
         }
+        return
+    }
+
+    // Phase 9 QA M-1 fix: single-point needs a 56 dp touch target.
+    // Use a Box with a Canvas underneath and a clickable 56 dp overlay centered on the dot.
+    if (results.size == 1) {
+        SinglePointChart(
+            result         = results[0],
+            primaryColor   = primaryColor,
+            surfaceVariant = surfaceVariant,
+            accessibilityDesc = accessibilityDesc,
+            onPointTapped  = onPointTapped,
+            modifier       = modifier,
+        )
         return
     }
 
@@ -110,16 +137,6 @@ fun ExamScoresChart(
         // Draw horizontal grid lines at 0, 25%, 50%, 75%, 100% of max.
         drawGridLines(drawWidth, drawHeight, padLeft, padTop, padBottom, chartHeight, surfaceVariant)
 
-        if (results.size == 1) {
-            // Single point: draw a dot only.
-            val cx = padLeft + drawWidth / 2f
-            val rawY = results[0].totalScore.toFloat() / maxScore.toFloat()
-            val cy = padTop + drawHeight * (1f - rawY)
-            drawCircle(color = primaryColor, radius = 8f, center = Offset(cx, cy))
-            pointPositions.add(Pair(cx, results[0].id))
-            return@Canvas
-        }
-
         // Multiple points: draw line + dots.
         val xs = results.mapIndexed { i, _ ->
             padLeft + i.toFloat() / (results.size - 1).toFloat() * drawWidth
@@ -152,6 +169,59 @@ fun ExamScoresChart(
     }
 }
 
+/**
+ * Single-point chart with a 56 dp tappable circle overlay (QA M-1 fix).
+ * The dot is centred horizontally in the chart area, at the correct vertical score position.
+ */
+@Composable
+private fun SinglePointChart(
+    result: ExamResult,
+    primaryColor: Color,
+    surfaceVariant: Color,
+    accessibilityDesc: String,
+    onPointTapped: (Long) -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    Box(
+        modifier = modifier
+            .fillMaxWidth()
+            .height(160.dp)
+            .semantics { contentDescription = accessibilityDesc },
+        contentAlignment = Alignment.Center,
+    ) {
+        // Grid canvas behind the dot
+        Canvas(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(SpacingM),
+        ) {
+            val drawWidth  = size.width
+            val drawHeight = size.height
+            drawGridLines(drawWidth, drawHeight, 0f, 0f, 0f, size.height, surfaceVariant)
+
+            // Draw the dot at the correct vertical position
+            val rawY = result.totalScore.toFloat() / result.totalMaxScore.toFloat().coerceAtLeast(1f)
+            val cx = drawWidth / 2f
+            val cy = drawHeight * (1f - rawY.coerceIn(0f, 1f))
+            drawCircle(color = primaryColor, radius = 12f, center = Offset(cx, cy))
+            drawCircle(color = Color.White,  radius = 5f,  center = Offset(cx, cy))
+        }
+
+        // Transparent 56 dp tap target centred on the dot (satisfies the 56 dp rule)
+        Box(
+            modifier = Modifier
+                .size(56.dp)
+                .semantics {
+                    role = Role.Button
+                    contentDescription = accessibilityDesc
+                }
+                .pointerInput(result.id) {
+                    detectTapGestures { onPointTapped(result.id) }
+                },
+        )
+    }
+}
+
 private fun DrawScope.drawGridLines(
     drawWidth: Float,
     drawHeight: Float,
@@ -173,20 +243,39 @@ private fun DrawScope.drawGridLines(
     }
 }
 
-private fun buildChartAccessibilityDescription(results: List<ExamResult>): String {
-    if (results.isEmpty()) return "No exam scores recorded yet."
+/**
+ * Builds the TalkBack content description for the chart.
+ * Uses string-resource-derived templates passed from the composable context (QA m-1 fix).
+ *
+ * @param emptyDesc        Localised "no exams" fallback (R.string.chart_acc_empty).
+ * @param singleTemplate   Template "%1$d out of %2$d" (R.string.chart_acc_single).
+ * @param gainTemplate     Template "gain of %1$d points" (R.string.chart_acc_gain).
+ * @param lossTemplate     Template "loss of %1$d points" (R.string.chart_acc_loss).
+ * @param noChangeDesc     Localised "no change" string (R.string.chart_acc_no_change).
+ * @param multiTemplate    Template "Latest %1$d, previous %2$d, %3$s." (R.string.chart_acc_multi).
+ */
+private fun buildChartAccessibilityDescription(
+    results: List<ExamResult>,
+    emptyDesc: String,
+    singleTemplate: String,
+    gainTemplate: String,
+    lossTemplate: String,
+    noChangeDesc: String,
+    multiTemplate: String,
+): String {
+    if (results.isEmpty()) return emptyDesc
     if (results.size == 1) {
-        return "Latest score ${results[0].totalScore} out of ${results[0].totalMaxScore}."
+        return String.format(singleTemplate, results[0].totalScore, results[0].totalMaxScore)
     }
     val latest = results.last()
     val previous = results[results.size - 2]
     val diff = latest.totalScore - previous.totalScore
     val change = when {
-        diff > 0 -> "gain of $diff points"
-        diff < 0 -> "loss of ${-diff} points"
-        else     -> "no change"
+        diff > 0 -> String.format(gainTemplate, diff)
+        diff < 0 -> String.format(lossTemplate, -diff)
+        else     -> noChangeDesc
     }
-    return "Latest score ${latest.totalScore}, previous ${previous.totalScore}, $change."
+    return String.format(multiTemplate, latest.totalScore, previous.totalScore, change)
 }
 
 // ---- Preview ----

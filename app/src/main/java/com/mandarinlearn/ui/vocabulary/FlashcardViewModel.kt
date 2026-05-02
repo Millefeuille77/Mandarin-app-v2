@@ -1,12 +1,14 @@
 // FlashcardViewModel.kt — Mandarin Learn
 // ViewModel for FlashcardScreen. Manages SM-2 session queue and card state.
 // UX_SPECIFICATION.md §4 Screen 3. ARCHITECTURE.md §5 (SM-2) and §4.6 (AudioRepository).
+// Phase 9: dailyNewCardsLimit read from UserPreferencesRepository (replaces hardcoded 10).
 
 package com.mandarinlearn.ui.vocabulary
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import com.mandarinlearn.data.preferences.UserPreferencesRepository
 import com.mandarinlearn.data.repository.AudioRepository
 import com.mandarinlearn.data.repository.AudioPlaybackState
 import com.mandarinlearn.data.repository.VocabularyRepository
@@ -22,6 +24,7 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
 private const val TAG = "FlashcardViewModel"
@@ -36,8 +39,11 @@ class FlashcardViewModel(
     private val audioRepository: AudioRepository,
     private val reviewUseCase: ReviewVocabularyUseCase,
     private val hsk: Int,
-    private val newCardsLimit: Int = 10,
+    /** Reads the persisted daily limit; falls back to 10 if the flow is unavailable. */
+    private val preferencesRepository: UserPreferencesRepository? = null,
 ) : ViewModel() {
+    // Effective limit resolved on session load from DataStore (Phase 9).
+    private var newCardsLimit: Int = 10
 
     private val _uiState = MutableStateFlow<FlashcardUiState>(FlashcardUiState.Loading)
     val uiState: StateFlow<FlashcardUiState> = _uiState.asStateFlow()
@@ -59,6 +65,10 @@ class FlashcardViewModel(
         viewModelScope.launch {
             _uiState.value = FlashcardUiState.Loading
             try {
+                // Phase 9: read the persisted limit from DataStore before building the queue.
+                if (preferencesRepository != null) {
+                    newCardsLimit = preferencesRepository.dailyNewCardsLimit.first()
+                }
                 val cards = vocabularyRepository.getDueAndNewCards(hsk, newCardsLimit)
                 if (cards.isEmpty()) {
                     _uiState.value = FlashcardUiState.Empty
@@ -100,11 +110,13 @@ class FlashcardViewModel(
         }
     }
 
-    /** User tapped the audio play button. Stub plays via AudioRepository (Phase 5 will wire TTS). */
+    /** User tapped the audio play button. Plays via AudioRepository with user's speed preference. */
     fun playAudio() {
         val current = currentContent() ?: return
         viewModelScope.launch {
-            audioRepository.play(current.currentCard.character).collect { state ->
+            // Phase 9: read audio speed preference for each playback so changes are live.
+            val speed = preferencesRepository?.audioSpeed?.first() ?: 1.0f
+            audioRepository.play(current.currentCard.character, speed).collect { state ->
                 when (state) {
                     is AudioPlaybackState.Loading ->
                         _uiState.value = current.copy(isAudioLoading = true)
@@ -180,12 +192,12 @@ class FlashcardViewModel(
             audioRepository: AudioRepository,
             reviewUseCase: ReviewVocabularyUseCase,
             hsk: Int,
-            newCardsLimit: Int = 10,
+            preferencesRepository: UserPreferencesRepository? = null,
         ): ViewModelProvider.Factory = object : ViewModelProvider.Factory {
             @Suppress("UNCHECKED_CAST")
             override fun <T : ViewModel> create(modelClass: Class<T>): T =
                 FlashcardViewModel(
-                    vocabularyRepository, audioRepository, reviewUseCase, hsk, newCardsLimit
+                    vocabularyRepository, audioRepository, reviewUseCase, hsk, preferencesRepository
                 ) as T
         }
     }

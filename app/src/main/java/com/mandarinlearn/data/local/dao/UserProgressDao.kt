@@ -50,4 +50,15 @@ interface UserProgressDao {
     /** Resets completed_items to 0 for all rows (ResetProgressUseCase). Content columns unchanged. */
     @Query("UPDATE user_progress SET completed_items = 0, last_activity_date = NULL")
     suspend fun resetAllProgress()
+
+    /** Returns all progress rows once (non-reactive). Used by ExportProgressUseCase. */
+    @Query("SELECT * FROM user_progress ORDER BY hsk_level ASC, section ASC")
+    suspend fun getAllOnce(): List<UserProgressEntity>
+
+    /**
+     * Returns a single row by level + section (non-suspend, for use inside runInTransaction).
+     * Used by ImportProgressUseCase to preserve existing total_items when restoring progress.
+     */
+    @Query("SELECT * FROM user_progress WHERE hsk_level = :hsk AND section = :section LIMIT 1")
+    fun getByLevelAndSectionSync(hsk: Int, section: String): UserProgressEntity?
 }

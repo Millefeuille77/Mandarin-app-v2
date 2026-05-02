@@ -1,12 +1,14 @@
 // PassageViewModel.kt — Mandarin Learn
 // ViewModel for PassageScreen. Full Phase 4 implementation replacing skeleton.
 // UX_SPECIFICATION.md §4 Screen 5. ARCHITECTURE.md §6 (MVVM + Repository).
+// Phase 9: pinyin default reads from UserPreferencesRepository; audio speed honours preference.
 
 package com.mandarinlearn.ui.reading
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import com.mandarinlearn.data.preferences.UserPreferencesRepository
 import com.mandarinlearn.data.repository.AudioPlaybackState
 import com.mandarinlearn.data.repository.AudioRepository
 import com.mandarinlearn.data.repository.ReadingRepository
@@ -20,6 +22,7 @@ import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
 private const val TAG = "PassageViewModel"
@@ -43,6 +46,8 @@ class PassageViewModel(
     private val readingRepository: ReadingRepository,
     private val vocabularyRepository: VocabularyRepository,
     private val audioRepository: AudioRepository? = null,
+    /** Phase 9: reads pinyin default and audio speed from DataStore. */
+    private val preferencesRepository: UserPreferencesRepository? = null,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<PassageUiState>(PassageUiState.Loading)
@@ -73,12 +78,18 @@ class PassageViewModel(
                     // Default pinyin ON for HSK 1–3, OFF for HSK 4–5 per UX spec §4 Screen 5
                     val defaultShowPinyin = passage.hskLevel <= 3
                     val current = _uiState.value
+                    // Phase 9: if a preference exists, use it as the default; otherwise
+                    // fall back to the HSK-level rule (≤3 → ON, 4–5 → OFF).
+                    val effectiveDefault = preferencesRepository?.let {
+                        try { it.showPinyin.first() } catch (e: Exception) { defaultShowPinyin }
+                    } ?: defaultShowPinyin
+
                     // Preserve UI state (showPinyin, fontScale) across Room Flow emissions
                     _uiState.value = when (current) {
                         is PassageUiState.Content -> current.copy(passage = passage)
                         else -> PassageUiState.Content(
                             passage         = passage,
-                            showPinyin      = defaultShowPinyin,
+                            showPinyin      = effectiveDefault,
                             fontScale       = 1.0f,
                             selectedWord    = null,
                             noDefinition    = false,
@@ -149,7 +160,11 @@ class PassageViewModel(
             return
         }
         viewModelScope.launch {
-            repo.play(current.passage.chineseText).collect { state ->
+            // Phase 9: honour audio speed preference for "Play all".
+            val speed = preferencesRepository?.let {
+                try { it.audioSpeed.first() } catch (e: Exception) { 1.0f }
+            } ?: 1.0f
+            repo.play(current.passage.chineseText, speed).collect { state ->
                 when (state) {
                     is AudioPlaybackState.Loading ->
                         _uiState.value = current.copy(isPlayingAll = true, playAllFailed = false)
@@ -209,11 +224,13 @@ class PassageViewModel(
             readingRepository: ReadingRepository,
             vocabularyRepository: VocabularyRepository,
             audioRepository: AudioRepository? = null,
+            preferencesRepository: UserPreferencesRepository? = null,
         ): ViewModelProvider.Factory = object : ViewModelProvider.Factory {
             @Suppress("UNCHECKED_CAST")
             override fun <T : ViewModel> create(modelClass: Class<T>): T =
                 PassageViewModel(
-                    passageId, readingRepository, vocabularyRepository, audioRepository
+                    passageId, readingRepository, vocabularyRepository,
+                    audioRepository, preferencesRepository
                 ) as T
         }
     }

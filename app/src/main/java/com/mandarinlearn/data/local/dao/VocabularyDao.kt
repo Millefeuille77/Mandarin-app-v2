@@ -136,4 +136,35 @@ interface VocabularyDao {
         """
     )
     suspend fun resetAllProgress()
+
+    /** Returns all vocabulary rows once (non-reactive). Used by ExportProgressUseCase. */
+    @Query("SELECT * FROM vocabulary ORDER BY hsk_level ASC, id ASC")
+    suspend fun getAllOnce(): List<VocabularyEntity>
+
+    /**
+     * Updates only the SM-2 state columns for a given card.
+     * Content columns (character, pinyin, translation, etc.) are not touched.
+     * Used by ImportProgressUseCase to replay a saved SRS state.
+     */
+    @Query(
+        """
+        UPDATE vocabulary
+        SET ease_factor = :easeFactor,
+            interval_days = :intervalDays,
+            repetition_count = :repetitionCount,
+            next_review_date = :nextReviewDate,
+            last_reviewed_date = :lastReviewedDate,
+            is_introduced = :isIntroduced
+        WHERE id = :id
+        """
+    )
+    suspend fun updateSrsFields(
+        id: String,
+        easeFactor: Double,
+        intervalDays: Int,
+        repetitionCount: Int,
+        nextReviewDate: Long,
+        lastReviewedDate: Long?,
+        isIntroduced: Int,
+    )
 }

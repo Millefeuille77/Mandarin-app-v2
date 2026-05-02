@@ -316,4 +316,81 @@
     <!-- Phase 8: MeScreen strings -->
     <string name="me_progress_icon_desc">Progress</string>
     <string name="me_nav_row_desc">Navigate to %1$s</string>
+
+    <!-- Phase 9: ExamScoresChart accessibility strings (QA m-1 fix — moved from hardcoded) -->
+    <string name="chart_acc_empty">No exam scores recorded yet.</string>
+    <string name="chart_acc_single">Latest score %1$d out of %2$d.</string>
+    <string name="chart_acc_gain">gain of %1$d points</string>
+    <string name="chart_acc_loss">loss of %1$d points</string>
+    <string name="chart_acc_no_change">no change</string>
+    <string name="chart_acc_multi">Latest score %1$d, previous %2$d, %3$s.</string>
+
+    <!-- Phase 9: SettingsScreen strings (UX_SPECIFICATION.md §4 Screen 11) -->
+    <!-- Section headers -->
+    <string name="settings_section_display">Display</string>
+    <string name="settings_section_audio">Audio</string>
+    <string name="settings_section_learning">Learning</string>
+    <string name="settings_section_data">Data</string>
+    <string name="settings_section_about">About</string>
+
+    <!-- Theme -->
+    <string name="settings_theme_label">Theme</string>
+    <string name="settings_theme_system">System</string>
+    <string name="settings_theme_light">Light</string>
+    <string name="settings_theme_dark">Dark</string>
+
+    <!-- Font size -->
+    <string name="settings_font_size_label">Font size</string>
+    <string name="settings_font_small">Small</string>
+    <string name="settings_font_medium">Medium</string>
+    <string name="settings_font_large">Large</string>
+    <string name="settings_font_xl">Extra-large</string>
+    <string name="settings_font_preview">Aa Bb 你好</string>
+
+    <!-- Reduce motion -->
+    <string name="settings_reduce_motion">Reduce motion</string>
+    <string name="settings_reduce_motion_desc">Skip card flip animation</string>
+
+    <!-- Audio speed -->
+    <string name="settings_audio_speed_label">Audio playback speed</string>
+
+    <!-- Pinyin -->
+    <string name="settings_show_pinyin_label">Show pinyin by default</string>
+    <string name="settings_show_pinyin_helper">HSK 1–3: on by default. HSK 4–5: off by default.</string>
+    <string name="settings_show_pinyin_desc">Toggle whether pinyin is shown above characters in reading passages</string>
+
+    <!-- Daily new cards -->
+    <string name="settings_daily_limit_label">Daily new cards</string>
+    <string name="settings_daily_limit_value">%1$d new cards per day</string>
+
+    <!-- Data buttons -->
+    <string name="settings_export_button">Export progress</string>
+    <string name="settings_import_button">Import progress</string>
+    <string name="settings_reset_button">Reset all progress</string>
+
+    <!-- Export / import / reset feedback -->
+    <string name="settings_export_success">Progress exported successfully.</string>
+    <string name="settings_export_failed">Export failed — please try again.</string>
+    <string name="settings_import_success">Progress imported successfully.</string>
+    <string name="settings_import_failed">File could not be read.</string>
+    <string name="settings_reset_complete">All progress has been reset.</string>
+    <string name="settings_reset_failed">Reset failed — please try again.</string>
+
+    <!-- Import confirm dialog -->
+    <string name="settings_import_confirm_title">Overwrite progress?</string>
+    <string name="settings_import_confirm_message">This will overwrite your current progress. Continue?</string>
+    <string name="settings_import_confirm_action">Import</string>
+
+    <!-- Reset confirm dialog -->
+    <string name="settings_reset_confirm_title">Reset all progress?</string>
+    <string name="settings_reset_confirm_message">This will erase all your flashcard progress, exam history, and streak. Your vocabulary content and reading passages will remain. This cannot be undone.</string>
+    <string name="settings_reset_confirm_action">Reset</string>
+
+    <!-- About section -->
+    <string name="settings_app_version_label">App version</string>
+    <string name="settings_app_version_value">%1$s</string>
+    <string name="settings_gemini_key_label">Gemini API key</string>
+    <string name="settings_gemini_key_set">Set</string>
+    <string name="settings_gemini_key_not_set">Not set</string>
+    <string name="settings_gemini_key_helper">Set via local.properties at build time.</string>
 </resources>

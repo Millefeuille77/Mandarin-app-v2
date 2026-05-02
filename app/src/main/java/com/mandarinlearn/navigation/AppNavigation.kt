@@ -2,6 +2,7 @@
 // Central NavHost. UX_SPECIFICATION.md §2 full navigation tree.
 // Phase 2: IMPORT start destination. Phase 4: ViewModel injection from AppContainer.
 // Phase 6: SpeakingScreen. Phase 7: Exam screens. Phase 8: ProgressScreen.
+// Phase 9: SettingsViewModel wired; legacy ProgressScreen fallback removed (QA M-2 fix).
 
 package com.mandarinlearn.navigation
 
@@ -25,13 +26,10 @@ import com.mandarinlearn.ui.importing.ImportLoadingScreen
 import com.mandarinlearn.ui.importing.ImportLoadingViewModel
 import com.mandarinlearn.ui.listening.ListeningScreen
 import com.mandarinlearn.ui.listening.ListeningViewModel
-import com.mandarinlearn.ui.progress.ProgressScreen
-import com.mandarinlearn.ui.progress.ProgressViewModel
 import com.mandarinlearn.ui.reading.PassageScreen
 import com.mandarinlearn.ui.reading.PassageViewModel
 import com.mandarinlearn.ui.reading.ReadingListScreen
 import com.mandarinlearn.ui.reading.ReadingListViewModel
-import com.mandarinlearn.ui.settings.SettingsScreen
 import com.mandarinlearn.ui.speaking.SpeakingScreen
 import com.mandarinlearn.ui.speaking.SpeakingViewModel
 import com.mandarinlearn.ui.vocabulary.FlashcardScreen
@@ -118,10 +116,11 @@ fun AppNavigation(
             if (appContainer != null) {
                 val vm: FlashcardViewModel = viewModel(
                     factory = FlashcardViewModel.factory(
-                        vocabularyRepository = appContainer.vocabularyRepository,
-                        audioRepository      = appContainer.audioRepository,
-                        reviewUseCase        = appContainer.reviewVocabularyUseCase,
-                        hsk                  = hsk,
+                        vocabularyRepository  = appContainer.vocabularyRepository,
+                        audioRepository       = appContainer.audioRepository,
+                        reviewUseCase         = appContainer.reviewVocabularyUseCase,
+                        hsk                   = hsk,
+                        preferencesRepository = appContainer.userPreferencesRepository,
                     )
                 )
                 FlashcardScreen(
@@ -169,10 +168,11 @@ fun AppNavigation(
             if (appContainer != null) {
                 val vm: PassageViewModel = viewModel(
                     factory = PassageViewModel.factory(
-                        passageId            = id,
-                        readingRepository    = appContainer.readingRepository,
-                        vocabularyRepository = appContainer.vocabularyRepository,
-                        audioRepository      = appContainer.audioRepository,
+                        passageId             = id,
+                        readingRepository     = appContainer.readingRepository,
+                        vocabularyRepository  = appContainer.vocabularyRepository,
+                        audioRepository       = appContainer.audioRepository,
+                        preferencesRepository = appContainer.userPreferencesRepository,
                     )
                 )
                 PassageScreen(
@@ -273,22 +273,7 @@ fun AppNavigation(
             }
         }
 
-        // --- Me tab children ---
-
-        composable(Routes.PROGRESS) {
-            if (appContainer != null) {
-                val vm: ProgressViewModel = viewModel(factory = ProgressViewModel.factory(
-                    appContainer.streakRepository, appContainer.vocabularyRepository,
-                    appContainer.progressRepository, appContainer.examRepository))
-                ProgressScreen(vm, onNavigateBack = { navController.popBackStack() },
-                    onNavigateToExamResult = { id -> navController.navigate(Routes.examResult(id)) })
-            } else {
-                ProgressScreen(onNavigateBack = { navController.popBackStack() })
-            }
-        }
-
-        composable(Routes.SETTINGS) {
-            SettingsScreen(onNavigateBack = { navController.popBackStack() })
-        }
+        // --- Me tab children — extracted to MeNavRoutes.kt (Phase 9 QA blocker fix) ---
+        meNavRoutes(navController = navController, appContainer = appContainer)
     }
 }
