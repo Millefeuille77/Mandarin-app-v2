@@ -100,6 +100,7 @@
     <string name="flashcard_interval_days">%1$d day(s)</string>
     <string name="flashcard_rating_button_desc">%1$s. Next review in %2$s.</string>
     <string name="flashcard_back_content_desc">Word %1$s, pronounced %2$s, means %3$s. Example: %4$s — %5$s.</string>
+    <string name="flashcard_back_no_example_desc">Word %1$s, pronounced %2$s, means %3$s.</string>
     <string name="flashcard_card_flipped">Card flipped to answer</string>
 
     <!-- Phase 3: Audio -->

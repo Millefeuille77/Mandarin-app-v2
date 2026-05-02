@@ -151,8 +151,14 @@ private fun CardFront(
 
 @Composable
 private fun CardBack(card: VocabularyWord, onPlayAudio: () -> Unit, isAudioLoading: Boolean) {
-    val desc = stringResource(R.string.flashcard_back_content_desc,
-        card.character, card.pinyin, card.translation, card.exampleChinese, card.exampleEnglish)
+    val hasExample = card.exampleChinese.isNotBlank()
+    val desc = if (hasExample) {
+        stringResource(R.string.flashcard_back_content_desc,
+            card.character, card.pinyin, card.translation, card.exampleChinese, card.exampleEnglish)
+    } else {
+        stringResource(R.string.flashcard_back_no_example_desc,
+            card.character, card.pinyin, card.translation)
+    }
     Column(
         modifier            = Modifier.fillMaxWidth().height(FlashcardMaxHeight)
             .semantics { contentDescription = desc },
@@ -163,13 +169,16 @@ private fun CardBack(card: VocabularyWord, onPlayAudio: () -> Unit, isAudioLoadi
         AudioIconButton(onPlayAudio, isAudioLoading)
         Text(card.pinyin, style = PinyinLargeStyle, color = MaterialTheme.colorScheme.onSurfaceVariant)
         Text(card.translation, style = MaterialTheme.typography.bodyLarge)
-        Spacer(Modifier.height(SpacingM))
-        Text(card.exampleChinese, style = MaterialTheme.typography.bodyMedium, textAlign = TextAlign.Center,
-             color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.fillMaxWidth(0.85f))
-        Text(card.examplePinyin, style = MaterialTheme.typography.bodyMedium, textAlign = TextAlign.Center,
-             color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.fillMaxWidth(0.85f))
-        Text(card.exampleEnglish, style = MaterialTheme.typography.bodyMedium, textAlign = TextAlign.Center,
-             modifier = Modifier.fillMaxWidth(0.85f))
+        // Example sentence is omitted for HSK 4/5 in v1.0 — v1.1 will source real sentences.
+        if (hasExample) {
+            Spacer(Modifier.height(SpacingM))
+            Text(card.exampleChinese, style = MaterialTheme.typography.bodyMedium, textAlign = TextAlign.Center,
+                 color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.fillMaxWidth(0.85f))
+            Text(card.examplePinyin, style = MaterialTheme.typography.bodyMedium, textAlign = TextAlign.Center,
+                 color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.fillMaxWidth(0.85f))
+            Text(card.exampleEnglish, style = MaterialTheme.typography.bodyMedium, textAlign = TextAlign.Center,
+                 modifier = Modifier.fillMaxWidth(0.85f))
+        }
     }
 }
 

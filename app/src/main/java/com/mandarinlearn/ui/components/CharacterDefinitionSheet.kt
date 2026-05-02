@@ -127,31 +127,33 @@ private fun CharacterDefinitionContent(
             style = MaterialTheme.typography.bodyLarge,
             color = MaterialTheme.colorScheme.onBackground,
         )
-        Spacer(Modifier.height(SpacingS))
-        Divider(color = MaterialTheme.colorScheme.surfaceVariant)
-        Spacer(Modifier.height(SpacingS))
+        // --- Example sentence (hidden if missing — HSK 4/5 ship without examples in v1.0) ---
+        if (word.exampleChinese.isNotBlank()) {
+            Spacer(Modifier.height(SpacingS))
+            Divider(color = MaterialTheme.colorScheme.surfaceVariant)
+            Spacer(Modifier.height(SpacingS))
 
-        // --- Example sentence ---
-        Text(
-            text  = stringResource(R.string.label_example_sentence),
-            style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
-        Text(
-            text  = word.exampleChinese,
-            style = MaterialTheme.typography.bodyLarge,
-            color = MaterialTheme.colorScheme.onBackground,
-        )
-        Text(
-            text  = word.examplePinyin,
-            style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onSurfaceVariant,
-        )
-        Text(
-            text  = word.exampleEnglish,
-            style = MaterialTheme.typography.bodyMedium,
-            color = MaterialTheme.colorScheme.onBackground,
-        )
+            Text(
+                text  = stringResource(R.string.label_example_sentence),
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            Text(
+                text  = word.exampleChinese,
+                style = MaterialTheme.typography.bodyLarge,
+                color = MaterialTheme.colorScheme.onBackground,
+            )
+            Text(
+                text  = word.examplePinyin,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            Text(
+                text  = word.exampleEnglish,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onBackground,
+            )
+        }
     }
 }
 
