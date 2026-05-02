@@ -24,6 +24,7 @@ import com.mandarinlearn.navigation.tabFadeIn
 import com.mandarinlearn.navigation.tabFadeOut
 import com.mandarinlearn.ui.components.MandarinBottomNav
 import com.mandarinlearn.ui.exam.ExamHubScreen
+import com.mandarinlearn.ui.exam.ExamHubViewModel
 import com.mandarinlearn.ui.home.HomeScreen
 import com.mandarinlearn.ui.me.MeScreen
 import com.mandarinlearn.ui.practice.PracticeHubScreen
@@ -112,9 +113,20 @@ fun MainScaffold(
             }
 
             composable(Routes.EXAM_HUB) {
-                ExamHubScreen(
-                    onNavigateToExam = { hsk -> rootNavController.navigate(Routes.exam(hsk)) },
-                )
+                // Phase 7: use real ViewModel when AppContainer is available.
+                if (appContainer != null) {
+                    val examHubVm: ExamHubViewModel = viewModel(
+                        factory = ExamHubViewModel.factory(appContainer.examRepository)
+                    )
+                    ExamHubScreen(
+                        viewModel        = examHubVm,
+                        onNavigateToExam = { hsk -> rootNavController.navigate(Routes.exam(hsk)) },
+                    )
+                } else {
+                    ExamHubScreen(
+                        onNavigateToExam = { hsk -> rootNavController.navigate(Routes.exam(hsk)) },
+                    )
+                }
             }
 
             composable(Routes.ME) {

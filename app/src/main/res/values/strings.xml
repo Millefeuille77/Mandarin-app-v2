@@ -205,6 +205,48 @@
     <string name="speaking_offline_error">You\'re offline. Speaking practice needs internet.</string>
     <string name="speaking_no_phrases_error">No speaking phrases found. Please restart the app.</string>
 
+    <!-- Phase 7: Exam section strings (UX_SPECIFICATION.md §4 Screens 8 and 9) -->
+    <!-- ExamHubScreen -->
+    <string name="exam_hub_start_exam">Start exam</string>
+    <string name="exam_hub_no_attempts">No attempts yet</string>
+    <string name="exam_hub_last_score">Score: %1$d / %2$d</string>
+    <string name="exam_hub_attempts">%1$d attempt(s)</string>
+
+    <!-- ExamScreen -->
+    <string name="exam_title_hsk">HSK %1$d Exam</string>
+    <string name="exam_section_header">Section %1$d of %2$d: %3$s</string>
+    <string name="exam_timer">%1$02d:%2$02d</string>
+    <string name="exam_question_counter">Question %1$d of %2$d</string>
+    <string name="exam_option_desc">Option %1$s: %2$s</string>
+    <string name="exam_finish_section">Finish section</string>
+    <string name="exam_submit">Submit exam</string>
+    <string name="exam_no_questions">No questions available for this section.</string>
+    <string name="exam_not_auto_graded">This question is not auto-graded — it will be marked as 0 in your score.</string>
+    <string name="exam_section_complete">%1$s section complete!</string>
+    <string name="exam_next_section">Next section: %1$s — continuing in %2$d seconds</string>
+    <string name="exam_continue">Continue</string>
+    <string name="exam_quit_title">Quit exam?</string>
+    <string name="exam_quit_message">Your progress will be lost. Are you sure you want to quit?</string>
+    <string name="exam_quit_confirm">Quit</string>
+    <string name="exam_timer_announcement">%1$d minute(s) remaining</string>
+
+    <!-- ExamResultScreen -->
+    <string name="exam_result_passed">PASSED</string>
+    <string name="exam_result_not_yet">NOT YET</string>
+    <string name="exam_result_passed_icon_desc">Passed</string>
+    <string name="exam_result_failed_icon_desc">Not passed</string>
+    <string name="exam_result_hero_desc">%1$s. Score %2$d out of %3$d. Passing score %4$d.</string>
+    <string name="exam_result_passing_score">Passing score: %1$d</string>
+    <string name="exam_result_section_desc">%1$s: %2$d of %3$d</string>
+    <string name="exam_result_mistakes_count">%1$d incorrect</string>
+    <string name="exam_result_review_mistakes">Review mistakes</string>
+    <string name="exam_result_hide_mistakes">Hide mistakes</string>
+    <string name="exam_result_your_answer">Your answer: %1$s</string>
+    <string name="exam_result_correct_answer">Correct answer: %1$s</string>
+    <string name="exam_result_no_answer">(no answer)</string>
+    <string name="exam_result_history_title">Past attempts</string>
+    <string name="exam_result_try_again">Try again</string>
+
     <!-- Phase 2: Import loading screen strings (ARCHITECTURE.md §3.4) -->
     <string name="import_setting_up">Setting up your lessons…</string>
     <string name="import_importing_vocabulary">Importing vocabulary…</string>
@@ -219,4 +261,8 @@
     <string name="import_error_audio">Failed to import audio content</string>
     <string name="import_error_exams">Failed to import exam structures</string>
     <string name="import_error_finalise">Failed to finalise setup</string>
+
+    <!-- Phase 7 QA M-2 fix: in-exam audio replay button -->
+    <string name="exam_replay_audio">Replay audio</string>
+    <string name="exam_replay_audio_desc">Replay the question audio</string>
 </resources>

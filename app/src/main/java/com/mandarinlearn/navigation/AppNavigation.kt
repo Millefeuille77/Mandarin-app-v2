@@ -4,6 +4,7 @@
 // Phase 2: IMPORT is the start destination; gated on JsonImporter completion.
 // Phase 4: ViewModels injected from AppContainer factory.
 // Phase 6: SpeakingScreen wired with real SpeakingViewModel.
+// Phase 7: ExamHubScreen, ExamScreen, ExamResultScreen wired with real ViewModels.
 
 package com.mandarinlearn.navigation
 
@@ -20,7 +21,9 @@ import com.mandarinlearn.data.local.import.JsonImporter
 import com.mandarinlearn.di.AppContainer
 import com.mandarinlearn.ui.MainScaffold
 import com.mandarinlearn.ui.exam.ExamResultScreen
+import com.mandarinlearn.ui.exam.ExamResultViewModel
 import com.mandarinlearn.ui.exam.ExamScreen
+import com.mandarinlearn.ui.exam.ExamViewModel
 import com.mandarinlearn.ui.importing.ImportLoadingScreen
 import com.mandarinlearn.ui.importing.ImportLoadingViewModel
 import com.mandarinlearn.ui.listening.ListeningScreen
@@ -255,34 +258,35 @@ fun AppNavigation(
             }
         }
 
-        // --- Exam screens (Phase 7) ---
+        // --- Exam screens (Phase 7 — real ViewModels) ---
 
-        composable(
-            route     = Routes.EXAM,
-            arguments = listOf(navArgument("hsk") { type = NavType.IntType; defaultValue = 1 })
-        ) { backStackEntry ->
-            val hsk = backStackEntry.arguments?.getInt("hsk") ?: 1
-            ExamScreen(
-                hsk              = hsk,
-                onNavigateToResult = { resultId ->
-                    navController.navigate(Routes.examResult(resultId)) {
-                        popUpTo(Routes.EXAM) { inclusive = true }
-                    }
-                },
-                onNavigateBack = { navController.popBackStack() },
-            )
+        composable(Routes.EXAM, listOf(navArgument("hsk") { type = NavType.IntType; defaultValue = 1 })) { back ->
+            val hsk = back.arguments?.getInt("hsk") ?: 1
+            val toResult = { id: Long ->
+                navController.navigate(Routes.examResult(id)) { popUpTo(Routes.EXAM) { inclusive = true } }
+            }
+            if (appContainer != null) {
+                val vm: ExamViewModel = viewModel(factory = ExamViewModel.factory(
+                    startExamUseCase = appContainer.startExamUseCase,
+                    submitExamUseCase = appContainer.submitExamUseCase,
+                    audioRepository = appContainer.audioRepository,
+                    hsk = hsk))
+                ExamScreen(vm, onNavigateToResult = toResult, onNavigateBack = { navController.popBackStack() })
+            } else {
+                ExamScreen(hsk = hsk, onNavigateToResult = toResult, onNavigateBack = { navController.popBackStack() })
+            }
         }
 
-        composable(
-            route     = Routes.EXAM_RESULT,
-            arguments = listOf(navArgument("id") { type = NavType.LongType })
-        ) { backStackEntry ->
-            val id = backStackEntry.arguments?.getLong("id") ?: 0L
-            ExamResultScreen(
-                resultId       = id,
-                onNavigateBack = { navController.popBackStack() },
-                onTryAgain     = { hsk -> navController.navigate(Routes.exam(hsk)) },
-            )
+        composable(Routes.EXAM_RESULT, listOf(navArgument("id") { type = NavType.LongType })) { back ->
+            val id = back.arguments?.getLong("id") ?: 0L
+            val tryAgain = { hsk: Int -> navController.navigate(Routes.exam(hsk)) }
+            if (appContainer != null) {
+                val vm: ExamResultViewModel = viewModel(factory = ExamResultViewModel.factory(
+                    examRepository = appContainer.examRepository, resultId = id))
+                ExamResultScreen(vm, onNavigateBack = { navController.popBackStack() }, onTryAgain = tryAgain)
+            } else {
+                ExamResultScreen(id, onNavigateBack = { navController.popBackStack() }, onTryAgain = tryAgain)
+            }
         }
 
         // --- Me tab children ---

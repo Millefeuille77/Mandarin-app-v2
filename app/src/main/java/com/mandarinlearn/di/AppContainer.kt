@@ -6,6 +6,7 @@
 // Phase 5: GeminiService, NetworkMonitor, AndroidTtsFallback, AudioRepository (full),
 //           ListeningRepository (full).
 // Phase 6: AudioRecorder, SpeakingRepository (full), ScorePronunciationUseCase.
+// Phase 7: StartExamUseCase, SubmitExamUseCase, ExamGrader.
 
 package com.mandarinlearn.di
 
@@ -25,9 +26,12 @@ import com.mandarinlearn.data.repository.ReadingRepository
 import com.mandarinlearn.data.repository.SpeakingRepository
 import com.mandarinlearn.data.repository.StreakRepository
 import com.mandarinlearn.data.repository.VocabularyRepository
+import com.mandarinlearn.domain.grading.ExamGrader
 import com.mandarinlearn.domain.usecase.PlayChineseAudioUseCase
 import com.mandarinlearn.domain.usecase.ReviewVocabularyUseCase
 import com.mandarinlearn.domain.usecase.ScorePronunciationUseCase
+import com.mandarinlearn.domain.usecase.StartExamUseCase
+import com.mandarinlearn.domain.usecase.SubmitExamUseCase
 import com.mandarinlearn.util.DefaultDispatcherProvider
 import com.mandarinlearn.util.DispatcherProvider
 import com.mandarinlearn.util.NetworkMonitor
@@ -172,6 +176,21 @@ class AppContainer(val context: Context) {
 
     val scorePronunciationUseCase: ScorePronunciationUseCase by lazy {
         ScorePronunciationUseCase(speakingRepository)
+    }
+
+    // ---- Phase 7: Exam grading use cases ----
+
+    /** Stateless grader — shared instance (pure functions, no mutable state). */
+    val examGrader: ExamGrader by lazy { ExamGrader() }
+
+    /** Fetches exam structure + questions for a given HSK level. */
+    val startExamUseCase: StartExamUseCase by lazy {
+        StartExamUseCase(examRepository)
+    }
+
+    /** Grades answers via ExamGrader and persists the result row. */
+    val submitExamUseCase: SubmitExamUseCase by lazy {
+        SubmitExamUseCase(examRepository, examGrader)
     }
 
     // ---- Preferences (DataStore-backed) ----
