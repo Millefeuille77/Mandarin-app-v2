@@ -153,8 +153,8 @@ fun SettingsScreen(
         ConfirmDialog(
             title     = stringResource(R.string.settings_import_confirm_title),
             message   = stringResource(R.string.settings_import_confirm_message),
-            confirmLabel = stringResource(R.string.settings_import_confirm_action),
-            dismissLabel = stringResource(R.string.action_cancel),
+            confirmText = stringResource(R.string.settings_import_confirm_action),
+            dismissText = stringResource(R.string.action_cancel),
             onConfirm = {
                 showImportConfirm = false
                 pendingImportUri?.let { viewModel.importProgress(it) }
@@ -172,8 +172,8 @@ fun SettingsScreen(
         ConfirmDialog(
             title     = stringResource(R.string.settings_reset_confirm_title),
             message   = stringResource(R.string.settings_reset_confirm_message),
-            confirmLabel = stringResource(R.string.settings_reset_confirm_action),
-            dismissLabel = stringResource(R.string.action_cancel),
+            confirmText = stringResource(R.string.settings_reset_confirm_action),
+            dismissText = stringResource(R.string.action_cancel),
             onConfirm = {
                 showResetConfirm = false
                 viewModel.resetAllProgress()

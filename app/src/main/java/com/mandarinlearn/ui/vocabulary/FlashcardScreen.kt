@@ -31,6 +31,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.mandarinlearn.R
+import com.mandarinlearn.domain.srs.SrsQuality
 import com.mandarinlearn.ui.components.ConfirmDialog
 import com.mandarinlearn.ui.components.EmptyState
 import com.mandarinlearn.ui.components.ErrorState
@@ -111,7 +112,7 @@ fun FlashcardScreen(
                 .padding(innerPadding),
         ) {
             when (val state = uiState) {
-                is FlashcardUiState.Loading  -> LoadingState(Modifier.fillMaxSize())
+                is FlashcardUiState.Loading  -> LoadingState(modifier = Modifier.fillMaxSize())
                 is FlashcardUiState.Error    -> ErrorState(
                     message = state.message,
                     onRetry = { /* viewModel re-loads */ },
@@ -249,7 +250,7 @@ fun FlashcardScreen(
 private fun FlashcardScreenLoadingPreview() {
     MandarinLearnTheme {
         Box(Modifier.fillMaxSize()) {
-            LoadingState(Modifier.fillMaxSize())
+            LoadingState(modifier = Modifier.fillMaxSize())
         }
     }
 }

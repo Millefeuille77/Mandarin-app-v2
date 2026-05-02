@@ -37,12 +37,15 @@ import kotlin.math.roundToInt
 
 // ---- Section header ----
 
-internal fun LazyListScope.sectionHeader(title: String) {
+// Takes @StringRes Int (not String) so callers don't need to be @Composable themselves —
+// stringResource() can only be called inside a composable scope, and the *Section() helpers
+// that call sectionHeader() are LazyListScope extensions, not composables.
+internal fun LazyListScope.sectionHeader(@androidx.annotation.StringRes titleRes: Int) {
     item {
         Column {
             HorizontalDivider(modifier = Modifier.padding(horizontal = PagePaddingH))
             Text(
-                text     = title,
+                text     = stringResource(titleRes),
                 style    = MaterialTheme.typography.headlineSmall,
                 color    = MaterialTheme.colorScheme.primary,
                 modifier = Modifier.padding(horizontal = PagePaddingH, vertical = SpacingS),
@@ -59,7 +62,7 @@ internal fun LazyListScope.displaySection(
     onSetFontIndex: (Int) -> Unit,
     onSetReduceMotion: (Boolean) -> Unit,
 ) {
-    sectionHeader(stringResource(R.string.settings_section_display))
+    sectionHeader(R.string.settings_section_display)
     item { ThemeSegmentedRow(state.theme, onSetTheme) }
     item { FontSliderRow(state.fontScaleIndex, onSetFontIndex) }
     item {
@@ -149,7 +152,7 @@ internal fun LazyListScope.audioSection(
     onSetAudioIndex: (Int) -> Unit,
     onSetShowPinyin: (Boolean) -> Unit,
 ) {
-    sectionHeader(stringResource(R.string.settings_section_audio))
+    sectionHeader(R.string.settings_section_audio)
     item { AudioSpeedRow(state.audioSpeedIndex, onSetAudioIndex) }
     item {
         SettingsSwitchRow(

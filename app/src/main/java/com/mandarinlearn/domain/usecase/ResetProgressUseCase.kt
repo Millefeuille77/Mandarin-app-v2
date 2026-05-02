@@ -5,6 +5,7 @@
 
 package com.mandarinlearn.domain.usecase
 
+import androidx.room.withTransaction
 import com.mandarinlearn.data.local.MandarinLearnDatabase
 import com.mandarinlearn.util.Logger
 import kotlinx.coroutines.Dispatchers
@@ -36,7 +37,8 @@ class ResetProgressUseCase(
      */
     suspend fun execute(): Result<Unit> = withContext(Dispatchers.IO) {
         try {
-            database.runInTransaction {
+            // withTransaction (suspend version) is required because the DAO methods are suspend.
+            database.withTransaction {
                 // 1. Reset SRS state on all vocabulary rows (content columns untouched)
                 database.vocabularyDao().resetAllProgress()
 

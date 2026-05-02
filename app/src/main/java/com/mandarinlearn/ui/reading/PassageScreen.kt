@@ -279,6 +279,7 @@ private fun PassageContentPreview() {
             onDismissSheet      = {},
             onToggleTranslation = {},
             onMarkAsRead        = {},
+            onPlayAll           = {},
         )
     }
 }

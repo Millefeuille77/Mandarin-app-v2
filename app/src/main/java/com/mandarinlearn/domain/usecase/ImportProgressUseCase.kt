@@ -7,6 +7,7 @@ package com.mandarinlearn.domain.usecase
 
 import android.content.Context
 import android.net.Uri
+import androidx.room.withTransaction
 import com.mandarinlearn.data.local.MandarinLearnDatabase
 import com.mandarinlearn.data.local.entity.ExamResultEntity
 import com.mandarinlearn.data.local.entity.StreakEntity
@@ -62,8 +63,9 @@ class ImportProgressUseCase(
                 )
             }
 
-            // Apply all data inside one transaction for atomicity
-            database.runInTransaction {
+            // Apply all data inside one transaction for atomicity.
+            // withTransaction (suspend version) is required because the DAO methods are suspend.
+            database.withTransaction {
                 // 1. Apply vocabulary SRS state to existing vocabulary rows
                 //    Content columns (character, pinyin, etc.) are NOT overwritten.
                 snapshot.vocabulary.forEach { row ->

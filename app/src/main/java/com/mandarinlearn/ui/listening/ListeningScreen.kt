@@ -86,7 +86,7 @@ fun ListeningScreen(
         ) {
             when (val state = uiState) {
                 is ListeningUiState.Loading ->
-                    LoadingState(Modifier.fillMaxSize())
+                    LoadingState(modifier = Modifier.fillMaxSize())
 
                 is ListeningUiState.Error ->
                     ErrorState(

@@ -16,14 +16,15 @@ import com.mandarinlearn.util.Logger
 import com.mandarinlearn.util.NetworkMonitor
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.flow.flowOn
 
 private const val TAG = "AudioRepository"
-private const val DEFAULT_VOICE = "cmn-CN-Female-1"  // Single voice today; key future-proofs multi-voice (ARCH §2.1).
+// Single voice today; the explicit voice field future-proofs against multi-voice (ARCH §2.1 / §4.6).
+private const val DEFAULT_VOICE = "cmn-CN-Female-1"
 private const val EVICT_BATCH = 10            // Rows to delete per eviction pass.
 private const val EVICT_MAX_PASSES = 200      // Hard ceiling: 200 * 10 = 2000 rows deletable.
-private const val VOICE_DEFAULT = "cmn-CN-Female-1"
 private const val CACHE_MAX_BYTES = 50L * 1024L * 1024L // 50 MB
 
 /**
@@ -70,91 +71,94 @@ class AudioRepository(
             return@flow
         }
 
-        withContext(ioDispatcher) {
-            // Step 2: Compute cache key — 3-field per ARCHITECTURE §2.1 / §4.6 (text|voice|speed).
-            // Single voice today; the explicit voice field future-proofs against multi-voice.
-            val cacheKey = HashUtil.audioCacheKey(text, DEFAULT_VOICE, speed)
+        // Step 2: Compute cache key — 3-field per ARCHITECTURE §2.1 / §4.6 (text|voice|speed).
+        val cacheKey = HashUtil.audioCacheKey(text, DEFAULT_VOICE, speed)
 
-            // Step 3: Cache lookup
-            val cached = try {
-                audioCacheDao.get(cacheKey)
-            } catch (e: Exception) {
-                Logger.w(TAG, "Cache lookup failed, treating as miss", e)
-                null
-            }
-
-            if (cached != null) {
-                // Cache hit — update LRU timestamp, play, done
-                try {
-                    audioCacheDao.touch(cacheKey, System.currentTimeMillis())
-                    AudioPlayer.play(cached.audioBytes, context.cacheDir)
-                    emit(AudioPlaybackState.Playing(AudioPlaybackState.Source.CACHE))
-                    emit(AudioPlaybackState.Finished)
-                } catch (e: Exception) {
-                    Logger.e(TAG, "Failed to play cached audio", e)
-                    // Cache hit but playback failed — fall through to TTS
-                    playWithTtsFallback(text, speed)
-                }
-                return@withContext
-            }
-
-            // Step 4: Cache miss — check network
-            if (networkMonitor.isOnline()) {
-                // Step 4a: Try Gemini TTS
-                val geminiResult = try {
-                    gemini.synthesize(text, speed)
-                } catch (e: Exception) {
-                    Result.failure(e)
-                }
-
-                if (geminiResult.isSuccess) {
-                    val blob = geminiResult.getOrNull()
-                    if (blob != null) {
-                        // Insert into cache before playing
-                        try {
-                            evictCacheIfNeeded()
-                            audioCacheDao.insert(
-                                AudioCacheEntity(
-                                    cacheKey  = cacheKey,
-                                    text      = text,
-                                    voice     = VOICE_DEFAULT,
-                                    speed     = speed.toDouble(),
-                                    audioBytes = blob.bytes,
-                                    mimeType  = blob.mimeType,
-                                    createdAt = System.currentTimeMillis(),
-                                    lastUsedAt = System.currentTimeMillis(),
-                                    byteSize  = blob.bytes.size.toLong(),
-                                )
-                            )
-                        } catch (e: Exception) {
-                            Logger.w(TAG, "Failed to cache Gemini audio — playing without caching", e)
-                        }
-
-                        try {
-                            AudioPlayer.play(blob.bytes, context.cacheDir)
-                            emit(AudioPlaybackState.Playing(AudioPlaybackState.Source.GEMINI))
-                            emit(AudioPlaybackState.Finished)
-                        } catch (e: Exception) {
-                            Logger.e(TAG, "Failed to play Gemini audio", e)
-                            playWithTtsFallback(text, speed)
-                        }
-                        return@withContext
-                    }
-                }
-                // Gemini failure — log and fall through
-                Logger.d(TAG, "Gemini synthesize failed: ${geminiResult.exceptionOrNull()?.message}")
-            }
-
-            // Step 5: AndroidTtsFallback (reached when offline or Gemini failed)
-            playWithTtsFallback(text, speed)
+        // Step 3: Cache lookup
+        val cached = try {
+            audioCacheDao.get(cacheKey)
+        } catch (e: Exception) {
+            Logger.w(TAG, "Cache lookup failed, treating as miss", e)
+            null
         }
-    }
+
+        if (cached != null) {
+            // Cache hit — update LRU timestamp, play, done
+            try {
+                audioCacheDao.touch(cacheKey, System.currentTimeMillis())
+                AudioPlayer.play(cached.audioBytes, context.cacheDir)
+                emit(AudioPlaybackState.Playing(AudioPlaybackState.Source.CACHE))
+                emit(AudioPlaybackState.Finished)
+            } catch (e: Exception) {
+                Logger.e(TAG, "Failed to play cached audio", e)
+                // Cache hit but playback failed — fall through to TTS
+                playWithTtsFallback(text, speed)
+            }
+            return@flow
+        }
+
+        // Step 4: Cache miss — check network
+        if (networkMonitor.isOnline()) {
+            // Step 4a: Try Gemini TTS
+            val geminiResult = try {
+                gemini.synthesize(text, speed)
+            } catch (e: Exception) {
+                Result.failure(e)
+            }
+
+            if (geminiResult.isSuccess) {
+                val blob = geminiResult.getOrNull()
+                if (blob != null) {
+                    // Insert into cache before playing
+                    try {
+                        evictCacheIfNeeded()
+                        audioCacheDao.insert(
+                            AudioCacheEntity(
+                                cacheKey  = cacheKey,
+                                text      = text,
+                                voice     = DEFAULT_VOICE,
+                                speed     = speed.toDouble(),
+                                audioBytes = blob.bytes,
+                                mimeType  = blob.mimeType,
+                                createdAt = System.currentTimeMillis(),
+                                lastUsedAt = System.currentTimeMillis(),
+                                byteSize  = blob.bytes.size.toLong(),
+                            )
+                        )
+                    } catch (e: Exception) {
+                        Logger.w(TAG, "Failed to cache Gemini audio — playing without caching", e)
+                    }
+
+                    try {
+                        AudioPlayer.play(blob.bytes, context.cacheDir)
+                        emit(AudioPlaybackState.Playing(AudioPlaybackState.Source.GEMINI))
+                        emit(AudioPlaybackState.Finished)
+                    } catch (e: Exception) {
+                        Logger.e(TAG, "Failed to play Gemini audio", e)
+                        playWithTtsFallback(text, speed)
+                    }
+                    return@flow
+                }
+            }
+            // Gemini failure — log and fall through
+            Logger.d(TAG, "Gemini synthesize failed: ${geminiResult.exceptionOrNull()?.message}")
+        }
+
+        // Step 5: AndroidTtsFallback (reached when offline or Gemini failed)
+        playWithTtsFallback(text, speed)
+    }.flowOn(ioDispatcher)
+    // Why .flowOn instead of withContext { } inside the flow body: emit() is a member of
+    // FlowCollector (the receiver of `flow { }`). withContext changes the receiver to
+    // CoroutineScope, breaking emit(). flowOn shifts the upstream dispatcher to IO without
+    // changing the receiver.
 
     /**
      * Runs the AndroidTtsFallback path and emits the appropriate state.
      * Extracted to avoid code duplication between the "Gemini failure" and "offline" paths.
+     * Receiver is FlowCollector (not Flow) because we are inside a flow{} block, where
+     * the receiver is the collector — not the flow being built.
      */
-    private suspend fun Flow<AudioPlaybackState>.playWithTtsFallback(
+    private suspend fun FlowCollector<AudioPlaybackState>.playWithTtsFallback(
         text: String,
         speed: Float,
     ) {

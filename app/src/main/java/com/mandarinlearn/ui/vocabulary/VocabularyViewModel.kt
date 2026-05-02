@@ -76,6 +76,7 @@ class VocabularyViewModel(
                     }
                     val new = words.count { w -> !w.isIntroduced }
 
+                    // Widen the inferred type so .catch can emit VocabularyUiState.Error.
                     VocabularyUiState.Content(
                         words         = filtered,
                         selectedLevel = level,
@@ -84,7 +85,7 @@ class VocabularyViewModel(
                         masteredCount = mastered,
                         dueCount      = due,
                         newCount      = new,
-                    )
+                    ) as VocabularyUiState
                 }
                 .catch { e ->
                     emit(VocabularyUiState.Error(e.message ?: "Unknown error"))

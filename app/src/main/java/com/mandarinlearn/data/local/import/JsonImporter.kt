@@ -6,6 +6,7 @@
 package com.mandarinlearn.data.local.import
 
 import android.content.Context
+import androidx.room.withTransaction
 import com.mandarinlearn.data.local.MandarinLearnDatabase
 import com.mandarinlearn.data.local.entity.DataVersionEntity
 import com.mandarinlearn.data.local.entity.StreakEntity

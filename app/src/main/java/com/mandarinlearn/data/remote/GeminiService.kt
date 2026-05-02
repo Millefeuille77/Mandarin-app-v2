@@ -135,7 +135,8 @@ class GeminiService(
                 }
 
                 val audioPart = com.google.ai.client.generativeai.type.content("user") {
-                    blob(mimeType = "audio/m4a", data = audioBytes)
+                    // Gemini SDK 0.2.2 signature: blob(mimeType: String, blob: ByteArray)
+                    blob(mimeType = "audio/m4a", blob = audioBytes)
                     text(prompt)
                 }
 

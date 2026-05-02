@@ -40,7 +40,7 @@ internal fun LazyListScope.learningSection(
     state: SettingsUiState.Content,
     onSetDailyLimit: (Int) -> Unit,
 ) {
-    sectionHeader(stringResource(R.string.settings_section_learning))
+    sectionHeader(R.string.settings_section_learning)
     item { DailyLimitSliderRow(state.dailyNewCardsLimit, onSetDailyLimit) }
 }
 
@@ -83,7 +83,7 @@ internal fun LazyListScope.dataSection(
     onImport: () -> Unit,
     onResetRequest: () -> Unit,
 ) {
-    sectionHeader(stringResource(R.string.settings_section_data))
+    sectionHeader(R.string.settings_section_data)
     item {
         val buttonsEnabled = !state.isExporting && !state.isImporting && !state.isResetting
         Column(
@@ -142,7 +142,7 @@ private fun DangerResetButton(
 // ---- About section ----
 
 internal fun LazyListScope.aboutSection(state: SettingsUiState.Content) {
-    sectionHeader(stringResource(R.string.settings_section_about))
+    sectionHeader(R.string.settings_section_about)
     item {
         Column(
             modifier            = Modifier

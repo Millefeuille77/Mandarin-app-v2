@@ -80,7 +80,7 @@ fun PracticeHubScreen(
         modifier = modifier,
     ) { innerPadding ->
         when (val state = uiState) {
-            is PracticeHubUiState.Loading -> LoadingState(Modifier.fillMaxSize().padding(innerPadding))
+            is PracticeHubUiState.Loading -> LoadingState(modifier = Modifier.fillMaxSize().padding(innerPadding))
             is PracticeHubUiState.Error   -> ErrorState(
                 message  = state.message,
                 onRetry  = {},
