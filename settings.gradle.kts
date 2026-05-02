@@ -15,11 +15,9 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
     }
-    versionCatalogs {
-        create("libs") {
-            from(files("gradle/libs.versions.toml"))
-        }
-    }
+    // Note: gradle/libs.versions.toml is auto-loaded as the "libs" catalog by Gradle.
+    // Do NOT declare it explicitly — that triggers "you can only call the 'from' method
+    // a single time" (Gradle docs: too_many_import_invocation).
 }
 
 rootProject.name = "MandarinLearn"
