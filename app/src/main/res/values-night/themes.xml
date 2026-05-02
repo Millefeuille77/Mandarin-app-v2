@@ -4,7 +4,8 @@
     Dark-mode overrides for the XML AppTheme and splash theme.
 -->
 <resources>
-    <style name="Theme.MandarinLearn" parent="Theme.Material3.DayNight.NoActionBar">
+    <!-- See values/themes.xml for why we use the AOSP parent instead of Theme.Material3.* -->
+    <style name="Theme.MandarinLearn" parent="android:Theme.Material.NoActionBar">
         <item name="android:statusBarColor">@color/color_background</item>
         <!-- Dark mode: light status bar icons are NOT used (background is dark) -->
         <item name="android:windowLightStatusBar">false</item>

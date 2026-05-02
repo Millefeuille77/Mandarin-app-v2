@@ -6,8 +6,20 @@
     The splash screen theme is declared here per core-splashscreen library requirements.
 -->
 <resources>
-    <!-- Base application theme — used as the fallback before Compose takes over -->
-    <style name="Theme.MandarinLearn" parent="Theme.Material3.DayNight.NoActionBar">
+    <!--
+        Base application theme — used briefly before Compose takes over.
+
+        Why android:Theme.Material.Light.NoActionBar (platform AOSP) instead of
+        Theme.Material3.DayNight.NoActionBar (Material Components):
+          - We use Compose Material 3 (androidx.compose.material3:material3), NOT the
+            views-based com.google.android.material:material library. The Theme.Material3.*
+            XML parents live in the views library, which we deliberately don't depend on
+            (architect rule: minimal deps, prefer built-in Android APIs).
+          - This XML theme only matters for the < 100 ms before Compose paints the first
+            frame. Once Compose takes over, MandarinLearnTheme (ui/theme/Theme.kt) runs.
+        Min SDK is 26, so AOSP Material is always available.
+    -->
+    <style name="Theme.MandarinLearn" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:statusBarColor">@color/color_background</item>
         <item name="android:windowLightStatusBar">true</item>
     </style>
