@@ -1,6 +1,6 @@
 // AudioCacheDao.kt — Mandarin Learn
 // DAO for the audio_cache table. Per ARCHITECTURE.md §2.2.
-// Eviction: LRU — evictLruUntil deletes rows starting from the least-recently-used.
+// Eviction: LRU — evictOldest(N) deletes the N least-recently-used rows; AudioRepository loops it.
 
 package com.mandarinlearn.data.local.dao
 
@@ -35,8 +35,13 @@ interface AudioCacheDao {
     suspend fun totalBytes(): Long
 
     /**
-     * Deletes the least-recently-used rows until total byte_size <= [targetBytes].
-     * Uses a subquery to identify LRU rows by last_used_at ASC.
+     * Deletes the [limit] least-recently-used rows. Used by AudioRepository's eviction loop
+     * to bring total cache size below the target.
+     *
+     * Why a fixed limit instead of size-based eviction in SQL: Room's SQL parser does not
+     * support window functions (`SUM(...) OVER (...)`), so the running-total trick that would
+     * let us evict-until-fit in a single statement is not available. Instead, the repository
+     * loops: check totalBytes → evictOldest(N) → re-check → repeat until under the cap.
      */
     @Query(
         """
@@ -44,17 +49,9 @@ interface AudioCacheDao {
         WHERE cache_key IN (
             SELECT cache_key FROM audio_cache
             ORDER BY last_used_at ASC
-            LIMIT (
-                SELECT COUNT(*) FROM audio_cache
-            ) - (
-                SELECT COUNT(*) FROM (
-                    SELECT cache_key,
-                           SUM(byte_size) OVER (ORDER BY last_used_at DESC) AS running_total
-                    FROM audio_cache
-                ) WHERE running_total <= :targetBytes
-            )
+            LIMIT :limit
         )
         """
     )
-    suspend fun evictLruUntil(targetBytes: Long)
+    suspend fun evictOldest(limit: Int)
 }

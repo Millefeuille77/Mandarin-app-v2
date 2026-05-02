@@ -21,6 +21,8 @@ import kotlinx.coroutines.withContext
 
 private const val TAG = "AudioRepository"
 private const val DEFAULT_VOICE = "cmn-CN-Female-1"  // Single voice today; key future-proofs multi-voice (ARCH §2.1).
+private const val EVICT_BATCH = 10            // Rows to delete per eviction pass.
+private const val EVICT_MAX_PASSES = 200      // Hard ceiling: 200 * 10 = 2000 rows deletable.
 private const val VOICE_DEFAULT = "cmn-CN-Female-1"
 private const val CACHE_MAX_BYTES = 50L * 1024L * 1024L // 50 MB
 
@@ -184,13 +186,21 @@ class AudioRepository(
      */
     private suspend fun evictCacheIfNeeded() {
         try {
-            val totalBytes = audioCacheDao.totalBytes()
-            if (totalBytes > CACHE_MAX_BYTES) {
-                // Target: bring down to 80% of max to avoid thrashing
-                val target = (CACHE_MAX_BYTES * 0.8).toLong()
-                audioCacheDao.evictLruUntil(target)
-                Logger.d(TAG, "Evicted LRU cache entries: ${totalBytes / 1024 / 1024}MB → target ${target / 1024 / 1024}MB")
+            val initialBytes = audioCacheDao.totalBytes()
+            if (initialBytes <= CACHE_MAX_BYTES) return
+
+            // Target: bring down to 80% of cap to avoid thrashing on every insert.
+            val target = (CACHE_MAX_BYTES * 0.8).toLong()
+            // Loop because Room's SQL parser doesn't support window functions, so we can't
+            // do a single size-bounded delete in SQL. EVICT_BATCH=10 is a balance: small
+            // enough that we don't over-evict on the first pass, large enough to converge fast.
+            // Hard ceiling of EVICT_MAX_PASSES prevents an unbounded loop on a degenerate cache.
+            var passes = 0
+            while (audioCacheDao.totalBytes() > target && passes < EVICT_MAX_PASSES) {
+                audioCacheDao.evictOldest(EVICT_BATCH)
+                passes++
             }
+            Logger.d(TAG, "Evicted in $passes passes: ${initialBytes / 1024 / 1024}MB → ${audioCacheDao.totalBytes() / 1024 / 1024}MB (target ${target / 1024 / 1024}MB)")
         } catch (e: Exception) {
             Logger.w(TAG, "Cache eviction check failed", e)
         }

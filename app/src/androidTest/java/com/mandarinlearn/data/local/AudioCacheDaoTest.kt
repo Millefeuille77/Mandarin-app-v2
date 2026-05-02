@@ -100,7 +100,7 @@ class AudioCacheDaoTest {
     }
 
     @Test
-    fun evictLruUntil_removesOldestEntries() = runTest {
+    fun evictOldest_removesNLeastRecentlyUsedEntries() = runTest {
         // Insert 3 entries with different lastUsedAt timestamps
         dao.insert(makeEntity("oldest", 1000).copy(lastUsedAt = 100L))
         dao.insert(makeEntity("middle", 1000).copy(lastUsedAt = 200L))
@@ -108,8 +108,8 @@ class AudioCacheDaoTest {
 
         assertEquals(3000L, dao.totalBytes())
 
-        // Evict until <= 2000 bytes (should remove "oldest")
-        dao.evictLruUntil(2000L)
+        // Evict the single oldest row.
+        dao.evictOldest(1)
 
         assertNull(dao.get("oldest"))
         assertNotNull(dao.get("middle"))
