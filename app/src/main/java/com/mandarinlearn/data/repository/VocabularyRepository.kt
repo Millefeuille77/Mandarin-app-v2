@@ -69,6 +69,14 @@ class VocabularyRepository(
     /** Total vocabulary count (reactive). */
     fun getTotalCount(): Flow<Int> = dao.count()
 
+    /**
+     * Reactive count of cards due today for a given HSK level.
+     * Used by Phase 8 HomeScreen to show the total due count and determine focus level.
+     * The query date is evaluated lazily on collection so crossing-midnight refreshes work.
+     */
+    fun getDueCountForLevel(hsk: Int): Flow<Int> =
+        dao.countDueForLevel(hsk, DateUtil.today())
+
     /** Resets all SM-2 state (used by ResetProgressUseCase in Phase 9). */
     suspend fun resetAllProgress() {
         withContext(dispatchers.io) { dao.resetAllProgress() }

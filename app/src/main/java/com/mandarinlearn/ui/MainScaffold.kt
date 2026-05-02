@@ -2,6 +2,7 @@
 // Bottom-nav scaffold that hosts the 4 tabs: Learn / Practice / Exam / Me.
 // UX_SPECIFICATION.md §1.6: 4 items, icon + label always visible, height 80 dp.
 // Phase 4 carried-over task: PracticeHubScreen now receives a real ViewModel from AppContainer.
+// Phase 8: HomeScreen and MeScreen now receive real ViewModels from AppContainer.
 
 package com.mandarinlearn.ui
 
@@ -26,7 +27,9 @@ import com.mandarinlearn.ui.components.MandarinBottomNav
 import com.mandarinlearn.ui.exam.ExamHubScreen
 import com.mandarinlearn.ui.exam.ExamHubViewModel
 import com.mandarinlearn.ui.home.HomeScreen
+import com.mandarinlearn.ui.home.HomeViewModel
 import com.mandarinlearn.ui.me.MeScreen
+import com.mandarinlearn.ui.me.MeViewModel
 import com.mandarinlearn.ui.practice.PracticeHubScreen
 import com.mandarinlearn.ui.practice.PracticeHubViewModel
 
@@ -81,11 +84,26 @@ fun MainScaffold(
             popExitTransition  = { tabFadeOut },
         ) {
             composable(Routes.HOME) {
-                HomeScreen(
-                    onNavigateToVocabulary = { hsk -> rootNavController.navigate(Routes.vocabulary(hsk)) },
-                    onNavigateToFlashcards = { hsk -> rootNavController.navigate(Routes.flashcards(hsk)) },
-                    onNavigateToSettings   = { rootNavController.navigate(Routes.SETTINGS) },
-                )
+                if (appContainer != null) {
+                    val homeVm: HomeViewModel = viewModel(
+                        factory = HomeViewModel.factory(appContainer.getDashboardUseCase)
+                    )
+                    HomeScreen(
+                        viewModel              = homeVm,
+                        onNavigateToVocabulary = { hsk -> rootNavController.navigate(Routes.vocabulary(hsk)) },
+                        onNavigateToFlashcards = { hsk -> rootNavController.navigate(Routes.flashcards(hsk)) },
+                        onNavigateToReading    = { hsk -> rootNavController.navigate(Routes.readingList(hsk)) },
+                        onNavigateToListening  = { hsk -> rootNavController.navigate(Routes.listening(hsk)) },
+                        onNavigateToSpeaking   = { hsk -> rootNavController.navigate(Routes.speaking(hsk)) },
+                        onNavigateToSettings   = { rootNavController.navigate(Routes.SETTINGS) },
+                    )
+                } else {
+                    HomeScreen(
+                        onNavigateToVocabulary = { hsk -> rootNavController.navigate(Routes.vocabulary(hsk)) },
+                        onNavigateToFlashcards = { hsk -> rootNavController.navigate(Routes.flashcards(hsk)) },
+                        onNavigateToSettings   = { rootNavController.navigate(Routes.SETTINGS) },
+                    )
+                }
             }
 
             composable(Routes.PRACTICE) {
@@ -130,10 +148,21 @@ fun MainScaffold(
             }
 
             composable(Routes.ME) {
-                MeScreen(
-                    onNavigateToProgress = { rootNavController.navigate(Routes.PROGRESS) },
-                    onNavigateToSettings = { rootNavController.navigate(Routes.SETTINGS) },
-                )
+                if (appContainer != null) {
+                    val meVm: MeViewModel = viewModel(
+                        factory = MeViewModel.factory(appContainer.streakRepository)
+                    )
+                    MeScreen(
+                        viewModel            = meVm,
+                        onNavigateToProgress = { rootNavController.navigate(Routes.PROGRESS) },
+                        onNavigateToSettings = { rootNavController.navigate(Routes.SETTINGS) },
+                    )
+                } else {
+                    MeScreen(
+                        onNavigateToProgress = { rootNavController.navigate(Routes.PROGRESS) },
+                        onNavigateToSettings = { rootNavController.navigate(Routes.SETTINGS) },
+                    )
+                }
             }
         }
     }

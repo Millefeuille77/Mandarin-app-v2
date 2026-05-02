@@ -265,4 +265,55 @@
     <!-- Phase 7 QA M-2 fix: in-exam audio replay button -->
     <string name="exam_replay_audio">Replay audio</string>
     <string name="exam_replay_audio_desc">Replay the question audio</string>
+
+    <!-- Phase 8: HomeScreen strings (UX_SPECIFICATION.md §4 Screen 1) -->
+    <!-- Greeting messages based on time of day -->
+    <string name="home_greeting_morning">Good morning, learner</string>
+    <string name="home_greeting_afternoon">Good afternoon, learner</string>
+    <string name="home_greeting_evening">Good evening, learner</string>
+
+    <!-- Streak cards -->
+    <string name="home_streak_current">Day streak</string>
+    <string name="home_streak_longest">Longest</string>
+    <!-- TalkBack: "Current streak: 5 days. Longest: 12 days." -->
+    <string name="home_streak_content_desc">Current streak: %1$d days. Longest: %2$d days.</string>
+
+    <!-- Today\'s review card -->
+    <string name="home_due_count">%1$d</string>
+    <string name="home_due_label">cards due for review today</string>
+    <string name="home_review_now">Review now</string>
+    <string name="home_all_caught_up">All caught up — try a new lesson</string>
+    <string name="home_learn_new">Learn new words</string>
+
+    <!-- HSK progress section -->
+    <string name="home_hsk_progress_header">Your HSK progress</string>
+    <!-- TalkBack: "HSK level 1, 45 of 153 words mastered. Tap to open." -->
+    <string name="home_hsk_row_content_desc">HSK level %1$d, %2$d of %3$d words mastered. Tap to open.</string>
+    <string name="home_hsk_row_count">%1$d/%2$d</string>
+
+    <!-- Quick-start grid -->
+    <string name="home_practice_header">Practice</string>
+    <string name="home_quick_vocab_desc">Open Vocabulary</string>
+    <string name="home_quick_reading_desc">Open Reading</string>
+    <string name="home_quick_listening_desc">Open Listening</string>
+    <string name="home_quick_speaking_desc">Open Speaking</string>
+
+    <!-- Phase 8: ProgressScreen strings (UX_SPECIFICATION.md §4 Screen 10) -->
+    <string name="progress_level_card_desc">HSK level %1$d, %2$d percent ready</string>
+    <string name="progress_readiness_badge">%1$d%% ready</string>
+    <string name="progress_vocab_label">Vocabulary</string>
+    <string name="progress_reading_label">Reading</string>
+    <string name="progress_exam_label">Exam</string>
+    <string name="progress_best_exam_date">Best exam: %1$d/%2$d on %3$s</string>
+    <string name="progress_readiness_info_link">How is readiness calculated?</string>
+    <string name="progress_readiness_info_title">Readiness formula</string>
+    <string name="progress_readiness_formula">readiness = 0.4 × vocab mastered + 0.2 × reading completed + 0.4 × best exam score</string>
+    <string name="progress_readiness_capped">Capped at 100%. Vocabulary and exam performance are weighted equally as the strongest predictors of real HSK success.</string>
+    <string name="progress_exam_chart_header">Exam scores over time</string>
+    <string name="progress_chart_filter_all">All</string>
+    <string name="progress_chart_empty">No exams taken yet — try one in the Exam tab.</string>
+
+    <!-- Phase 8: MeScreen strings -->
+    <string name="me_progress_icon_desc">Progress</string>
+    <string name="me_nav_row_desc">Navigate to %1$s</string>
 </resources>

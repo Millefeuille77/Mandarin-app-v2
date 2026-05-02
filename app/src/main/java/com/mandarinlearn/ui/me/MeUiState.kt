@@ -1,15 +1,23 @@
 // MeUiState.kt — Mandarin Learn
-// UI state for MeScreen. Phase 1: placeholder.
-// Full implementation in Phase 8 (Progress & Dashboard).
+// UI state for MeScreen. Phase 8: Progress & Dashboard.
+// MeScreen is the Me tab root, linking to Progress and Settings.
 
 package com.mandarinlearn.ui.me
 
 /**
  * UI state for [MeScreen].
- * TODO(phase_8): Add Content(streak, level summaries) — Me tab shows links to Progress/Settings.
+ *
+ * The Me tab is a simple navigation hub; it shows the user's streak at a glance
+ * and provides links to ProgressScreen and SettingsScreen.
  */
 sealed class MeUiState {
+
     data object Loading : MeUiState()
-    data object Placeholder : MeUiState()
+
+    data class Content(
+        val currentStreak: Int,
+        val longestStreak: Int,
+    ) : MeUiState()
+
     data class Error(val message: String) : MeUiState()
 }

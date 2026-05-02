@@ -7,6 +7,7 @@
 //           ListeningRepository (full).
 // Phase 6: AudioRecorder, SpeakingRepository (full), ScorePronunciationUseCase.
 // Phase 7: StartExamUseCase, SubmitExamUseCase, ExamGrader.
+// Phase 8: GetDashboardUseCase.
 
 package com.mandarinlearn.di
 
@@ -27,6 +28,7 @@ import com.mandarinlearn.data.repository.SpeakingRepository
 import com.mandarinlearn.data.repository.StreakRepository
 import com.mandarinlearn.data.repository.VocabularyRepository
 import com.mandarinlearn.domain.grading.ExamGrader
+import com.mandarinlearn.domain.usecase.GetDashboardUseCase
 import com.mandarinlearn.domain.usecase.PlayChineseAudioUseCase
 import com.mandarinlearn.domain.usecase.ReviewVocabularyUseCase
 import com.mandarinlearn.domain.usecase.ScorePronunciationUseCase
@@ -191,6 +193,21 @@ class AppContainer(val context: Context) {
     /** Grades answers via ExamGrader and persists the result row. */
     val submitExamUseCase: SubmitExamUseCase by lazy {
         SubmitExamUseCase(examRepository, examGrader)
+    }
+
+    // ---- Phase 8: Dashboard use case ----
+
+    /**
+     * Aggregates streak + vocabulary mastery + reading progress + due counts
+     * into a single observable flow for HomeScreen and ProgressScreen.
+     */
+    val getDashboardUseCase: GetDashboardUseCase by lazy {
+        GetDashboardUseCase(
+            streakRepository     = streakRepository,
+            vocabularyRepository = vocabularyRepository,
+            progressRepository   = progressRepository,
+            examRepository       = examRepository,
+        )
     }
 
     // ---- Preferences (DataStore-backed) ----

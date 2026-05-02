@@ -98,6 +98,21 @@ interface VocabularyDao {
     suspend fun countByLevel(hsk: Int): Int
 
     /**
+     * Reactive count of cards due for review today at a given HSK level.
+     * Used by Phase 8 HomeScreen to determine the focus level and total due count.
+     * Due = is_introduced = 1 AND next_review_date <= today.
+     */
+    @Query(
+        """
+        SELECT COUNT(*) FROM vocabulary
+        WHERE hsk_level = :hsk
+          AND is_introduced = 1
+          AND next_review_date <= :today
+        """
+    )
+    fun countDueForLevel(hsk: Int, today: Long): Flow<Int>
+
+    /**
      * Finds a vocabulary word by its hanzi character (exact match).
      * Used by PassageScreen character-tap popup to look up definitions.
      * Returns null if the character is not in the HSK 1–5 vocabulary.

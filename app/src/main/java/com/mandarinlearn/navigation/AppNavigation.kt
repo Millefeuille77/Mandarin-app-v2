@@ -1,10 +1,7 @@
 // AppNavigation.kt — Mandarin Learn
-// Central NavHost that wires every route in the app.
-// UX_SPECIFICATION.md §2 defines the full navigation tree.
-// Phase 2: IMPORT is the start destination; gated on JsonImporter completion.
-// Phase 4: ViewModels injected from AppContainer factory.
-// Phase 6: SpeakingScreen wired with real SpeakingViewModel.
-// Phase 7: ExamHubScreen, ExamScreen, ExamResultScreen wired with real ViewModels.
+// Central NavHost. UX_SPECIFICATION.md §2 full navigation tree.
+// Phase 2: IMPORT start destination. Phase 4: ViewModel injection from AppContainer.
+// Phase 6: SpeakingScreen. Phase 7: Exam screens. Phase 8: ProgressScreen.
 
 package com.mandarinlearn.navigation
 
@@ -29,6 +26,7 @@ import com.mandarinlearn.ui.importing.ImportLoadingViewModel
 import com.mandarinlearn.ui.listening.ListeningScreen
 import com.mandarinlearn.ui.listening.ListeningViewModel
 import com.mandarinlearn.ui.progress.ProgressScreen
+import com.mandarinlearn.ui.progress.ProgressViewModel
 import com.mandarinlearn.ui.reading.PassageScreen
 import com.mandarinlearn.ui.reading.PassageViewModel
 import com.mandarinlearn.ui.reading.ReadingListScreen
@@ -41,21 +39,7 @@ import com.mandarinlearn.ui.vocabulary.FlashcardViewModel
 import com.mandarinlearn.ui.vocabulary.VocabularyScreen
 import com.mandarinlearn.ui.vocabulary.VocabularyViewModel
 
-/**
- * Root NavHost for Mandarin Learn.
- *
- * Start destination is [Routes.IMPORT] (Phase 2). After import completes,
- * ImportLoadingScreen navigates to [Routes.MAIN] with popUpTo so back-press can't return.
- *
- * Phase 4 carried-over task: ViewModels for Vocabulary, Flashcard, ReadingList, and Passage
- * screens are now created via factories from [AppContainer] rather than using the legacy
- * no-arg overloads that were placeholders in Phase 1.
- *
- * @param appContainer   DI container providing repositories and use-cases.
- * @param jsonImporter   Passed for ImportLoadingViewModel factory.
- * @param navController  NavController; defaults to rememberNavController.
- * @param modifier       Optional modifier for the NavHost.
- */
+/** Root NavHost for Mandarin Learn. Start destination = [Routes.IMPORT] (gated on import). */
 @Composable
 fun AppNavigation(
     modifier: Modifier = Modifier,
@@ -292,7 +276,15 @@ fun AppNavigation(
         // --- Me tab children ---
 
         composable(Routes.PROGRESS) {
-            ProgressScreen(onNavigateBack = { navController.popBackStack() })
+            if (appContainer != null) {
+                val vm: ProgressViewModel = viewModel(factory = ProgressViewModel.factory(
+                    appContainer.streakRepository, appContainer.vocabularyRepository,
+                    appContainer.progressRepository, appContainer.examRepository))
+                ProgressScreen(vm, onNavigateBack = { navController.popBackStack() },
+                    onNavigateToExamResult = { id -> navController.navigate(Routes.examResult(id)) })
+            } else {
+                ProgressScreen(onNavigateBack = { navController.popBackStack() })
+            }
         }
 
         composable(Routes.SETTINGS) {
